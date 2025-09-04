@@ -18,6 +18,7 @@
     tree
     btop
     unzip
+    meli
   ];
 
 }

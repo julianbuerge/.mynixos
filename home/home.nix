@@ -22,6 +22,7 @@
     ".config/waybar/style.css".source = ./dotfiles/fractal-rice/waybar-style.css;
     ".config/hypr/hyprland.conf".source = ./dotfiles/fractal-rice/hyprland.conf;
     ".config/wofi/config".source = ./dotfiles/fractal-rice/wofi-config;
+    ".config/wofi/style.css".source = ./dotfiles/fractal-rice/wofi-style.css;
     
     ".config/pcmanfm/default/pcmanfm.conf".source = ./dotfiles/fractal-rice/pcmanfm.conf;
    
@@ -52,6 +53,7 @@
     extraConfig = {
 	core.editor = "nvim";
 	init.defaultBranch = "main";
+	advice.addIgnoredFile = "false";
     };
   };
 

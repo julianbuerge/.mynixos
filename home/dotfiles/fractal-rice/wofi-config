@@ -2,7 +2,7 @@
 show=drun
 location=center
 width=700
-lines=4
+lines=5
 columns=2
 dynamic_lines=false
 
@@ -27,5 +27,3 @@ key_right=Ctrl-l
 key_submit=Return
 key_forward=Tab
 key_backward=Shift-ISO_Left_Tab
-
-style= "~/.mynixos/home/dotfiles/fractal-rice/wofi-style.css"

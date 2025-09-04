@@ -3,6 +3,7 @@
 {
   imports = [
     ./firefox.nix
+    ./thunderbird.nix
   ];
 
   environment.systemPackages = with pkgs; [
