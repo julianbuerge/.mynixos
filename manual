@@ -1,0 +1,32 @@
+### Setup ###
+
+Clone mynixos to
+
+    $HOME/.mynixos (this is important)
+
+and navigate into it.
+
+
+### Basics ###
+
+To update available packages:
+
+    nix flake update
+
+To rebuild the system with a new configuration (or updated packages):
+
+    nixos-rebuild switch --flake .
+
+To rebuild the dotfiles in the home directory:
+
+    home-manager switch --flake ./home
+
+
+
+### Garbage collection ###
+
+To delete old builds:
+
+    sudo nh clean all --keep N
+
+where N is the amount of generations to not delete

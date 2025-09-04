@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Theme
+Name=BlackPurple
+Comment=GTK theme for my fractal rice
+Encoding=UTF-8
+
+[X-GTK-Theme]
+GtkTheme=BlackPurple
+

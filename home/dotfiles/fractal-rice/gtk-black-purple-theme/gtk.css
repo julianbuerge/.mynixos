@@ -1,0 +1,34 @@
+@define-color strongaccent #ff00ff;
+@define-color weakaccent #7a00ff;
+
+@define-color black #000000;
+@define-color white #ffffff;
+
+
+/* global options */
+* {
+  background-color: @black;
+  color: @white; 
+}
+
+
+/* global action options */
+*:hover {
+  background-color: @weakaccent;  
+}
+
+*:selected,
+*:active,
+*:checked {
+  background-color: @strongaccent;
+  color: @black;
+}
+
+*:focus {
+  border: 1px solid @strongaccent;
+}
+
+window, button, entry, textview, scrolledwindow {
+    border-radius: 10px;
+}
+
