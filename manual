@@ -6,15 +6,17 @@ Install NixOS. Then clone .mynixos to
 
 and navigate into it.
 
-Adjust `filesystems.nix` (this file handles declarative mounting of additional disks and is custom to my disk setup).
+Adjust `.mynixos/hosts/filesystems.nix` (this file handles declarative mounting of additional disks and is custom to my disk setup).
 
 Upon installing NixOS a file `/etc/nixos/hardware-configuration.nix` was automatically created.
 It handles the specifics of your hardware.
-Overwrite `.mynixos/hardware-configuration.nix` with this file.
+Overwrite `.mynixos/hosts/hardware-configuration.nix` with this file.
 Now you are ready to apply my configuration, see the steps below. 
 
 
 ### Basics ###
+
+Navigate to `.mynixos`.
 
 To update available packages (if so desired):
 
