@@ -7,21 +7,36 @@
 
 /* global options */
 * {
+  background-image: none;
   background-color: @black;
   color: @white; 
-  padding : 4px 7px;
-  border-radius : 10px;
+  border-radius : 7px;
+  padding : 1px 4px;
 }
 
 /* global action options */
 *:hover {
+  background-image: none;
   background-color: @weakaccent;  
+  color: @black;
+}
+
+*:hover label, *:hover * {
+    background-image : none;
+    background-color : transparent;
+    color : @black;
 }
 
 *:selected,
 *:active,
-*:checked {
+*:checked,
+*:selected label,
+*:active label,
+*:checked label,
+button:selected *,
+button:checked *,
+button:active * {
+  background-image: none;
   background-color: @strongaccent;
-  color: @black;
+  color : @black;
 }
-
