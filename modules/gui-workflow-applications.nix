@@ -8,13 +8,13 @@
 
   environment.systemPackages = with pkgs; [
     keepassxc
-    pcmanfm
     mpv #media player, audio, pictures and videos
     ffmpegthumbnailer # creates video thumbnails
+    gimp3
     zathura
     thunderbird
     firefox
-	
+    hypnotix
  ];
 
  xdg.mime.defaultApplications = {
@@ -29,14 +29,13 @@
     "application/xhtml+xml" = "firefox.desktop";
     "application/x-extension-xhtml" = "firefox.desktop";
     "application/x-extension-xht" = "firefox.desktop";
-    
 
-    "image/png" = "mpv.desktop";
-    "image/jpeg" = "mpv.desktop";
-    "image/gif" = "mpv.desktop";
-    "image/bmp" = "mpv.desktop";
-    "image/svg" = "mpv.desktop";
+    "application/pdf" = "org.pwmt.zathura.desktop";
 
+    "image/png" = "mpvi.desktop";
+    "image/jpeg" = "mpvi.desktop";
+    "image/jpg" = "mpvi.desktop";
+    "image/gif" = "mpvi.desktop";
   };
 
 }

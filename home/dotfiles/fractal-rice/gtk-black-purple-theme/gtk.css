@@ -9,8 +9,9 @@
 * {
   background-color: @black;
   color: @white; 
+  padding : 4px 7px;
+  border-radius : 10px;
 }
-
 
 /* global action options */
 *:hover {
@@ -22,13 +23,5 @@
 *:checked {
   background-color: @strongaccent;
   color: @black;
-}
-
-*:focus {
-  border: 1px solid @strongaccent;
-}
-
-window, button, entry, textview, scrolledwindow {
-    border-radius: 10px;
 }
 

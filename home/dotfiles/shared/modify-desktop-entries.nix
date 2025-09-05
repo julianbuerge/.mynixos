@@ -4,7 +4,7 @@
   home.file = {
 
     #hide or modify desktop entries that we don't want to launch graphically
-    #by adding a user .desktop entry with NoDispaly=true.
+    #by adding a user .desktop entry with NoDisplay=true.
     #user entries take precedence over the system wide ones.
     ".local/share/applications/btop.desktop".text = ''
 	[Desktop Entry]
@@ -20,6 +20,8 @@
 	Type=Application
 	Exec=julia
     '';
+
+/*
     ".local/share/applications/pcmanfm-desktop-pref.desktop".text = ''
 	[Desktop Entry]
 	Name=Desktop-Preferences
@@ -27,6 +29,8 @@
 	Type=Application
 	Exec=pcmanfm --desktop-pref
     '';
+*/
+
     ".local/share/applications/pcmanfm.desktop".text = ''
 	[Desktop Entry]
 	Type=Application
@@ -73,7 +77,47 @@
 	Terminal=false
 	Type=Application
     '';
-    
+    ".local/share/applications/gimp.desktop".text = ''
+	[Desktop Entry]
+	Type=Application
+	Name=GIMP
+	Keywords=GIMP;graphic;design;illustration;painting;
+	Exec=gimp-3.0 %U
+	TryExec=gimp-3.0
+        Icon=gimp
+	Terminal=false
+	Categories=Graphics;2DGraphics;RasterGraphics;GTK;
+	StartupNotify=true
+	MimeType=image/bmp;image/g3fax;image/svg+xml;image/x-compressed-xcf;image/x-fits;image/x-gimp-gbr;image/x-gimp-gih;image/x-gimp-pat;image/x-pcx;image/x-portable-anymap;image/x-portable-bitmap;image/x-portable-graymap;image/x-portable-pixmap;image/x-psd;image/x-sgi;image/x-sun-raster;image/x-tga;image/x-xbitmap;image/x-xcf;image/x-xwindowdump;image/tiff;image/x-psp;application/postscript;image/x-icon;image/x-xpixmap;image/x-ilbm;image/x-exr;image/x-webp;image/webp;image/heif;image/heic;image/avif;image/x-wmf;image/jp2;image/jpeg2000;image/jpx;image/jxl;image/x-xcursor;image/fits;image/openraster
+	StartupWMClass=gimp-3.0
+    '';
+    ".local/share/applications/mpvi.desktop".text = ''	
+	[Desktop Entry]
+	Type=Application
+	Name=mpv Image Viewer
+	Icon=mpv
+	TryExec=mpv
+	NoDisplay=true
+	Exec=mpv --image-display-duration=inf %U
+	Terminal=false
+	StartupWMClass=mpv
+	Keywords=mpv;media;player;image;picture;
+	MimeType=image/png;image/jpeg;image/gif;
+    '';
+    ".local/share/applications/yazi.desktop".text = ''
+	[Desktop Entry]
+	Type=Application
+	Name=Yazi
+	Icon=yazi
+	Comment=Blazing fast terminal file manager written in Rust, based on async I/O
+	Terminal=false
+	TryExec=yazi
+	Exec=kitty yazi %u
+	Type=Application
+	MimeType=inode/directory
+	Categories=Utility;Core;System;FileTools;FileManager;ConsoleOnly
+	Keywords=File;Manager;Explorer;Browser;Launcher
+    '';
 
   };
 

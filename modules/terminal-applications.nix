@@ -18,7 +18,7 @@
     tree
     btop
     unzip
-    meli
+    yazi
   ];
 
 }
