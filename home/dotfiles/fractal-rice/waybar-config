@@ -34,8 +34,8 @@
     "pulseaudio": {
         "format": "vol {volume}%",
         "format-muted": "¬",
-        "on-click": "$HOME/.mynixos/home/dotfiles/fractal-rice/scripts/audio-ctrl.sh",
-    	"on-click-right": "$HOME/.mynixos/home/dotfiles/fractal-rice/scripts/audio-ctrl.sh",
+        "on-click": "$HOME/.mynixos/home/dotfiles/shared/scripts/audio-ctrl.sh",
+    	"on-click-right": "$HOME/.mynixos/home/dotfiles/shared/scripts/audio-ctrl.sh",
     }
 }
 

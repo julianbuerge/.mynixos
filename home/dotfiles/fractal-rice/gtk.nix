@@ -2,24 +2,22 @@
 
 {
 
-  home.file = {
-    ".themes/BlackPurple/gtk-3.0/gtk.css".source = ./gtk-black-purple-theme/gtk.css;
-    ".themes/BlackPurple/gtk-4.0/gtk.css".source = ./gtk-black-purple-theme/gtk.css;
-    ".themes/BlackPurple/gtk-4.0/gtk-dark.css".source = ./gtk-black-purple-theme/gtk.css;
-    ".themes/BlackPurple/index.theme".source = ./gtk-black-purple-theme/index.theme;
-  };
-
-  #configure the gtk appearance in the nix language
+ #configure the gtk appearance in the nix language
   gtk = {
     enable = true;
 
     theme = {
-	name = "BlackPurple";
+	name = "Orchis-Purple-Dark";
+	package = pkgs.orchis-theme.override {
+	    tweaks = [ "black" ];
+	};
     };
 
     iconTheme = {
-	name = "Reversal-dark";
-	package = pkgs.reversal-icon-theme;
+	name = "Reversal-black-dark";
+	package = pkgs.reversal-icon-theme.override {
+	    colorVariants = [ "-black" ]; 
+	};
     };
 
     #Don't forget to edit the relevant environment variables in hypr.config as well

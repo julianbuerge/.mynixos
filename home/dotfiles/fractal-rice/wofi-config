@@ -2,9 +2,9 @@
 show=drun
 location=center
 width=700
-lines=6
+lines=7
 columns=2
-dynamic_lines=false
+dynamic_lines=true
 
 # icons
 allow_images=true
