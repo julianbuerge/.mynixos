@@ -10,6 +10,7 @@
   imports = [
     ./dotfiles/fractal-rice/gtk.nix
     ./dotfiles/shared/modify-desktop-entries.nix
+    ./dotfiles/shared/firefox-bookmarks.nix
   ];
 
   home.file = {

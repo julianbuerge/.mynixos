@@ -14,8 +14,8 @@
     asciiquarium
     sl
     cmatrix
-    fastfetch
     tree
+    fastfetch
     btop
     unzip
     yazi

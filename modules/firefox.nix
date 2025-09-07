@@ -17,6 +17,11 @@
       enable = true;
       languagePacks = [ "de" "es-MX" "en-US" ];
 
+      #needed for screen sharing in wayland (says the wiki)
+      wrapperConfig = {
+	pipewireSupport = true;
+      };
+
       /* ---- POLICIES ---- */
       # Check about:policies#documentation for options.
       policies = {
