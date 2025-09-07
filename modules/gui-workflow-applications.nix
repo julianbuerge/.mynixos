@@ -7,7 +7,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    keepassxc
+    gnome-secrets
     mpv #media player, audio, pictures and videos
     ffmpegthumbnailer # creates video thumbnails
     gimp3

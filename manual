@@ -14,6 +14,7 @@ Overwrite `.mynixos/hosts/hardware-configuration.nix` with this file.
 Now you are ready to apply my configuration, see the steps below. 
 
 
+
 ### Basics ###
 
 Navigate to `.mynixos`.
@@ -39,3 +40,17 @@ To delete old builds:
     sudo nh clean all --keep N
 
 where N is the amount of generations to not delete
+
+
+
+### Non declarative things ###
+
+In Gimp you have to manually go to Edit -> Preferences -> Interface -> Theme
+and select the system theme (which was set declaratively, so it's available and correct) instead of the default
+
+In Audacity you have to manually go to Edit -> Preferences -> Interface -> Theme
+and select dark (the system theme affects some parts, but not all)
+
+In Gnome-secrets you may have to manually change the sorting behavior
+
+
