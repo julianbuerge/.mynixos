@@ -16,7 +16,6 @@
     firefox
     hypnotix
     audacity
-    pcmanfm
  ];
 
  xdg.mime.defaultApplications = {

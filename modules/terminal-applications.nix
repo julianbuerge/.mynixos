@@ -19,6 +19,7 @@
     btop
     unzip
     yazi
+    playerctl
   ];
     
   programs.bash = {

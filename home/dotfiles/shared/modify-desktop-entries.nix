@@ -21,7 +21,6 @@
 	Exec=julia
     '';
 
-/*
     ".local/share/applications/pcmanfm-desktop-pref.desktop".text = ''
 	[Desktop Entry]
 	Name=Desktop-Preferences
@@ -29,7 +28,6 @@
 	Type=Application
 	Exec=pcmanfm --desktop-pref
     '';
-*/
 
     ".local/share/applications/pcmanfm.desktop".text = ''
 	[Desktop Entry]
