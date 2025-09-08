@@ -15,7 +15,7 @@
   programs = {
     firefox = {
       enable = true;
-      languagePacks = [ "de" "es-MX" "en-US" ];
+      languagePacks = [ "en-US" "es-MX" "de" ];
 
       #needed for screen sharing in wayland (says the wiki)
       wrapperConfig = {
@@ -23,12 +23,12 @@
       };
 
       /* ---- POLICIES ---- */
-      # Check about:policies#documentation for options.
       policies = {
+	DontCheckDefaultBrowser = true;
         DisableTelemetry = true;
         DisableFirefoxStudies = true;
-        EnableTrackingProtection = {
-          Value= true;
+	EnableTrackingProtection = {
+	  Value= true;
           Locked = true;
           Cryptomining = true;
           Fingerprinting = true;
@@ -37,17 +37,55 @@
         DisableFirefoxAccounts = true;
         DisableAccounts = true;
         DisableFirefoxScreenshots = true;
+	OfferToSaveLogins = false;
+	PasswordManagerEnabled = false;
+	SanitizeOnShutdown = true; 	
+	AutofillAddressEnabled = false;
+	AutofillCreditCardEnabled = false;
+	DisableFormHistory = true;
+
         OverrideFirstRunPage = "";
         OverridePostUpdatePage = "";
-        DontCheckDefaultBrowser = true;
-        DisplayBookmarksToolbar = "always"; # alternatives: "always" or "newtab"
-        DisplayMenuBar = "default-off"; # alternatives: "always", "never" or "default-on"
         SearchBar = "unified"; # alternative: "separate"
+	FirefoxHome = {
+	   Search = true;
+	   TopSites = false;
+	   SponsoredTopSites = false;
+	   Highlights = false;
+	   Pocket = false;
+	   SponsoredPocket = false;
+	   Snipptes = false;
+	   Locked = true;
+	};
+	Homepage = {
+	    Locked = true;
+	    StartPage = "none";
+	};
+	NewTabPage = false;
 
-        /* ---- EXTENSIONS ---- */
-        # Check about:support for extension/add-on ID strings.
-        # Valid strings for installation_mode are "allowed", "blocked",
-        # "force_installed" and "normal_installed".
+	SearchEngines = {
+	    Default = "DuckDuckGo";
+	    Remove = [
+		"Google"
+		"Bing"
+		"Ecosia"
+		"eBay"
+	    ];
+	    PreventInstalls = true;
+	};
+	SearchSuggestEnabled = false;
+	FirefoxSuggest = {
+	    WebSuggestions = false;
+	    SponsoredSuggestions = false;
+	    ImproveSuggest = false;
+	    Locked = true;
+	};
+        
+        DisplayBookmarksToolbar = "always"; # alternatives: "always" or "newtab"
+        DisplayMenuBar = "never"; # alternatives: "always", "never" or "default-on"
+
+	/* ---- EXTENSIONS ---- */
+        # Valid strings for installation_mode are "allowed", "blocked", "force_installed" and "normal_installed".
         ExtensionSettings = {
           "*".installation_mode = "blocked"; # blocks all addons except the ones specified below
 	  "*".allowed_type = [ "extension" "theme" "dictonary" "locale" ];
@@ -72,17 +110,35 @@
        };
   
         /* ---- PREFERENCES ---- */
-        # Check about:config for options.
         Preferences = { 
           "browser.contentblocking.category" = { Value = "strict"; Status = "locked"; };
+	  "privacy.globalprivacycontrol.enabled" = lock-true;
+
           "extensions.pocket.enabled" = lock-false;
           "extensions.screenshots.disabled" = lock-true;
+
           "browser.topsites.contile.enabled" = lock-false;
           "browser.formfill.enable" = lock-false;
+
           "browser.search.suggest.enabled" = lock-false;
           "browser.search.suggest.enabled.private" = lock-false;
+
           "browser.urlbar.suggest.searches" = lock-false;
           "browser.urlbar.showSearchSuggestionsFirst" = lock-false;
+	  "browser.urlbar.quickactions.enabled" = lock-false;
+	  "browser.urlbar.shortcuts.bookmarks" = lock-true;
+	  "browser.urlbar.shortcuts.history" = lock-false;
+	  "browser.urlbar.shortcuts.tabs" = lock-false;
+	  "browser.urlbar.suggest.addons" = lock-false;
+	  "browser.urlbar.suggest.recentsearches" = lock-false;
+	  "browser.urlbar.suggest.wikipedia" = lock-false;	  
+	  "services.sync.prefs.sync.browser.urlbar.suggest.topsites" = false;
+	  "services.sync.prefs.sync.browser.urlbar.suggest.searches" = false;
+	  "services.sync.prefs.sync.browser.urlbar.suggest.histroy" = false;
+	  "services.sync.prefs.sync.browser.urlbar.suggest.openpage" = false;
+	  "services.sync.prefs.sync.browser.urlbar.suggest.engines" = false;
+
+	  "browser.newtabpage.enabled" = lock-false;
           "browser.newtabpage.activity-stream.feeds.section.topstories" = lock-false;
           "browser.newtabpage.activity-stream.feeds.snippets" = lock-false;
           "browser.newtabpage.activity-stream.section.highlights.includePocket" = lock-false;
@@ -92,6 +148,14 @@
           "browser.newtabpage.activity-stream.showSponsored" = lock-false;
           "browser.newtabpage.activity-stream.system.showSponsored" = lock-false;
           "browser.newtabpage.activity-stream.showSponsoredTopSites" = lock-false;
+
+	  "browser.translations.automaticallyPopup" = lock-false;
+
+	  "browser.display.background_color.dark" = "#000000"; 
+	  "browser.display.background_color" = "#000000"; 
+	  "browser.theme.content-theme" = 0; #0 is dark, 1 light, 2 system, 3 toolbar
+	  "devtools.toolbox.zoomValue" = 1.33;
+
         };
       };
     };

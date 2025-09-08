@@ -43,7 +43,7 @@ where N is the amount of generations to not delete
 
 
 
-### Non declarative things ###
+### Non-declarative things (I have not found the correct nix option for these yet) ###
 
 In Gimp you have to manually go to Edit -> Preferences -> Interface -> Theme
 and select the system theme (which was set declaratively, so it's available and correct) instead of the default
@@ -53,4 +53,6 @@ and select dark (the system theme affects some parts, but not all)
 
 In Gnome-secrets you may have to manually change the sorting behavior
 
-Firefox bookmarks are entirely manaul at the moment. 
+In Firefox the default zoom level needs to be set manually.
+Unwanted search suggestions (history, shortcuts, ...) need to be deactivated under Settings->Search->Address Bar.
+To remove the "import bookmarks" suggestion, right click it and select remove.

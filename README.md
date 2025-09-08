@@ -8,4 +8,4 @@ Currently I have hardcoded the directory of this project to be in `$HOME/.mynixo
 In the future different looks will be available for the same set of programs. One can switch between looks by setting the relevant variable in `home.nix` (not yet).
 
 ### Fractal Rice
-I've create the fractal background images myself. The kitty window logo image is [Octopus Png PNGs by Vecteezy](https://www.vecteezy.com/free-png/octopus-png) with some color adjustments.
+I've create the fractal background images myself. The kitty window logo image is attributed to [Octopus Png PNGs by Vecteezy](https://www.vecteezy.com/free-png/octopus-png) with some color adjustments.
