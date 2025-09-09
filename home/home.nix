@@ -11,6 +11,7 @@
     ./dotfiles/fractal-rice/gtk.nix
     ./dotfiles/shared/modify-desktop-entries.nix
     ./dotfiles/shared/firefox-bookmarks.nix
+    ./dotfiles/fractal-rice/nvf.nix
   ];
 
   home.file = {

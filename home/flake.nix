@@ -7,10 +7,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nvf.url = "github:NotAShelf/nvf";
   };
 
   outputs =
-    { nixpkgs, home-manager, ... }:
+    { nixpkgs, home-manager, nvf, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -19,7 +20,10 @@
       homeConfigurations."julian" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
-        modules = [ ./home.nix ];
+        modules = [
+            nvf.homeManagerModules.default
+            ./home.nix
+        ];
 
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix

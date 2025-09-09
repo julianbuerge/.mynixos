@@ -7,7 +7,6 @@
     kitty #the terminal itself
     nh
     bat
-    neovim
     git
     tealdeer
     cowsay

@@ -6,11 +6,13 @@
 	clang
 	gdb
 	cmake
+	gnumake
 	ninja
 	python3Full
 	texliveFull
 	lua
 	julia
+	conda
  ];
 
 }

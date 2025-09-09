@@ -15,7 +15,7 @@
 			    { 
 				name = "Computer";
 				bookmarks = [
-				    { name = "Search NixOS"; url = "https://search.nixos.org"; }
+				    { name = "Search NixOS"; url = "https://search.nixos.org/packages?channel=unstable&"; }
 				    { name = "My Nixos"; url = "https://mynixos.com"; }
 				    { name = "Arch Wiki"; url = "https://wiki.archlinux.org/title/Main_page"; }
 				    { name = "Hyprland Wiki"; url = "https://wiki.hypr.land/"; }
