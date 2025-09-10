@@ -11,7 +11,8 @@
 		modules = [
 		    ./hosts/hardware-configuration.nix
 		    ./hosts/filesystems.nix
-		    ./configuration.nix
+		    ./modules/system/system-configuration.nix
+		    ./modules/applications/application-configuration.nix
 		];
 	};
   };

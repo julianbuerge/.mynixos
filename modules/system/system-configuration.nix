@@ -3,12 +3,10 @@
 {
   imports =
     [ 
-      ./modules/fonts.nix
-      ./modules/terminal-applications.nix
-      ./modules/coding-backends.nix
-      ./modules/nvidia.nix
-      ./modules/hyprland.nix
-      ./modules/gui-workflow-applications.nix
+      ./fonts.nix
+      ./nvidia.nix
+      ./hyprland.nix
+      ./coding-backends.nix
     ];
 
   boot.loader.systemd-boot.enable = true;

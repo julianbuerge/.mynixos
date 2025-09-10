@@ -8,7 +8,7 @@ let
     src = pkgs.fetchFromGitHub {
       owner = "cranberry-clockworks";
       repo = "coal.nvim";
-      rev = "2a1aaad"; # or a pinned commit hash
+      rev = "2a1aaad"; #commit name
       sha256 = "sha256-Mcdf0sx0hBDdTimwWJiLU6lMcqPOmODuCCelhwwAgso=";
     };
   };

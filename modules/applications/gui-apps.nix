@@ -1,11 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ./firefox.nix
-    ./thunderbird.nix
-  ];
-
   environment.systemPackages = with pkgs; [
     gnome-secrets
     mpv #media player, audio, pictures and videos
@@ -18,6 +13,8 @@
     audacity
  ];
 
+ #this may cause trouble on a different OS, but I don't want to put it into a different file either
+ #maybe there could be an if/else check if we are on NixOS?
  xdg.mime.defaultApplications = {
 
     "x-scheme-handler/http" = "firefox.desktop";

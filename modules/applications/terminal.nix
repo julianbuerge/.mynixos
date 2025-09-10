@@ -1,6 +1,5 @@
 { config, pkgs, ... }:
 
-
 {
   environment.systemPackages = with pkgs; [
     home-manager #dotfile management package,
@@ -21,6 +20,7 @@
     playerctl
   ];
     
+  #configure bash
   programs.bash = {
     enable = true;
     promptInit = ''
@@ -35,4 +35,10 @@
 	matrix = "cmatrix -B -C magenta -u 3";
     };
   };
+
+  #install a nerd font to use in kitty (the kitty config sets it)
+  fonts.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+  ];
+
 }

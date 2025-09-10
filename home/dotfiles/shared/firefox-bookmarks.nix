@@ -15,8 +15,9 @@
 			    { 
 				name = "Computer";
 				bookmarks = [
-				    { name = "Search NixOS"; url = "https://search.nixos.org/packages?channel=unstable&"; }
-				    { name = "My Nixos"; url = "https://mynixos.com"; }
+				    { name = "Search NixOS Packages"; url = "https://search.nixos.org/packages?channel=unstable&"; keyword = "nixsp";}
+				    { name = "Search NixOS Options"; url = "https://search.nixos.org/options?channel=unstable&"; keyword = "nixso";}
+				    { name = "My Nixos"; url = "https://mynixos.com"; keyword = "nixm"; }
 				    { name = "Arch Wiki"; url = "https://wiki.archlinux.org/title/Main_page"; }
 				    { name = "Hyprland Wiki"; url = "https://wiki.hypr.land/"; }
 				    { name = "Software alternatives"; url = "https://alternativeto.net"; }
@@ -30,7 +31,7 @@
 				    {
 					name = "Programming";
 					bookmarks = [
-					    { name = "ChatGPT"; url = "https://chatgpt.com"; }
+					    { name = "ChatGPT"; url = "https://chatgpt.com"; keyword = "gpt"; }
 					    { name = "Fonts"; url = "https://www.fontspace.com/new/fonts"; }
 					];
 				    }
@@ -39,7 +40,7 @@
 			    {
 				name = "Science";
 				bookmarks = [
-				    { name = "GitHub"; url = "https://github.com/julianbuerge";}
+				    { name = "GitHub"; url = "https://github.com/julianbuerge"; keyword = "git"; }
 				    { name = "NGF ETH Research collection"; url = "https://www.research-collection.ethz.ch/entities/publication/3f85c3d3-501b-4563-b204-044b54074949";}
 				    { name = "Scalable SciML Lab"; url = "https://scalable-sciml-lab.org/";}
 				    { name = "Imperial Luca Magri"; url = "https://profiles.imperial.ac.uk/l.magri";}
@@ -69,8 +70,8 @@
 			    {
 				name = "Entertainment";
 				bookmarks = [
-				    { name = "Youtube"; url = "https://www.youtube.com/"; }
-				    { name = "Youtube Music"; url = "https://music.youtube.com/"; }
+				    { name = "Youtube"; url = "https://www.youtube.com/"; keyword = "yt";}
+				    { name = "Youtube Music"; url = "https://music.youtube.com/"; keyword = "ytm"; }
 				    { name = "Maps"; url = "https://vemaps.com/"; }
 				    { name = "Star Wars Galaxy Map"; url = "http://www.swgalaxymap.com/"; }
 				    { name = "Souls Lore Shop"; url = "https://www.tuneandfairweather.com/"; }
@@ -90,8 +91,8 @@
 				    { name = "ETH Webshop Kanzlei"; url = "https://shop.akd.ethz.ch/"; }
 				    { name = "ETH MyAlumni"; url = "https://myalumni.ethz.ch/"; }
 				    { name = "ETH Alumni Email"; url = "https://myalumni.ethz.ch/webmail/"; }
-				    { name = "Proton Email"; url = "https://mail.proton.me"; }
-				    { name = "Google Email"; url = "https://mail.google.com"; }
+				    { name = "Proton Email"; url = "https://mail.proton.me"; keyword = "proton"; }
+				    { name = "Google Email"; url = "https://mail.google.com"; keyword = "gmail"; }
 				];
 			    }
 			    {

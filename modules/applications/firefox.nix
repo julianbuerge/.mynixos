@@ -46,7 +46,7 @@
 
         OverrideFirstRunPage = "";
         OverridePostUpdatePage = "";
-        SearchBar = "unified"; # alternative: "separate"
+        SearchBar = "unified"; # alternatives: "unified", "separate"
 	FirefoxHome = {
 	   Search = true;
 	   TopSites = false;
@@ -59,7 +59,7 @@
 	};
 	Homepage = {
 	    Locked = true;
-	    StartPage = "none";
+	    StartPage = "none"; #alternative is "homepage" and some others I think
 	};
 	NewTabPage = false;
 
@@ -125,6 +125,7 @@
 
           "browser.urlbar.suggest.searches" = lock-false;
           "browser.urlbar.showSearchSuggestionsFirst" = lock-false;
+          "browser.urlbar.restrict.bookmark" = lock-true;
 	  "browser.urlbar.quickactions.enabled" = lock-false;
 	  "browser.urlbar.shortcuts.bookmarks" = lock-true;
 	  "browser.urlbar.shortcuts.history" = lock-false;
