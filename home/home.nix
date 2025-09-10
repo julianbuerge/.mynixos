@@ -1,5 +1,14 @@
 { config, pkgs, ... }:
 
+let 
+
+#choose the rice here
+rice = "fractal-rice";
+
+#function taking in a dotfile name and returning the right path
+dotfile_path = dotfile_name : ./dotfiles/${rice} + "/${dotfile_name}";
+
+in
 {
   home.username = "julian";
   home.homeDirectory = "/home/julian";
@@ -14,8 +23,8 @@
     ./dotfiles/shared/nvf-base.nix
 
     #rice specific modules
-    ./dotfiles/fractal-rice/gtk.nix
-    ./dotfiles/fractal-rice/nvf-theme.nix
+    (dotfile_path "gtk.nix")
+    (dotfile_path "nvf-theme.nix")
   ];
 
   home.file = {
@@ -29,13 +38,13 @@
     ".config/yazi/keymap.toml".source = ./dotfiles/shared/yazi-keymap.toml;
 
     #rice specific dotfiles
-    ".config/kitty/kitty.conf".source = ./dotfiles/fractal-rice/kitty.conf;
-    ".config/waybar/config".source = ./dotfiles/fractal-rice/waybar-config;
-    ".config/waybar/style.css".source = ./dotfiles/fractal-rice/waybar-style.css;
-    ".config/hypr/hyprland.conf".source = ./dotfiles/fractal-rice/hyprland.conf;
-    ".config/wofi/config".source = ./dotfiles/fractal-rice/wofi-config;
-    ".config/wofi/style.css".source = ./dotfiles/fractal-rice/wofi-style.css;
-    ".config/yazi/theme.toml".source = ./dotfiles/fractal-rice/yazi-theme.toml;
+    ".config/kitty/kitty.conf".source = (dotfile_path "kitty.conf");
+    ".config/waybar/config".source = (dotfile_path "waybar-config");
+    ".config/waybar/style.css".source = (dotfile_path "waybar-style.css");
+    ".config/hypr/hyprland.conf".source = (dotfile_path "hyprland.conf");
+    ".config/wofi/config".source = (dotfile_path "wofi-config");
+    ".config/wofi/style.css".source = (dotfile_path "wofi-style.css");
+    ".config/yazi/theme.toml".source = (dotfile_path "yazi-theme.toml");
     
   };
 

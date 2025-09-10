@@ -12,7 +12,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   networking.firewall.enable = true;
@@ -33,13 +32,6 @@
   };
 
   console.keyMap = "sg";
-
-  users.users.julian = {
-    isNormalUser = true;
-    description = "Julian";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
-  };
 
   nixpkgs.config.allowUnfree = true;
 
