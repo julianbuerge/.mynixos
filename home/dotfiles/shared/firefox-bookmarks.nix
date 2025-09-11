@@ -15,6 +15,7 @@
 			    { 
 				name = "Computer";
 				bookmarks = [
+				    { name = "NixOS"; url = "https://nixos.org"; keyword = "nixos";}
 				    { name = "Search NixOS Packages"; url = "https://search.nixos.org/packages?channel=unstable&"; keyword = "nixsp";}
 				    { name = "Search NixOS Options"; url = "https://search.nixos.org/options?channel=unstable&"; keyword = "nixso";}
 				    { name = "My Nixos"; url = "https://mynixos.com"; keyword = "nixm"; }
