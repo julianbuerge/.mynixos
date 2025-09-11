@@ -1,49 +1,8 @@
-### Setup ###
-
-Install NixOS. Then clone .mynixos to
-
-    $HOME/.mynixos (this is important)
-
-and navigate into it.
-
-Adjust `.mynixos/hosts/filesystems.nix` (this file handles declarative mounting of additional disks and is custom to my disk setup).
-
-Upon installing NixOS a file `/etc/nixos/hardware-configuration.nix` was automatically created.
-It handles the specifics of your hardware.
-Overwrite `.mynixos/hosts/hardware-configuration.nix` with this file.
-Now you are ready to apply my configuration, see the steps below. 
-
-
-
-### Basics ###
-
-Navigate to `.mynixos`.
-
-To update available packages (if so desired):
-
-    nix flake update
-
-To rebuild the system with a new configuration (or updated packages):
-
-    nixos-rebuild switch --flake .
-
-To rebuild the dotfiles in the home directory:
-
-    home-manager switch --flake ./home
-
-
-
-### Garbage collection ###
-
-To delete old builds:
-
-    sudo nh clean all --keep N
-
-where N is the amount of generations to not delete
-
-
-
 ### Non-declarative things (I have not found the correct nix option for these yet) ###
+
+(!) Currently there is no explicit code for controlling the system font size.
+I should add this, probably in gtk.nix of each rice. Furthermore system fonts are handled
+on a system level instead of on a per rice level. This should be adapted too.
 
 In Gimp you have to manually go to Edit -> Preferences -> Interface -> Theme
 and select the system theme (which was set declaratively, so it's available and correct) instead of the default
