@@ -12,15 +12,11 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
+  #networking.wireless.enable = true; 
   networking.firewall.enable = true;
-
   networking.networkmanager.enable = true;
 
-
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
 
   time.timeZone = "Europe/Zurich";
 

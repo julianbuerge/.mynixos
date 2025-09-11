@@ -1,5 +1,5 @@
 {
-hostname = "xenia";
-realname = "Julian";
-username = "julian";
+hostname = "panther";
+realname = "Dominik";
+username = "dominik";
 }
