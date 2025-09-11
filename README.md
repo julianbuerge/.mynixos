@@ -20,7 +20,7 @@ and afterwards
 ```
 home-manager switch --flake ./home
 ```
-You may need to logout and login or reboot for all the changes to apply.
+You may need to logout and login or reboot for all the changes to apply. There is a configuration specific to me, namely, in `home/dotfiles/shared/git.nix` I set my user name and email. Please change these and then apply a home manager switch.
 
 ### Updating
 In order to update the system and packages do
@@ -38,7 +38,10 @@ This will delete all previous versions except the N most recent.
 
 ## Rices
 
-In the future different looks will be available for the same set of programs. One can switch between looks by setting the relevant variable in `home.nix` (not yet).
+There are different looks available for the same set of programs. One can switch between looks by setting the relevant variable in `home.nix`.
 
 ### Fractal Rice
-I've create the fractal background images myself. The kitty window logo image is attributed to [Octopus Png PNGs by Vecteezy](https://www.vecteezy.com/free-png/octopus-png) with some color adjustments.
+This is my main rice. I've create the fractal background images myself. The kitty window logo image is attributed to [Octopus Png PNGs by Vecteezy](https://www.vecteezy.com/free-png/octopus-png) with some color adjustments.
+
+### Laptop Rice
+Currently the same as the fractal rice with some adapted scaling to fit a smaller screen (resolution).

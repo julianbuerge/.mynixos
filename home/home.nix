@@ -2,7 +2,7 @@
 
 let 
 
-#choose the rice here
+#choose the rice here. The rest is automatic.
 rice = "laptop-rice";
 
 #function taking in a dotfile name and returning the right path
@@ -50,18 +50,5 @@ in
 
   #let home-manager manage itself
   programs.home-manager.enable = true;
-
-  #configure git in the nix language
-  programs.git = {
-    enable = true;
-    userName = "julianbuerge";
-    userEmail = "julian.buerge@alumni.ethz.ch";
-    
-    extraConfig = {
-	core.editor = "nvim";
-	init.defaultBranch = "main";
-	advice.addIgnoredFile = "false";
-    };
-  };
 
 }
