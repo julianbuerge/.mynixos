@@ -1,4 +1,4 @@
-#  My NixOS
+# My NixOS
 This is my personal NixOS setup as a Nix project which by its fully declarative nature makes the setup trivially reproducible.
 
 Currently I have hardcoded the directory of this project to be in `$HOME/.mynixos`. Furthermore I use an Nvidia GPU and want to do CUDA computations. Therefore I install proprietary Nvidia drivers and configure mpv thusly. 
