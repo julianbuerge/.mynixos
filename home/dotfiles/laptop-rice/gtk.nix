@@ -24,7 +24,12 @@
     cursorTheme = {
 	name = "Bibata-Modern-Classic";
 	package = pkgs.bibata-cursors;
-	size = 12;
+	size = 18;
+    };
+
+    font = {
+        name = "DejaVu Sans";
+        size = 14;
     };
   };
 

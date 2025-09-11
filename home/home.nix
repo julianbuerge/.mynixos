@@ -18,9 +18,10 @@ in
 
   imports = [
     #shared base functionality
+    ./dotfiles/shared/nvf-base.nix
+    ./dotfiles/shared/git.nix
     ./dotfiles/shared/modify-desktop-entries.nix
     ./dotfiles/shared/firefox-bookmarks.nix
-    ./dotfiles/shared/nvf-base.nix
 
     #rice specific modules
     (dotfile_path "gtk.nix")

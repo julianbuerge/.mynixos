@@ -1,14 +1,14 @@
 # mode & placement
 show=drun
 location=center
-width=500
+width=700
 lines=7
 columns=2
 dynamic_lines=true
 
 # icons
 allow_images=true
-image_size=32
+image_size=48
 
 # search & UX
 matching=fuzzy
