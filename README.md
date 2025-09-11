@@ -25,7 +25,7 @@ home-manager switch --flake ./home
 ```
 You may need to logout and login or reboot for all the changes to apply. Now that everything is installed there remains one thing to configure: Hyprland needs to be told which monitor to use. Each of my rice folders has it set to the correct option with regards to the device I use that rice on. To see what option are available on your device do
 ```
-hyprctl montiors
+hyprctl monitors
 ```
 You'll see something like
 ```
@@ -38,7 +38,7 @@ Go to `home/dotfiles/rice-folder/hyprland.conf` and put the name of your chosen 
 #preliminaries
 monitor=DP-2,preferred,auto,1
 ```
-Finally start hyprland with the command `hyprland`. My most important shortcuts are
+Finally start hyprland with the command `hyprland`. The most important shortcuts are
  * Super Enter ~ Open terminal
  * Super E ~ Open file manager
  * Super R ~ Open applauncher
