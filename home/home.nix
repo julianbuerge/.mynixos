@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, username, ... }:
 
 let 
 
@@ -10,8 +10,8 @@ dotfile_path = dotfile_name : ./dotfiles/${rice} + "/${dotfile_name}";
 
 in
 {
-  home.username = "julian";
-  home.homeDirectory = "/home/julian";
+  home.username = username;
+  home.homeDirectory = "/home/${username}";
 
   #initially installed version. helps the system from ever breaking. never change it.
   home.stateVersion = "25.05";

@@ -2,10 +2,9 @@
 
 let
 
-hostname = "xenia";
+names = import ./names.nix;
 
-name = "Julian";
-username = "julian";
+inherit (names) hostname realname username;
 
 hostfile_path = hostfile_name : ./${hostname} + "/${hostfile_name}";
 
@@ -21,7 +20,7 @@ in {
 
   users.users.${username} = {
     isNormalUser = true;
-    description = name;
+    description = realname;
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
   };

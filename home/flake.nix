@@ -15,9 +15,12 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-    in
+      
+      names = import ../hosts/names.nix;
+      username = names.username;
+   in
     {
-      homeConfigurations."julian" = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
         modules = [
@@ -27,6 +30,9 @@
 
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
+        extraSpecialArgs = {
+            inherit username;
+        };
       };
     };
 }
