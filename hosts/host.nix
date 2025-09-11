@@ -2,9 +2,9 @@
 
 let
 
-names = import ./names.nix;
+variables = import ./variables.nix;
 
-inherit (names) hostname realname username;
+inherit (variables) hostname realname username;
 
 hostfile_path = hostfile_name : ./${hostname} + "/${hostfile_name}";
 

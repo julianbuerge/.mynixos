@@ -3,10 +3,18 @@
 let 
 
 #choose the rice here. The rest is automatic.
-rice = "laptop-rice";
+rice = "fractal-rice";
 
 #function taking in a dotfile name and returning the right path
 dotfile_path = dotfile_name : ./dotfiles/${rice} + "/${dotfile_name}";
+
+
+variables = import ../hosts/variables.nix;
+
+mpv_config_path = if variables.use_nvidia then
+    ./dotfiles/shared/mpv-nvidia.conf else
+    ./dotfiles/shared/mpv-cpu.conf;
+
 
 in
 {
@@ -34,7 +42,7 @@ in
     #(so that we could use a different OS and package manager in the future)
     
     #shared #shared base functionality
-    ".config/mpv/mpv.conf".source = ./dotfiles/shared/mpv.conf;  #edit to make sure mpv uses nvidia for decoding (or does not)
+    ".config/mpv/mpv.conf".source = mpv_config_path;  #edit to make sure mpv uses nvidia for decoding (or does not)
     ".config/yazi/yazi.toml".source = ./dotfiles/shared/yazi.toml;
     ".config/yazi/keymap.toml".source = ./dotfiles/shared/yazi-keymap.toml;
 

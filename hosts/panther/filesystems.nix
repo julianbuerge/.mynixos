@@ -2,8 +2,8 @@
 { config, ... }:
 let
 
-names = import ../names.nix;
-username = names.username;
+variables = import ../variables.nix;
+username = variables.username;
 
 in {
     #mount my data drive

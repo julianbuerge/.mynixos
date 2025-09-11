@@ -16,8 +16,8 @@
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
       
-      names = import ../hosts/names.nix;
-      username = names.username;
+      variables = import ../hosts/variables.nix;
+      username = variables.username;
    in
     {
       homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {

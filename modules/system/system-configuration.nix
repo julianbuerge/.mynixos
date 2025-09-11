@@ -1,13 +1,21 @@
 { config, pkgs, ... }:
 
-{
+let
+
+variables = import ../../hosts/variables.nix;
+
+#define a list with either one item ./nvidia.nix or no item
+nvidia_import = if variables.use_nvidia then
+    [ ./nvidia.nix ] else [];
+
+in {
+  #imports are a list, which is the sum of the written and the nvidia_import list
   imports =
     [ 
       ./fonts.nix
-      ./nvidia.nix
       ./hyprland.nix
       ./coding-backends.nix
-    ];
+    ] ++ nvidia_import;
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
