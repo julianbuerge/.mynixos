@@ -9,7 +9,7 @@
 
 	nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 		modules = [
-		    ./hosts/xenia/xenia.nix
+		    ./hosts/host.nix
 		    ./modules/system/system-configuration.nix
 		    ./modules/applications/application-configuration.nix
 		];
