@@ -34,7 +34,7 @@ and afterwards
 ```
 home-manager switch --flake ./home/hosts/examplehostname
 ```
-Reboot for all the changes to apply. Start hyprland simply by doing `hyprland`. Perhaps the resolution will be off, that is because hyprland needs to be told which monitor to use (there is multi monitor support, but at the moment I don't know how it works). To see what options are available on do
+Reboot for all the changes to apply. Start hyprland simply by doing `hyprland`. Perhaps the resolution will be off, that is because hyprland needs to be told which monitor to use (there is multi monitor support, but at the moment I don't know how it works). To see what options are available do
 ```
 hyprctl monitors
 ```
