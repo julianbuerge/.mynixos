@@ -12,21 +12,21 @@ Heart piece of my workflow for programming and creating documents with LaTeX.
  * [neovim](https://github.com/neovim/neovim) (terminal based highly configurable text editor)
 
 Basic apps
- * Yazi
- * Zathura
- * mpv
+ * [Yazi](https://github.com/sxyazi/yazi) (blazing fast terminal file manager)
+ * [zathura](https://github.com/pwmt/zathura) (functional document viewer with an extremely minimal design) 
+ * [mpv](https://github.com/mpv-player/mpv) (free (as in freedom) terminal media player)
 
 Editors
- * Audacity
- * GIMP
+ * [Audacity](https://github.com/audacity/audacity) (easy-to-use, multi-track audio editor)
+ * [GIMP](https://www.gimp.org/) (cross-platform image editor)
 
 Onlineness
- * Gnome-secrets
- * Thunderbird
- * Firefox
+ * [Gnome-secrets](https://gitlab.gnome.org/World/secrets) (Gnome's GTK password manager using the KeePass v.4 format)
+ * [Thunderbird](https://www.thunderbird.net/en-US/) (privacy focused open source email client)
+ * [Firefox](https://github.com/mozilla-firefox/firefox) (fast, reliable and private web browser)
 
 Just for fun
- * Hypnotix
+ * [Hypnotix](https://github.com/linuxmint/hypnotix) (IPTV streaming application with support for live TV, movies and series)
 
 
 ## Usage
