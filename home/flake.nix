@@ -17,7 +17,7 @@
       pkgs = nixpkgs.legacyPackages.${system};
     
       #set host name here!  
-      hostname = "xenia";       #this could perhaps be soft coded with builints.readDir and then passing the hostname in the switch command but very unsure about this
+      hostname = "panther";       #this could perhaps be soft coded with builints.readDir and then passing the hostname in the switch command but very unsure about this
 
       variables = import ../hosts/${hostname}/variables.nix;
    in
