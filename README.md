@@ -17,11 +17,10 @@ Assuming you are on a computer with NixOS and with git installed, clone this rep
     4. `filesystems.nix` can be copied over from any of the other hosts. There you can specify what additional drives should get mounted automatically at startup. If you don't want this you can make the output be only `{ }` with nothing in it.
 
 With the new host ready we need to tell the system flake `flake.nix` and the home-manager flake `home/flake.nix` about it.
- 1. In `flake.nix` add a new line 
- ```
- examplehostname = setup "examplehostname" 
- ```
- to `nixosConfiguration`.
+ 1. In `flake.nix` add a new line to `nixosConfiguration`:
+    ```
+    examplehostname = setup "examplehostname"
+    ```
  2. In `home/flake.nix` find the variable `hostname = "..."` and simply change it to `hostname = "examplehostname"`.
 
 After having completed these steps stash all the changes with `git add *`. Now you are ready to rebuild the system. Do
