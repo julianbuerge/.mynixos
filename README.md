@@ -1,9 +1,33 @@
 # My NixOS
 This is my personal NixOS setup as a Nix project which by its fully declarative nature makes the setup trivially reproducible.
 
-As my base environment I use hyprland (wayland tiling window manager) with waybar (status bar for wayland) and wofi (app launcher for wayland).
+## Build overview
+Base environment 
+ * [Hyprland](https://github.com/hyprwm/Hyprland) (highly customizable dynamic tiling window manager with GPU rendering with the latest wayland features) 
+ * [Waybar](https://github.com/Alexays/Waybar) (status bar for wayland)
+ * [wofi](https://github.com/SimplyCEO/wofi) (app launcher for wayland).
 
-The heart piece of my workflow is kitty (terminal) with neovim (text editor) for programming and creating nice text documents with LaTeX.
+Heart piece of my workflow for programming and creating documents with LaTeX.
+ 
+ * [kitty](https://sw.kovidgoyal.net/kitty/) (fast feature-rich GPU based terminal) 
+ * neovim [terminal based highly configurable text editor](https://github.com/neovim/neovim)
+
+Basic gui apps
+
+ * Yazi
+ * Zathura
+ * mpv
+ * Audacity
+ * GIMP
+
+Onlineness
+
+ * Gnome-secrets
+ * Thunderbird
+ * Firefox
+
+Just for fun
+ * Hypnotix
 
 
 ## Usage
@@ -34,7 +58,7 @@ and afterwards
 ```
 home-manager switch --flake ./home/hosts/examplehostname
 ```
-Reboot for all the changes to apply. Start hyprland simply by doing `hyprland`. Perhaps the resolution will be off, that is because hyprland needs to be told which monitor to use (there is multi monitor support, but at the moment I don't know how it works). To see what options are available do
+Reboot for all the changes to apply. Start Hyprland simply by doing `hyprland`. Perhaps the resolution will be off, that is because Hyprland needs to be told which monitor to use (there is multi monitor support, but at the moment I don't know how it works). To see what options are available do
 ```
 hyprctl monitors
 ```
@@ -49,7 +73,7 @@ Go to `home/dotfiles/rice-folder/hyprland.conf` and put the name of your chosen 
 #preliminaries
 monitor=DP-2,preferred,auto,1
 ```
-Logout with Super Esc and start hyprland anew. Now you should be ready to go! The most important shortcuts are
+Logout with Super Esc and start Hyprland anew. Now you should be ready to go! The most important shortcuts are
  * Super Enter ~ Open terminal
  * Super E ~ Open file manager
  * Super R ~ Open applauncher
