@@ -1,9 +1,5 @@
 ### Non-declarative things (I have not found the correct nix option for these yet) ###
 
-(!) Currently there is no explicit code for controlling the system font size.
-I should add this, probably in gtk.nix of each rice. Furthermore system fonts are handled
-on a system level instead of on a per rice level. This should be adapted too.
-
 In Gimp you have to manually go to Edit -> Preferences -> Interface -> Theme
 and select the system theme (which was set declaratively, so it's available and correct) instead of the default
 
@@ -14,4 +10,3 @@ In Gnome-secrets you may have to manually change the sorting behavior
 
 In Firefox the default zoom level needs to be set manually.
 Unwanted search suggestions (history, shortcuts, ...) need to be deactivated under Settings->Search->Address Bar.
-To remove the "import bookmarks" suggestion, right click it and select remove.

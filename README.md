@@ -12,20 +12,20 @@ The heart piece of my workflow is kitty (terminal) with neovim (text editor) for
 Assuming you are on a computer with NixOS and with git installed, clone this repository to `$HOME/.mynixos`. Navigate into it. You will need to create a new directory in `hosts` which specifies things specific to your machine (i.e. your host).
  * Create a directory `hosts/hostname` where `hostname` is the name you want your machine to have. You will need to put all the same files that the other hosts have into that directory
     1. `host-configuration.nix` can be copied over from any of the other hosts. No changes needed here.
-    2. `variables.nix` can be copied over from any of the other hosts. Adapt host- and username, git username and email, and whether or not you use an nvidia GPU.
+    2. `variables.nix` can be copied over from any of the other hosts. Adapt host- and username, git username and email, and whether or not you use an nvidia GPU. You can also choose which rice you want to use (has to be any of `home/dotfiles/rice-folder`).
     3. `hardware-configuration.nix` should be copied over from `/etc/nixos/hardware-configuration.nix`, which is the hardware configuration that NixOS automatically created during install. 
     4. `filesystems.nix` can be copied over from any of the other hosts. There you can specify what additional drives should get mounted automatically at startup. If you don't want this you can make the output be only `{ }` with nothing in it.
 
 With the new host ready we need to tell the system flake `flake.nix` and the home-manager flake `home/flake.nix` about it.
  1. In `flake.nix` add a new line to `nixosConfiguration`:
     ```
-    examplehostname = setup "examplehostname"
+    examplehostname = setup "examplehostname";
     ```
  2. In `home/flake.nix` find the variable `hostname = "..."` and simply change it to `hostname = "examplehostname"`.
 
 After having completed these steps stash all the changes with `git add *`. Now you are ready to rebuild the system. Do
 ```
-sudo nixos-rebuild switch --flake .#nixos
+sudo nixos-rebuild switch --flake .#examplehostname
 ```
 and afterwards
 ```

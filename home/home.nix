@@ -3,7 +3,7 @@
 let 
 
 #choose the rice here. The rest is automatic.
-rice = "fractal-rice";
+rice = variables.rice;
 
 #function taking in a dotfile name and returning the right path
 dotfile_path = dotfile_name : ./dotfiles/${rice} + "/${dotfile_name}";
