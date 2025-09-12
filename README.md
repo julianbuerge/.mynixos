@@ -23,7 +23,7 @@ Editors
 Onlineness
  * [Gnome-secrets](https://gitlab.gnome.org/World/secrets) (Gnome's GTK password manager using the KeePass v.4 format)
  * [Thunderbird](https://www.thunderbird.net/en-US/) (privacy focused open source email client)
- * [Firefox](https://github.com/mozilla-firefox/firefox) (fast, reliable and private web browser)
+ * [Firefox](https://github.com/mozilla-firefox/firefox) (fast privacy focused web browser)
 
 Just for fun
  * [Hypnotix](https://github.com/linuxmint/hypnotix) (IPTV streaming application with support for live TV, movies and series)
