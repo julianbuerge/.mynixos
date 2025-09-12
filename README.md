@@ -10,7 +10,7 @@ Base environment
 Heart piece of my workflow for programming and creating documents with LaTeX.
  
  * [kitty](https://sw.kovidgoyal.net/kitty/) (fast feature-rich GPU based terminal) 
- * neovim [terminal based highly configurable text editor](https://github.com/neovim/neovim)
+ * [neovim](https://github.com/neovim/neovim) (terminal based highly configurable text editor)(https://github.com/neovim/neovim)
 
 Basic gui apps
 
