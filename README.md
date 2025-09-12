@@ -14,7 +14,7 @@ Heart piece of my workflow for programming and creating documents with LaTeX.
 Basic apps
  * [Yazi](https://github.com/sxyazi/yazi) (blazing fast terminal file manager)
  * [zathura](https://github.com/pwmt/zathura) (functional document viewer with an extremely minimal design) 
- * [mpv](https://github.com/mpv-player/mpv) (free (as in freedom) terminal media player)
+ * [mpv](https://github.com/mpv-player/mpv) (free terminal media player)
 
 Editors
  * [Audacity](https://github.com/audacity/audacity) (easy-to-use, multi-track audio editor)
@@ -22,8 +22,8 @@ Editors
 
 Onlineness
  * [Gnome-secrets](https://gitlab.gnome.org/World/secrets) (Gnome's GTK password manager using the KeePass v.4 format)
- * [Thunderbird](https://www.thunderbird.net/en-US/) (privacy focused open source email client)
- * [Firefox](https://github.com/mozilla-firefox/firefox) (fast privacy focused web browser)
+ * [Thunderbird](https://www.thunderbird.net/en-US/) (privacy focused open source email client from Mozilla)
+ * [Firefox](https://github.com/mozilla-firefox/firefox) (Mozilla's web browser)
 
 Just for fun
  * [Hypnotix](https://github.com/linuxmint/hypnotix) (IPTV streaming application with support for live TV, movies and series)
