@@ -1,8 +1,6 @@
-{ config, pkgs, ... }:
+{ config, pkgs, variables, ... }:
 
 let
-
-variables = import ../../hosts/variables.nix;
 
 #define a list with either one item ./nvidia.nix or no item
 nvidia_import = if variables.use_nvidia then

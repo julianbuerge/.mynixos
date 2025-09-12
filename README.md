@@ -9,11 +9,19 @@ The heart piece of my workflow is kitty (terminal) with neovim (text editor) for
 ## Usage
 
 ### Setup
-Assuming you are on a computer with NixOS and with git installed, clone this repository to `$HOME/.mynixos`. Navigate into it. You will need to adjust some things in `hosts`.
- * Go to `hosts/variables.nix` and set your hostname, name, username, git username and email, and whether or not you use an nvidia GPU.
- * Create a directory `hosts/hostname` where `hostname` is the same as the one you just set.
- * Copy `/etc/nixos/hardware-configuration.nix` into `hosts/hostname`.
- * Create `hosts/filesystems.nix` (or copy one from the other hosts). There you can specify what additional drives should get mounted automatically at startup. If you don't want this you can make the output be only `{ }` with nothing in it.
+Assuming you are on a computer with NixOS and with git installed, clone this repository to `$HOME/.mynixos`. Navigate into it. You will need to create a new directory in `hosts` which specifies things specific to your machine (i.e. your host).
+ * Create a directory `hosts/hostname` where `hostname` is the name you want your machine to have. You will need to put all the same files that the other hosts have into that directory
+    ** `host.nix` can be copied over from any of the other hosts. No changes needed here.
+    ** `variables.nix` can be copied over from any of the other hosts. Adapt username, git username and email, and whether or not you use an nvidia GPU.
+    ** `hardware-configuration.nix` should be copied over from `/etc/nixos/hardware-configuration.nix`, which is the hardware configuration that NixOS automatically created during install. 
+    ** `filesystems.nix` can be copied over from any of the other hosts. There you can specify what additional drives should get mounted automatically at startup. If you don't want this you can make the output be only `{ }` with nothing in it.
+With the new host ready we need to tell the system flake `flake.nix` and the home-manager flake `home/flake.nix` about it.
+ * In `flake.nix` add a new line 
+ ```
+ examplehostname = setup "examplehostname" 
+ ```
+ to `nixosConfiguration`.
+ * In `home/flake.nix` find the variable `hostname = "..."` and simply change it to `hostname = "examplehostname"`.
 
 After having completed these steps stash all the changes with `git add *`. Now you are ready to rebuild the system. Do
 ```

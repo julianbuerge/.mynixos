@@ -27,9 +27,11 @@
 	size = 18;
     };
 
+    #make sure that the font gets installed in ./fonts.nix
+    #list available families with fc-list : family | sort -u
     font = {
-        name = "DejaVu Sans";
-        size = 14;
+        name = "STIX Two Math";
+        size = 12;
     };
   };
 

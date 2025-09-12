@@ -1,18 +1,12 @@
-{ config, pkgs, ... }:
+{ config, pkgs, variables, ... }:
 
-let
-
-variables = import ../../../hosts/variables.nix;
-name = variables.gitusername;
-email = variables.gitemail;
-
-in {
+{
 
   #configure git in the nix language
   programs.git = {
     enable = true;
-    userName = name;
-    userEmail = email;
+    userName = variables.gitusername;
+    userEmail = variables.gitemail;
     
     extraConfig = {
 	core.editor = "nvim";

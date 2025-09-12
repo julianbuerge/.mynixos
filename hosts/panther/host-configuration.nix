@@ -3,17 +3,14 @@
 let
 
 variables = import ./variables.nix;
-
 inherit (variables) hostname realname username;
-
-hostfile_path = hostfile_name : ./${hostname} + "/${hostfile_name}";
 
 in {
 
 
   imports = [
-    (hostfile_path "hardware-configuration.nix")
-    (hostfile_path "filesystems.nix")
+    ./hardware-configuration.nix
+    ./filesystems.nix
   ];
 
   networking.hostName = hostname;

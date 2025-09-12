@@ -15,12 +15,14 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-      
-      variables = import ../hosts/variables.nix;
-      username = variables.username;
+    
+      #set host name here!  
+      hostname = "xenia";       #this could perhaps be soft coded with builints.readDir and then passing the hostname in the switch command but very unsure about this
+
+      variables = import ../hosts/${hostname}/variables.nix;
    in
     {
-      homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations.${variables.username} = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
         modules = [
@@ -31,7 +33,7 @@
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
         extraSpecialArgs = {
-            inherit username;
+            inherit variables;
         };
       };
     };

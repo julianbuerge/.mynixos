@@ -26,6 +26,13 @@
 	package = pkgs.bibata-cursors;
 	size = 24;
     };
+
+    #make sure that the font gets installed in ./fonts.nix
+    #list available families with fc-list : family | sort -u
+    font = {
+        name = "STIX Two Math";
+        size = 14;
+    };
   };
 
 }

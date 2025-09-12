@@ -1,4 +1,4 @@
-{ config, pkgs, username, ... }:
+{ config, pkgs, variables, ... }:
 
 let 
 
@@ -9,17 +9,15 @@ rice = "fractal-rice";
 dotfile_path = dotfile_name : ./dotfiles/${rice} + "/${dotfile_name}";
 
 
-variables = import ../hosts/variables.nix;
-
+#look at use_nvidia (boolean) to install the right mpv config
 mpv_config_path = if variables.use_nvidia then
     ./dotfiles/shared/mpv-nvidia.conf else
     ./dotfiles/shared/mpv-cpu.conf;
 
-
 in
 {
-  home.username = username;
-  home.homeDirectory = "/home/${username}";
+  home.username = variables.username;
+  home.homeDirectory = "/home/${variables.username}";
 
   #initially installed version. helps the system from ever breaking. never change it.
   home.stateVersion = "25.05";
@@ -32,17 +30,17 @@ in
     ./dotfiles/shared/firefox-bookmarks.nix
 
     #rice specific modules
+    (dotfile_path "fonts.nix")
     (dotfile_path "gtk.nix")
     (dotfile_path "nvf-theme.nix")
   ];
 
+  #source the config files that we have in the original format
+  # (so that we could use a different OS and package manager in the future)
   home.file = {
 
-    #source the config files that we have in the original format
-    #(so that we could use a different OS and package manager in the future)
-    
     #shared #shared base functionality
-    ".config/mpv/mpv.conf".source = mpv_config_path;  #edit to make sure mpv uses nvidia for decoding (or does not)
+    ".config/mpv/mpv.conf".source = mpv_config_path;
     ".config/yazi/yazi.toml".source = ./dotfiles/shared/yazi.toml;
     ".config/yazi/keymap.toml".source = ./dotfiles/shared/yazi-keymap.toml;
 
