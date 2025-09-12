@@ -8,20 +8,19 @@ Base environment
  * [wofi](https://github.com/SimplyCEO/wofi) (app launcher for wayland).
 
 Heart piece of my workflow for programming and creating documents with LaTeX.
- 
  * [kitty](https://sw.kovidgoyal.net/kitty/) (fast feature-rich GPU based terminal) 
  * [neovim](https://github.com/neovim/neovim) (terminal based highly configurable text editor)
 
-Basic gui apps
-
+Basic apps
  * Yazi
  * Zathura
  * mpv
+
+Editors
  * Audacity
  * GIMP
 
 Onlineness
-
  * Gnome-secrets
  * Thunderbird
  * Firefox
