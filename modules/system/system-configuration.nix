@@ -18,7 +18,6 @@ in {
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  #networking.wireless.enable = true; 
   networking.firewall.enable = true;
   networking.networkmanager.enable = true;
 

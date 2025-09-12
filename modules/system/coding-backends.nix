@@ -8,7 +8,7 @@
 	cmake
 	gnumake
 	ninja
-	python3Full
+	python314
 	texliveFull
 	lua
 	julia
