@@ -99,5 +99,5 @@ There are different looks available for the same set of programs. One can switch
 ### Fractal Rice
 This is my main rice. I've create the fractal background images myself. The kitty window logo image is attributed to [Octopus Png PNGs by Vecteezy](https://www.vecteezy.com/free-png/octopus-png) with some color adjustments.
 
-### Laptop Rice
-Currently the same as the fractal rice with some adapted scaling to fit a smaller screen (resolution).
+### City Rice
+Work in progress.

@@ -7,7 +7,7 @@ username = "dominik";
 
 use_nvidia = true;
 
-rice = "laptop-rice";
+rice = "city-rice";
 
 gitusername = "julianbuerge";
 gitemail = "julian.buerge@alumni.ethz.ch";

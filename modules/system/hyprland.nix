@@ -18,6 +18,7 @@
 		waybar
 		wofi
 		swww
+                mpvpaper
 		dunst
 	];
 }
