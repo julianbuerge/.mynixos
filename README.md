@@ -6,6 +6,9 @@ Base environment
  * [Hyprland](https://github.com/hyprwm/Hyprland) (highly customizable dynamic tiling window manager with GPU rendering with the latest wayland features) 
  * [Waybar](https://github.com/Alexays/Waybar) (status bar for wayland)
  * [wofi](https://github.com/SimplyCEO/wofi) (app launcher for wayland).
+ * [swww](https://github.com/LGFae/swww) (efficient animated wallpaper daemon for wayland)
+ * [mpvpaper](https://github.com/GhostNaN/mpvpaper) (wayland video wallpaper program based on mpv)
+ * [dunst](https://github.com/dunst-project/dunst) (lightweight notification daemon for wayland)
 
 Heart piece of my workflow for programming and creating documents with LaTeX.
  * [kitty](https://sw.kovidgoyal.net/kitty/) (fast feature-rich GPU based terminal) 
