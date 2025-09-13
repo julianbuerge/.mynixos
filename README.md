@@ -15,7 +15,7 @@ Heart piece of my workflow for programming and creating documents with LaTeX.
  * [neovim](https://github.com/neovim/neovim) (terminal based highly configurable text editor)
 
 Basic apps
- * [Yazi](https://github.com/sxyazi/yazi) (blazing fast terminal file manager)
+ * [Yazi](https://github.com/sxyazi/yazi) (blazingly fast terminal file manager)
  * [zathura](https://github.com/pwmt/zathura) (functional document viewer with an extremely minimal design) 
  * [mpv](https://github.com/mpv-player/mpv) (free terminal media player)
 
