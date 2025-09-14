@@ -32,8 +32,8 @@
         "states": {
             "warning": 30,
         },
-        "format": "{icon} {capacity}",
-        "format-full": "{icon} {capacity}",
+        "format": "{icon}  {capacity}",
+        "format-full": "{icon}  {capacity}",
         "format-charging": "󰂇  {capacity}",
         "format-plugged": "󰚥 {capacity}",
         "format-icons": [" ", " ", " ", " ", " "]
@@ -44,14 +44,14 @@
         "format-disconnected": " ",
     },
     "pulseaudio": {
-        "format": "󰕾 {volume}",
+        "format": "󰕾  {volume}",
         "format-muted": "󰝟 ",
         "on-click": "$HOME/.mynixos/home/dotfiles/shared/scripts/audio-ctrl.sh",
     	"on-click-right": "$HOME/.mynixos/home/dotfiles/shared/scripts/audio-ctrl.sh",
     },
 
     "clock": {
-    	"format": " {:%d 󰥔  %H:%M}"
+    	"format": " {:%d  󰥔  %H:%M}"
     }
 
 }
