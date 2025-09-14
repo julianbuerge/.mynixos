@@ -19,7 +19,7 @@ light = ""
 # : Manager {{{
 
 [mgr]
-cwd = { fg = "#404040" }
+cwd = { fg = "#a0a0a0" }
 
 # Hovered
 hovered         = { reversed = true }
@@ -249,8 +249,7 @@ rules = [
 	{ name = "*/", is = "dummy", bg = "#ff0059" },
 
 	# Fallback
-	# { name = "*", fg = "white" },
-	{ name = "*/", fg = "#4574d0", bg = "black" }
+	{ name = "*/", fg = "#dddddd", bg = "black" }
 ]
 
 # : }}}

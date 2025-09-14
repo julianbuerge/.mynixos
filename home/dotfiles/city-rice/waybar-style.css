@@ -1,5 +1,5 @@
 @define-color whitemain #eeeeee;
-@define-color bluemain rgba(30, 50, 90, 0.6);
+@define-color bluemain rgba(30, 50, 90, 0.8);
 
 
 
@@ -14,7 +14,7 @@
 
 /* Waybar background */
 window#waybar {
-    background-color: rgba(0, 0, 0, 0.4); 
+    background-color: rgba(0, 0, 0, 0.0); 
     color: @whitemain;
 }
 
@@ -29,6 +29,10 @@ window#waybar {
     border-color: rgba(0, 0, 0, 0);
     border-bottom: 3px solid @bluemain;
     
+}
+
+#clock {
+    background-color: @bluemain;
 }
 
 button {

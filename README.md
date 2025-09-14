@@ -37,11 +37,12 @@ Just for fun
 ### Setup
 Assuming you are on a computer with NixOS and with git installed, clone this repository to `$HOME/.mynixos`. Navigate into it. You will need adapt the configuration to use your computer as a new host, both on for the system and home-manager flake. 
 
-First on a system level. Create a directory `hosts/examplehostname` where `examplehostname` is the name you want your machine to have. You will need to put all the same files that the other hosts have into that directory:
- 1. `host-configuration.nix` can be copied over from any of the other hosts. No changes needed here.
- 2. `variables.nix` can be copied over from any of the other hosts. Adapt host- and username, git username and email, and whether or not you use an nvidia GPU. You can also choose which rice you want to use (has to be any of `home/dotfiles/rice-folder`).
- 3. `hardware-configuration.nix` should be copied over from `/etc/nixos/hardware-configuration.nix`, which is the hardware configuration that NixOS automatically created during install. 
- 4. `filesystems.nix` can be copied over from any of the other hosts. There you can specify what additional drives should get mounted automatically at startup. If you don't want this you can make the output be only `{ }` with nothing in it.
+First on a system level. Copy the directory `hosts/template` to `hosts/examplehostname` where `examplehostname` is the name you want your machine to have. You will need edit some of the files and add a new one:
+ 1. Copy `/etc/nixos/hardware-configuration.nix` into the directory. This is the hardware configuration that NixOS automatically created during install and is unique to your machine. 
+ 2. Edit `variables.nix` by setting the setting all the variables (hostname, username, use_nvidia, ...).
+ 3. OPTIONALLY edit `filesystems.nix` by uncommenting the code and specifying what additional drives should get mounted automatically at startup.
+ 4. OPTIONALLY add something to `additional-configuration.nix` (it's empty by default).
+ 5. OPTIONALLY add packages to `additional-packages.nix` (none by default).
 
 With the new host ready you need to tell the system flake `flake.nix` about it. In `flake.nix` add a new line to `nixosConfiguration`:
 ```
