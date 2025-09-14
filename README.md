@@ -51,7 +51,7 @@ examplehostname = setup "examplehostname";
 
 Now for the home-manager. Create a directory `home/hosts/examplehostname`. Then
  1. Copy the `flake.nix` and `flake.lock` from any other `home/hosts/otherhostname` into it 
- 2. Find the variable `hostname = "otherhostname"` and change it to `hostname = "examplehostname"`.
+ 2. In `home/hosts/examplehostname/flake.nix` find the variable `hostname = "otherhostname"` and change it to `hostname = "examplehostname"`.
 
 After having completed these steps stash all the changes with `git add *`. Now you are ready to rebuild the system. Do
 ```
