@@ -3,9 +3,9 @@ require('coal').setup({
     colors = {
         -- these are all defined colors
         smoky_black = '#000000',
-        eerie_black = '#000000',      --'#1A1A1A',
+        eerie_black = '#1A1A1A',
         raisin_black = '#262626',
-        dark_charcoal = '#303030',    -- this changes the inactive line numbers, active line background
+        dark_charcoal = '#000000',    -- this changes the inactive line numbers, active line background
         gray = "#A5A5A5",             --'#7E7E7E', active line number, operators, delimiters, comments
         quick_silver = '#A5A5A5',     --this seems to be key words
         chinese_silver = '#CCCCCC',   -- this seems to be basic text
@@ -17,8 +17,8 @@ require('coal').setup({
 
 -- -----------------------------------------------------------------------------
 -- Spell checking
-vim.api.nvim_set_hl(0, "SpellBad", { undercurl = true, sp = "#FF99FF" })
-vim.api.nvim_set_hl(0, "SpellCap", { undercurl = true, sp = "#FF99FF" })
+vim.api.nvim_set_hl(0, "SpellBad", { undercurl = true, sp = "#FF0059" })
+vim.api.nvim_set_hl(0, "SpellCap", { undercurl = true, sp = "#FF0059" })
 vim.api.nvim_set_hl(0, "SpellRare", { undercurl = true, sp = "#FFFFE0" })
 vim.api.nvim_set_hl(0, "SpellLocal", { undercurl = true, sp = "#FFFFE0" })
 
@@ -28,25 +28,19 @@ vim.api.nvim_set_hl(0, "SpellLocal", { undercurl = true, sp = "#FFFFE0" })
 -- -----------------------------------------------------------------------------
 -- Code highlighting customizations
 local black = "#000000"
-local strong1 = "#FF40FF"
-local weak1 = "#B46FFF"
+local strong1 = "#4beed0"
+local weak1 = "#4b9eff"
 
 -- keywords
 vim.api.nvim_set_hl(0, "@keyword", { fg = black, bg = weak1, bold = true, italic = true })
 
--- strings
--- vim.api.nvim_set_hl(0, "@string", { fg = black, bg = strong1 })
--- vim.api.nvim_set_hl(0, "@character", { fg = strong1 })
-
 -- methods
-vim.api.nvim_set_hl(0, "@function", { fg = weak1, bold = true })
-vim.api.nvim_set_hl(0, "@constructor", { fg = weak1, bold = true })
+vim.api.nvim_set_hl(0, "@function", { fg = strong1, bold = true })
+vim.api.nvim_set_hl(0, "@constructor", { fg = strong1, bold = true })
 vim.api.nvim_set_hl(0, "@type.python", { fg = weak1, bold = true })
 
--- punctuation
--- vim.api.nvim_set_hl(0, "@punctuation.bracket", { bg = "#7E7E7E", fg = black, bold = true })
--- vim.api.nvim_set_hl(0, "@punctuation.special", { bg = "#7E7E7E", fg = black, bold = true })
-vim.api.nvim_set_hl(0, "@comment", { fg = "#505050" })
+-- comments
+vim.api.nvim_set_hl(0, "@comment", { fg = "#a0a0a0" })
 
 
 -- ---------------------------------------------------------------------------

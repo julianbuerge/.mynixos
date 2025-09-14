@@ -1,4 +1,4 @@
-@define-color bgc rgba(30, 50, 90, 0.4);
+@define-color bgc rgba(30, 50, 90, 0.6);
 @define-color whitemain #eeeeee;
 
 * {
@@ -15,44 +15,35 @@ window {
 
 #input {
     margin: 2px;
-    border: 1px solid @whitemain;
-    border-radius : 5px;
     color: @whitemain;
     font-size : 14px;
-    background-color : @bgc;
 }
 
 #input image {
     margin : 2px;
     color: @whitemain;
-    background-color : @bgc;
 }
 
 #inner-box {
     margin: 10px;
     border: none;
-    background-color : @bgc;
 }
 
 #outer-box {
     margin: 0px;
     border: none;
     border-radius: 10px;
-    border: 2px solid @whitemain;
-    background-color : @bgc;
 }
 
 #scroll {
     margin: 0px;
     border: none;
-    background-color : @bgc;
 }
 
 #text {
     margin: 5px;
     border: none;
     color: @whitemain;
-    background-color : @bgc;
 }
 
 #entry:selected {

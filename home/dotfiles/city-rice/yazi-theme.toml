@@ -26,8 +26,8 @@ hovered         = { reversed = true }
 preview_hovered = { underline = true }
 
 # Find
-find_keyword  = { fg = "#aa00ff", bold = true, italic = true, underline = true }
-find_position = { fg = "magenta", bg = "reset", bold = true, italic = true }
+find_keyword  = { fg = "#4574d0", bold = true, italic = true, underline = true }
+find_position = { fg = "#eeeeee", bg = "reset", bold = true, italic = true }
 
 # Symlink
 symlink_target = { italic = true }
@@ -41,7 +41,7 @@ marker_selected = { fg = "lightyellow", bg = "lightyellow" }
 # Count
 count_copied   = { fg = "white", bg = "#22bb66" }
 count_cut      = { fg = "white", bg = "#ff0059" }
-count_selected = { fg = "white", bg = "#6a25c2" }
+count_selected = { fg = "white", bg = "#4574d0" }
 
 # Border
 border_symbol = "│"
@@ -56,8 +56,8 @@ syntect_theme = ""
 # : Tabs {{{
 
 [tabs]
-active   = { bg = "#7a00ff", bold = true }
-inactive = { fg = "#7a00ff", bg = "gray" }
+active   = { bg = "#4574d0", bold = true }
+inactive = { fg = "#4574d0", bg = "gray" }
 
 # Separator
 sep_inner = { open = "", close = "" }
@@ -70,8 +70,8 @@ sep_outer = { open = "", close = "" }
 
 [mode]
 #these here color the bottom pills
-normal_main = { fg = "black", bg = "#7a00ff", bold = true }
-normal_alt  = { fg = "#7a00ff", bg = "#151515" }
+normal_main = { fg = "black", bg = "#4574d0", bold = true }
+normal_alt  = { fg = "#4574d0", bg = "#151515" }
 
 # Select mode
 select_main = { bg = "#ff0059", bold = true }
@@ -94,14 +94,14 @@ sep_right  = { open = "", close = "" }
 # Permissions
 perm_sep   = { fg = "darkgray" }
 perm_type  = { fg = "#22bb66"}
-perm_read  = { fg = "#6a25c2" }
+perm_read  = { fg = "#4574d0" }
 perm_write = { fg = "#ff0059" }
-perm_exec  = { fg = "#ff00ff" }
+perm_exec  = { fg = "#eeeeee" }
 
 
 # Progress
 progress_label  = { bold = true }
-progress_normal = { fg = "#ff00ff", bg = "black" }
+progress_normal = { fg = "#eeeeee", bg = "black" }
 progress_error  = { fg = "#ff0059", bg = "black" }
 
 # : }}}
@@ -124,8 +124,8 @@ separator_style = { fg = "darkgray" }
 # : Confirmation {{{
 
 [confirm]
-border     = { fg = "#7a00ff" }
-title      = { fg = "#7a00ff" }
+border     = { fg = "#4574d0" }
+title      = { fg = "#4574d0" }
 content    = {}
 list       = {}
 btn_yes    = { reversed = true }
@@ -138,12 +138,12 @@ btn_labels = [ "  [Y]es  ", "  (N)o  " ]
 # : Spotter {{{
 
 [spot]
-border = { fg = "#7a00ff" }
-title  = { fg = "#7a00ff" }
+border = { fg = "#4574d0" }
+title  = { fg = "#4574d0" }
 
 # Table
-tbl_col  = { fg = "#7a00ff" }
-tbl_cell = { fg = "#6a25c2", reversed = true }
+tbl_col  = { fg = "#4574d0" }
+tbl_cell = { fg = "#4574d0", reversed = true }
 
 # : }}}
 
@@ -152,7 +152,7 @@ tbl_cell = { fg = "#6a25c2", reversed = true }
 
 [notify]
 title_info  = { fg = "#22bb66" }
-title_warn  = { fg = "#6a25c2" }
+title_warn  = { fg = "#4574d0" }
 title_error = { fg = "#ff0059" }
 
 # Icons
@@ -166,8 +166,8 @@ icon_error = ""
 # : Picker {{{
 
 [pick]
-border   = { fg = "#7a00ff" }
-active   = { fg = "magenta", bold = true }
+border   = { fg = "#4574d0" }
+active   = { fg = "#eeeeee", bold = true }
 inactive = {}
 
 # : }}}
@@ -176,7 +176,7 @@ inactive = {}
 # : Input {{{
 
 [input]
-border   = { fg = "#7a00ff" }
+border   = { fg = "#4574d0" }
 title    = {}
 value    = {}
 selected = { reversed = true }
@@ -187,7 +187,7 @@ selected = { reversed = true }
 # : Completion {{{
 
 [cmp]
-border   = { fg = "#7a00ff" }
+border   = { fg = "#4574d0" }
 active   = { reversed = true }
 inactive = {}
 
@@ -202,9 +202,9 @@ icon_command = ""
 # : Task manager {{{
 
 [tasks]
-border  = { fg = "#7a00ff" }
+border  = { fg = "#4574d0" }
 title   = {}
-hovered = { fg = "magenta", underline = true }
+hovered = { fg = "#eeeeee", underline = true }
 
 # : }}}
 
@@ -212,8 +212,8 @@ hovered = { fg = "magenta", underline = true }
 # : Help menu {{{
 
 [help]
-on      = { fg = "#ff00ff" }
-run     = { fg = "magenta" }
+on      = { fg = "#eeeeee" }
+run     = { fg = "#eeeeee" }
 desc    = {}
 hovered = { reversed = true, bold = true }
 footer  = { fg = "#303030", bg = "black" }
@@ -226,16 +226,16 @@ footer  = { fg = "#303030", bg = "black" }
 [filetype]
 rules = [
 	# Images
-	{ mime = "image/*", fg = "#6a25c2" },
+	{ mime = "image/*", fg = "#4574d0" },
 
 	# Media
-	{ mime = "{audio,video}/*", fg = "magenta" },
+	{ mime = "{audio,video}/*", fg = "#eeeeee" },
 
 	# Archives
 	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#ff0059" },
 
 	# Documents
-	{ mime = "application/{pdf,doc,rtf}", fg = "#ff00ff" },
+	{ mime = "application/{pdf,doc,rtf}", fg = "#eeeeee" },
 
 	# Empty files
 	# { mime = "inode/empty", fg = "#ff0059" },
@@ -250,7 +250,7 @@ rules = [
 
 	# Fallback
 	# { name = "*", fg = "white" },
-	{ name = "*/", fg = "#7a00ff", bg = "black" }
+	{ name = "*/", fg = "#4574d0", bg = "black" }
 ]
 
 # : }}}
@@ -731,8 +731,8 @@ exts = [
 	{ name = "mobi", text = "", fg = "#eab16d" },
 	{ name = "mojo", text = "", fg = "#ff4c1f" },
 	{ name = "mov", text = "", fg = "#fd971f" },
-	{ name = "mp3", text = "", fg = "#df00ff" },
-	{ name = "mp4", text = "", fg = "#df00ff" },
+	{ name = "mp3", text = "", fg = "#4574d0" },
+	{ name = "mp4", text = "", fg = "#4574d0" },
 	{ name = "mpp", text = "", fg = "#519aba" },
 	{ name = "msf", text = "", fg = "#137be1" },
 	{ name = "mts", text = "", fg = "#519aba" },
