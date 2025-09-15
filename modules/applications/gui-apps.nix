@@ -5,12 +5,9 @@
     gnome-secrets
     mpv #media player, audio, pictures and videos
     ffmpegthumbnailer # creates video thumbnails
-    gimp3
     zathura
     thunderbird
     firefox
-    hypnotix
-    audacity
  ];
 
  #this may cause trouble on a different OS, but I don't want to put it into a different file either

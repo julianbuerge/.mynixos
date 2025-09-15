@@ -47,6 +47,33 @@
 	Type=Application
 	Exec=nvim
     '';
+    ".local/share/applications/org.gnome.World.Secrets.desktop".text = ''
+	[Desktop Entry]
+	Name=Secrets
+	Comment=A password manager for GNOME
+        Icon=org.gnome.World.Secrets
+        Exec=secrets %F
+        Terminal=false
+        Type=Application
+        Categories=Utility;GTK;GNOME;
+        MimeType=application/x-keepass2;
+        Keywords=keepass;encrypt;secure;
+        X-Purism-FormFactor=Workstation;Mobile;
+    '';
+
+    ".local/share/applications/steam.desktop".text = ''
+        [Desktop Entry]
+        Name=Steam
+        Comment=Application for managing and playing games on Steam
+        Exec=steam %U
+        Icon=steam
+        Terminal=false
+        Type=Application
+        Categories=Network;FileTransfer;Game;
+        MimeType=x-scheme-handler/steam;x-scheme-handler/steamlink;
+        PrefersNonDefaultGPU=true
+    '';
+ 
     ".local/share/applications/firefox.desktop".text = ''
 	[Desktop Entry]
 	Categories=Network;WebBrowser

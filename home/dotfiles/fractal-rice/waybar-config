@@ -32,7 +32,7 @@
     },
 
     "pulseaudio": {
-        "format": "𝑢ₜₜ = 𝑐²𝛻²𝑢,  𝐴 = 0.{volume}",
+        "format": "𝑢ₜₜ = 𝑐²𝛻²𝑢,  𝐴 = {volume}",
         "format-muted": "𝑢 ≡ 0",
         "on-click": "$HOME/.mynixos/home/dotfiles/shared/scripts/audio-ctrl.sh",
     	"on-click-right": "$HOME/.mynixos/home/dotfiles/shared/scripts/audio-ctrl.sh",

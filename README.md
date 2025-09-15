@@ -20,6 +20,7 @@ Basic apps
  * [mpv](https://github.com/mpv-player/mpv) (free terminal media player)
 
 Editors
+These are installed as additional packages for some hosts.
  * [Audacity](https://github.com/audacity/audacity) (easy-to-use, multi-track audio editor)
  * [GIMP](https://www.gimp.org/) (cross-platform image editor)
 
@@ -29,6 +30,7 @@ Onlineness
  * [Firefox](https://github.com/mozilla-firefox/firefox) (Mozilla's web browser)
 
 Just for fun
+These are installed as additional packages for some hosts.
  * [Hypnotix](https://github.com/linuxmint/hypnotix) (IPTV streaming application with support for live TV, movies and series)
 
 

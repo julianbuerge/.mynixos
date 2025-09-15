@@ -11,6 +11,7 @@ in {
   imports = [
     ./hardware-configuration.nix
     ./filesystems.nix
+    ./additional-packages.nix
   ];
 
   networking.hostName = hostname;

@@ -28,6 +28,7 @@
     '';
     shellAliases = {
 	mpvi = "mpv --image-display-duration=inf";
+        calc = "nix repl";
 	tree1 = "tree -L 1";
 	tree2 = "tree -L 2";
 	tree3 = "tree -L 3";
