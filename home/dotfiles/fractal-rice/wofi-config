@@ -4,7 +4,7 @@ location=center
 width=700
 lines=7
 columns=2
-dynamic_lines=true
+dynamic_lines=false
 
 # icons
 allow_images=true

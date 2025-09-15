@@ -1,41 +1,47 @@
-@define-color strongaccent #ff00ff;
-@define-color weakaccent #7a00ff;
+@define-color bgc rgba(0, 0, 0, 0.99); /*for some reason the rounded corners are glitchy if a=1)*/
+@define-color whitemain #ffffff;
 
-@define-color bgc #000000;
-@define-color white #ffffff;
+@define-color strong rgba(255, 0, 255, 0.99);
 
 * {
     all : initial;
-    font-size : 16px;
+    font-size : 19px;
     font-weight : normal;
 }
 
 window {
     margin: 0px;
-    border: 2px solid @weakaccent;
     border-radius: 10px;
-    background-color: @bgc;
+    border: 3px solid;
+    border-color: @strong;
+    background-color : @bgc;
 }
 
 #input {
     margin: 2px;
-    border: 1px solid @weakaccent;
-    border-radius : 5px;
-    color: @white;
-    font-size : 14px;
+    color: @whitemain;
+    font-size: 17px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
 }
 
 #input image {
-    color: @white;
+    margin : 2px;
+    color: @whitemain;
 }
 
 #inner-box {
-    margin: 10px;
+    margin: 0px;
     border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 10px;
 }
 
 #outer-box {
-    margin: 5px;
+    margin: 0px;
     border: none;
     border-radius: 10px;
 }
@@ -48,15 +54,15 @@ window {
 #text {
     margin: 5px;
     border: none;
-    color: @white;
+    color: @whitemain;
 }
 
 #entry:selected {
     border-radius : 10px;
-    background-color: @strongaccent;
+    background-color:@strong;
 }
 
 #text:selected {
-    background-color: @strongaccent;
+    background-color: @strong;
     color : #000000;
 }
