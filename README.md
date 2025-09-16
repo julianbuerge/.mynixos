@@ -1,8 +1,8 @@
 # My NixOS
 This is my personal NixOS setup as a Nix project which by its fully declarative nature makes the setup trivially reproducible.
 
-## Build overview
-Base environment 
+## Overview
+Base environment:
  * [Hyprland](https://github.com/hyprwm/Hyprland) (highly customizable dynamic tiling window manager with GPU rendering with the latest wayland features) 
  * [Waybar](https://github.com/Alexays/Waybar) (status bar for wayland)
  * [wofi](https://github.com/SimplyCEO/wofi) (app launcher for wayland).
@@ -10,17 +10,16 @@ Base environment
  * [mpvpaper](https://github.com/GhostNaN/mpvpaper) (wayland video wallpaper program based on mpv)
  * [dunst](https://github.com/dunst-project/dunst) (lightweight notification daemon for wayland)
 
-Heart piece of my workflow for programming and creating documents with LaTeX.
+The heart piece of my workflow for programming and creating documents with LaTeX:
  * [kitty](https://sw.kovidgoyal.net/kitty/) (fast feature-rich GPU based terminal) 
  * [neovim](https://github.com/neovim/neovim) (terminal based highly configurable text editor)
 
-Basic apps
+Basic apps:
  * [Yazi](https://github.com/sxyazi/yazi) (blazingly fast terminal file manager)
  * [zathura](https://github.com/pwmt/zathura) (functional document viewer with an extremely minimal design) 
  * [mpv](https://github.com/mpv-player/mpv) (free terminal media player)
 
-Editors
-These are installed as additional packages for some hosts.
+Editors (These are installed as additional packages for some hosts):
  * [Audacity](https://github.com/audacity/audacity) (easy-to-use, multi-track audio editor)
  * [GIMP](https://www.gimp.org/) (cross-platform image editor)
 
@@ -29,21 +28,20 @@ Onlineness
  * [Thunderbird](https://www.thunderbird.net/en-US/) (privacy focused open source email client from Mozilla)
  * [Firefox](https://github.com/mozilla-firefox/firefox) (Mozilla's web browser)
 
-Just for fun
-These are installed as additional packages for some hosts.
+Just for fun (These are installed as additional packages for some hosts):
  * [Hypnotix](https://github.com/linuxmint/hypnotix) (IPTV streaming application with support for live TV, movies and series)
-
+ * [Steam](https://store.steampowered.com) (gaming platform)
 
 ## Usage
 
 ### Setup
-Assuming you are on a computer with NixOS and with git installed, clone this repository to `$HOME/.mynixos`. Navigate into it. You will need adapt the configuration to use your computer as a new host, both on for the system and home-manager flake. 
+Assuming you are on a computer with NixOS and with git installed, clone this repository to `$HOME/.mynixos`. Navigate into it. You will need to adapt the configuration to use your computer as a new host, both for the system and home-manager flake. 
 
-First on a system level. Copy the directory `hosts/template` to `hosts/examplehostname` where `examplehostname` is the name you want your machine to have. You will need edit some of the files and add a new one:
+First on a system level. Copy the directory `hosts/template` to `hosts/examplehostname` where `examplehostname` is the name you want your machine to have. You will need edit one of the files and add a new one. Optionally you can edit several more files:
  1. Copy `/etc/nixos/hardware-configuration.nix` into the directory. This is the hardware configuration that NixOS automatically created during install and is unique to your machine. 
- 2. Edit `variables.nix` by setting the setting all the variables (hostname, username, use_nvidia, ...).
+ 2. Edit `variables.nix` by setting all the variables (hostname, username, use_nvidia, ...).
  3. OPTIONALLY edit `filesystems.nix` by uncommenting the code and specifying what additional drives should get mounted automatically at startup.
- 4. OPTIONALLY add something to `additional-configuration.nix` (it's empty by default).
+ 4. OPTIONALLY add something to `additional-configuration.nix` (none by default).
  5. OPTIONALLY add packages to `additional-packages.nix` (none by default).
 
 With the new host ready you need to tell the system flake `flake.nix` about it. In `flake.nix` add a new line to `nixosConfiguration`:
