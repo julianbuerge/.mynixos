@@ -12,6 +12,7 @@ in {
     ./hardware-configuration.nix
     ./filesystems.nix
     ./additional-packages.nix
+    ./additional-options.nix
   ];
 
   networking.hostName = hostname;
@@ -19,7 +20,7 @@ in {
   users.users.${username} = {
     isNormalUser = true;
     description = realname;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "cdrom" ];
     packages = with pkgs; [];
   };
 

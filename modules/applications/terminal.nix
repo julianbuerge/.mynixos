@@ -20,6 +20,7 @@
     playerctl
     grim
     slurp
+    ffmpeg
   ];
     
   #configure bash
@@ -31,8 +32,7 @@
     shellAliases = {
 	mpvi = "mpv --image-display-duration=inf";
         calc = "nix repl";
-        shotregion = ''grim -g "$(slurp)" "Data/Pictures/Geeky/Linux/$(date +%Yy%mm%dd_%Hh%Mm%Ss).png" '';
-        shot = ''grim "Data/Pictures/Geeky/Linux/$(date +%Yy%mm%dd_%Hh%Mm%Ss).png" '';
+        gpu = "watch -n 1 nvidia-smi";
 	tree1 = "tree -L 1";
 	tree2 = "tree -L 2";
 	tree3 = "tree -L 3";

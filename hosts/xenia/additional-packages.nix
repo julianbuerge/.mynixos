@@ -8,6 +8,7 @@
     audacity
     hypnotix
     steam
+    makemkv
   ];
 
 }
