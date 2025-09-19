@@ -20,7 +20,6 @@
     playerctl
     grim
     slurp
-    ffmpeg
   ];
     
   #configure bash

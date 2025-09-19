@@ -9,6 +9,8 @@
     hypnotix
     steam
     makemkv
+    handbrake
+    ffmpeg
   ];
 
 }
