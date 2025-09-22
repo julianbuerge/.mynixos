@@ -16,7 +16,7 @@ in {
 
   #import the base configuration that is shared between all rices
   imports = [
-    ../shared/nvf-base.nix
+    ../shared/neovim-nvf/nvf-base.nix
   ];
 
   #here we configure only the looks
