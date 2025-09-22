@@ -16,8 +16,6 @@
                            nixpkgs.lib.nixosSystem {
 		                modules = [
 		                    ./hosts/${hostname}/host-configuration.nix
-		                    ./modules/system/system-configuration.nix
-		                    ./modules/applications/application-configuration.nix
 		                ];
                            #this get passed to the modules above
                            specialArgs = { inherit variables; };

@@ -43,6 +43,7 @@ First on a system level. Copy the directory `hosts/template` to `hosts/exampleho
  3. OPTIONALLY edit `filesystems.nix` by uncommenting the code and specifying what additional drives should get mounted automatically at startup.
  4. OPTIONALLY add something to `additional-configuration.nix` (none by default).
  5. OPTIONALLY add packages to `additional-packages.nix` (none by default).
+ 6. OPTIONALLY modify the imports in `host-configuration.nix` (the setup is very modular, here is where you choose what modules will be installed. By default you can leave it as is).
 
 With the new host ready you need to tell the system flake `flake.nix` about it. In `flake.nix` add a new line to `nixosConfiguration`:
 ```

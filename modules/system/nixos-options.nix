@@ -11,8 +11,6 @@ in {
   imports =
     [ 
       ./fonts.nix
-      ./hyprland.nix
-      ./coding-backends.nix
     ] ++ nvidia_import;
 
   boot.loader.systemd-boot.enable = true;

@@ -2,9 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
-    home-manager #dotfile management package,
-    kitty #the terminal itself
     nh
+    home-manager
     bat
     git
     tealdeer
@@ -16,7 +15,6 @@
     fastfetch
     btop
     unzip
-    yazi
     playerctl
     grim
     slurp
@@ -39,10 +37,5 @@
 	matrix = "cmatrix -B -C magenta -u 3";
     };
   };
-
-  #install a nerd font to use in kitty (the kitty config sets it)
-  fonts.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-  ];
 
 }
