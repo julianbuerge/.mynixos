@@ -11,8 +11,8 @@ dotfile_path = dotfile_name : ./dotfiles/${rice} + "/${dotfile_name}";
 
 #look at use_nvidia (boolean) to install the right mpv config
 mpv_config_path = if variables.use_nvidia then
-    ./dotfiles/shared/mpv-nvidia.conf else
-    ./dotfiles/shared/mpv-cpu.conf;
+    ./dotfiles/shared/mpv/mpv-nvidia.conf else
+    ./dotfiles/shared/mpv/mpv-cpu.conf;
 
 in
 {
@@ -24,7 +24,7 @@ in
 
   imports = [
     #shared base functionality
-    ./dotfiles/shared/nvf-base.nix
+    ./dotfiles/shared/neovim-nvf/nvf-base.nix
     ./dotfiles/shared/git.nix
     ./dotfiles/shared/modify-desktop-entries.nix
     ./dotfiles/shared/firefox-bookmarks.nix
@@ -41,8 +41,8 @@ in
 
     #shared #shared base functionality
     ".config/mpv/mpv.conf".source = mpv_config_path;
-    ".config/yazi/yazi.toml".source = ./dotfiles/shared/yazi.toml;
-    ".config/yazi/keymap.toml".source = ./dotfiles/shared/yazi-keymap.toml;
+    ".config/yazi/yazi.toml".source = ./dotfiles/shared/yazi/yazi.toml;
+    ".config/yazi/keymap.toml".source = ./dotfiles/shared/yazi/yazi-keymap.toml;
 
     #rice specific dotfiles
     ".config/kitty/kitty.conf".source = (dotfile_path "kitty.conf");
