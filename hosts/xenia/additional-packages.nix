@@ -6,7 +6,6 @@
   environment.systemPackages = with pkgs; [
     gimp3
     audacity
-    hypnotix
     steam
     makemkv
     ffmpeg
