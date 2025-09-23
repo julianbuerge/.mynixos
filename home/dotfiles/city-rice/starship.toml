@@ -1,15 +1,14 @@
 add_newline = true
 
 format = """\
-[](fg:#1E325A bg:#000000)\
-[ ](fg:#000000 bg:#1E325A)\
+[](fg:#4B9EFF bg:#000000)\
+[ ](fg:#000000 bg:#4B9EFF)\
 $username\
 $directory\
-[](fg:#1E325A bg:#000000)\
-$git_branch\
-[](fg:#000000 bg:#4B9EFF)\
-$nix_shell\
 [](fg:#4B9EFF bg:#000000)\
+$git_branch\
+$nix_shell\
+[](fg:#4BEED0 bg:#000000)\
 $character\
 """
 
@@ -21,14 +20,14 @@ style_user = "bold fg:#4B9EFF bg:#000000"
 
 [directory]
 format = "[ $path ]($style)"
-style = "bold fg:#000000 bg:#1E325A"
+style = "bold fg:#000000 bg:#4B9EFF"
 truncation_length = 10
 read_only = " "
 
 [git_branch]
 format = '[ $symbol$branch(:$remote_branch) ]($style)'
 symbol = "  "
-style = "fg:#1E325A bg:#000000"
+style = "fg:#4B9EFF bg:#000000"
 
 [hg_branch]
 format = "[ $symbol$branch ]($style)"
@@ -36,7 +35,7 @@ symbol = " "
 
 [nix_shell]
 format = "[  $state nix-$name ]($style)"
-style = "bold fg:#000000 bg:#4B9EFF"
+style = "bold fg:#000000 bg:#4BEED0"
 
 [cmd_duration]
 format = "[  $duration ]($style)"
@@ -44,5 +43,5 @@ style = "fg:bright-white bg:18"
 
 [character]
 disabled = false
-success_symbol = '[](#1E325A) '
-error_symbol = '[](#1E325A) '
+success_symbol = '[](#4B9EFF) '
+error_symbol = '[](#4B9EFF) '
