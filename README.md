@@ -9,6 +9,7 @@ Base environment:
  * [swww](https://github.com/LGFae/swww) (efficient animated wallpaper daemon for wayland)
  * [mpvpaper](https://github.com/GhostNaN/mpvpaper) (wayland video wallpaper program based on mpv)
  * [dunst](https://github.com/dunst-project/dunst) (lightweight notification daemon for wayland)
+ * [starship](https://github.com/starship/starship) (minimal, blazing-fast, and infinitely customizable prompt for any shell)
 
 The heart piece of my workflow for programming and creating documents with LaTeX:
  * [kitty](https://sw.kovidgoyal.net/kitty/) (fast feature-rich GPU based terminal) 

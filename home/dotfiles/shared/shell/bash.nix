@@ -1,31 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    nh
-    home-manager
-    bat
-    git
-    tealdeer
-    cowsay
-    asciiquarium
-    sl
-    cmatrix
-    tree
-    fastfetch
-    btop
-    unzip
-    playerctl
-    grim
-    slurp
-  ];
-    
   #configure bash
   programs.bash = {
     enable = true;
-    promptInit = ''
-	PS1='\[\e[1m\]\$\[\e[0;38;5;99m\]\u\[\e[0m\] \[\e[30;48;5;99;1m\]\w\[\e[0m\] '
-    '';
     shellAliases = {
 	mpvi = "mpv --image-display-duration=inf";
         calc = "nix repl";
@@ -37,5 +15,4 @@
 	matrix = "cmatrix -B -C magenta -u 3";
     };
   };
-
 }

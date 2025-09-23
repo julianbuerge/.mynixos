@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./terminal-packages.nix
+    ./terminal-base.nix
   ];
 
   environment.systemPackages = with pkgs; [

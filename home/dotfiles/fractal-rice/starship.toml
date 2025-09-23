@@ -1,0 +1,48 @@
+add_newline = true
+
+format = """\
+[](fg:#835EEE bg:#000000)\
+[ ](fg:#000000 bg:#835EEE)\
+$username\
+$directory\
+[](fg:#835EEE bg:#000000)\
+$git_branch\
+[](fg:#000000 bg:#DD50EE)\
+$nix_shell\
+[](fg:#DD50EE bg:#000000)\
+$character\
+"""
+
+#I think showing it for root does not work, as we install starship in the userspace
+[username]
+format = "[ $user ]($style)"
+style_root = "bold fg:#FF0059 bg:#000000"
+style_user = "bold fg:#DD50EE bg:#000000"
+
+[directory]
+format = "[ $path ]($style)"
+style = "bold fg:#000000 bg:#835EEE"
+truncation_length = 10
+read_only = " "
+
+[git_branch]
+format = '[ $symbol$branch(:$remote_branch) ]($style)'
+symbol = "  "
+style = "fg:#835EEE bg:#000000"
+
+[hg_branch]
+format = "[ $symbol$branch ]($style)"
+symbol = " "
+
+[nix_shell]
+format = "[  $state nix-$name ]($style)"
+style = "bold fg:#000000 bg:#DD50EE"
+
+[cmd_duration]
+format = "[  $duration ]($style)"
+style = "fg:bright-white bg:18"
+
+[character]
+disabled = false
+success_symbol = '[](#835EEE) '
+error_symbol = '[](#835EEE) '

@@ -26,6 +26,8 @@ in
     #shared base functionality
     ./dotfiles/shared/neovim-nvf/nvf-base.nix
     ./dotfiles/shared/git.nix
+    ./dotfiles/shared/shell/bash.nix
+    ./dotfiles/shared/shell/starship.nix
     ./dotfiles/shared/modify-desktop-entries.nix
     ./dotfiles/shared/firefox-bookmarks.nix
 
@@ -46,6 +48,7 @@ in
 
     #rice specific dotfiles
     ".config/kitty/kitty.conf".source = (dotfile_path "kitty.conf");
+    ".config/starship.toml".source = (dotfile_path "starship.toml");
     ".config/waybar/config".source = (dotfile_path "waybar-config");
     ".config/waybar/style.css".source = (dotfile_path "waybar-style.css");
     ".config/hypr/hyprland.conf".source = (dotfile_path "hyprland.conf");
