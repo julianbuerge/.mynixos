@@ -18,7 +18,7 @@ in {
     ../../modules/system/nixos-options.nix
 
     #import the coding environments of choice
-    ../../modules/coding/coding-backends.nix
+    #../../modules/coding/coding-backends.nix
 
 
 
