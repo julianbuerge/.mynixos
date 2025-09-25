@@ -1,6 +1,10 @@
 # My NixOS
 This is my personal NixOS setup as a Nix project which by its fully declarative nature makes the setup trivially reproducible.
 
+<p align="center">
+    <img src="images/fractal-rice.png" alt="Screenshot" width=90%>
+</p>
+
 ## Overview
 Base environment:
  * [Hyprland](https://github.com/hyprwm/Hyprland) (highly customizable dynamic tiling window manager with GPU rendering with the latest wayland features) 
