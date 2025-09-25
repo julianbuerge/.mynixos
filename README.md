@@ -73,7 +73,7 @@ Monitor DP-2 (ID 0):
 	2560x1440@143.85600 at 0x0
     ...
 ```
-Go to `home/dotfiles/rice-folder/hyprland.conf` and put the name of your chosen monitor (in my example it is DP-2) into the line
+Go to `home/dotfiles/shared/Hyprland/hyprland-monitors.conf` and put the name of your chosen monitor (in my example it is DP-2) into the line
 ```
 #preliminaries
 monitor=DP-2,preferred,auto,1
