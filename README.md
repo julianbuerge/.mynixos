@@ -103,7 +103,10 @@ This will delete all previous versions except the N most recent.
 There are different looks available for the same set of programs. One can switch between looks by setting the relevant variable in `home.nix`.
 
 ### Fractal Rice
-This is my main rice. I've create the fractal background images myself. The kitty window logo image is attributed to [Octopus Png PNGs by Vecteezy](https://www.vecteezy.com/free-png/octopus-png) with some color adjustments.
+This is my main rice. It is themed around mathematics and scientific work, based on terminal, LaTeX and coding workflow. I've create the fractal background images myself. The kitty window logo image is attributed to [Octopus Png PNGs by Vecteezy](https://www.vecteezy.com/free-png/octopus-png) with some color adjustments.
+<p align="center">
+    <img src="images/fractal-rice.png" alt="Screenshot" width=90%>
+</p>
 
 ### City Rice
 Transparent style with soft blue ui and a animated city background. Since the background video is large it is not included in the repo but must be manually downloaded and placed at `home/hosts/dotfiles/city-rice/backgrounds/city.mp4`. I've used [this video](https://moewalls.com/lifestyle/japan-summer-train-live-wallpaper/).
