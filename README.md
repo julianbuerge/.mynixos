@@ -114,3 +114,7 @@ This is my main rice. It is themed around mathematics and scientific work, based
 
 ### City Rice
 Transparent style with soft blue ui and a animated city background. Since the background video is large it is not included in the repo but must be manually downloaded and placed at `home/hosts/dotfiles/city-rice/backgrounds/city.mp4`. I've used [this video](https://moewalls.com/lifestyle/japan-summer-train-live-wallpaper/).
+<p align="center">
+    <img src="images/city-rice.png" alt="Screenshot" width=90%>
+</p>
+
