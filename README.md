@@ -104,7 +104,7 @@ This will delete all previous versions except the N most recent.
 
 ## Rices
 
-There are different looks available for the same set of programs. One can switch between looks by setting the relevant variable in `home.nix`.
+There are different looks available for the same set of programs. One can switch between looks by setting the relevant variable in `hosts/hostname/variables.nix`.
 
 ### Fractal Rice
 This is my main rice. It is themed around mathematics and scientific work, based on terminal, LaTeX and coding workflow. I've create the fractal background images myself. The kitty window logo image is attributed to [Octopus Png PNGs by Vecteezy](https://www.vecteezy.com/free-png/octopus-png) with some color adjustments.
