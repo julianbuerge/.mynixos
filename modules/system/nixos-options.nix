@@ -11,6 +11,7 @@ in {
   imports =
     [ 
       ./fonts.nix
+      ./android-usb.nix
     ] ++ nvidia_import;
 
   boot.loader.systemd-boot.enable = true;
