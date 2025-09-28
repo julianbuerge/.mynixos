@@ -40,30 +40,34 @@ Just for fun (These are installed as additional packages for some hosts):
 ## Usage
 
 ### Setup
-Assuming you are on a computer with NixOS and with git installed, clone this repository to `$HOME/.mynixos`. Navigate into it. You will need to adapt the configuration to use your computer as a new host, both for the system and home-manager flake. 
+Assuming you are on a computer with NixOS and with git installed, clone this repository to `$HOME/.mynixos`. Navigate into it. You will need to adapt the system and the home configuration to use your computer as a new host with your user as new user. 
 
 First on a system level. Copy the directory `hosts/template` to `hosts/examplehostname` where `examplehostname` is the name you want your machine to have. You will need edit one of the files and add a new one. Optionally you can edit several more files:
  1. Copy `/etc/nixos/hardware-configuration.nix` into the directory. This is the hardware configuration that NixOS automatically created during install and is unique to your machine. 
- 2. Edit `variables.nix` by setting all the variables (hostname, username, use_nvidia, ...).
+ 2. Edit `host-variables.nix` by setting all the variables (hostname, username, use_nvidia, ...).
  3. OPTIONALLY edit `filesystems.nix` by uncommenting the code and specifying what additional drives should get mounted automatically at startup.
  4. OPTIONALLY add something to `additional-configuration.nix` (none by default).
  5. OPTIONALLY add packages to `additional-packages.nix` (none by default).
- 6. OPTIONALLY modify the imports in `host-configuration.nix` (the setup is very modular, here is where you choose what modules will be installed. By default you can leave it as is).
+ 6. OPTIONALLY modify the imports in `host-modules.nix` (the setup is very modular, here is where you choose what modules will be installed. By default you can leave it as is).
 
 With the new host ready you need to tell the system flake `flake.nix` about it. In `flake.nix` add a new line to `nixosConfiguration`:
 ```
 examplehostname = setup "examplehostname";
 ```
 
-Now for the home-manager. Create a directory `home/hosts/examplehostname`. Then
- 1. Copy the `flake.nix` and `flake.lock` from any other `home/hosts/otherhostname` into it 
- 2. In `home/hosts/examplehostname/flake.nix` find the variable `hostname = "otherhostname"` and change it to `hostname = "examplehostname"`.
+The process for adding a new user home configuration is analogous. Copy the directory `home/users/template` to `home/users/exampleusername` where `exampleusername` is the name of the user. You will need edit one of the files.
+ 1. Edit `user-variables.nix` by setting all the variables.
+ 2. OPTIONALLY edit `home.nix` to fit your preferences.
 
+With the new user ready you need to tell the home flake `home/flake.nix` about it. In `home/flake.nix` add a new line to `homeConfigurations`:
+```
+exampleusername = setup "exampleusername";
+```
 After having completed these steps stash all the changes with `git add *`. Now you are ready to rebuild the system. Do
 ```
 sudo nixos-rebuild switch --flake .#examplehostname
 ```
-and afterwards
+and afterwards you can apply the home configuration with
 ```
 home-manager switch --flake ./home/hosts/examplehostname
 ```
