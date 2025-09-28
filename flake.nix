@@ -8,7 +8,7 @@
   outputs = { self, nixpkgs, ... }:
 
         let
-        system = "x86_64-linux"; #could this become part of variables.nix?
+        system = "x86_64-linux"; #could this become part of host-variables.nix?
         pkgs = import nixpkgs {
                                 inherit system;
                                 config.allowUnfree = true;
@@ -16,11 +16,11 @@
 
         #define a function that takes the hostname and sets up all the modules 
 	setup = hostname : let 
-                              variables = import ./hosts/${hostname}/variables.nix;
+                              variables = import ./hosts/${hostname}/host-variables.nix;
                            in 
                            nixpkgs.lib.nixosSystem {
 		                modules = [
-		                    ./hosts/${hostname}/host-configuration.nix
+		                    ./hosts/${hostname}/host-modules.nix
 		                ];
 
                                                       #this get passed to the modules above

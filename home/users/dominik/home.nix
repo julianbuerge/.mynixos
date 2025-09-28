@@ -6,13 +6,13 @@ let
 rice = variables.rice;
 
 #function taking in a dotfile name and returning the right path
-dotfile_path = dotfile_name : ./dotfiles/${rice} + "/${dotfile_name}";
+dotfile_path = dotfile_name : ../../dotfiles/${rice} + "/${dotfile_name}";
 
 
 #look at use_nvidia (boolean) to install the right mpv config
-mpv_config_path = if variables.use_nvidia then
-    ./dotfiles/shared/mpv/mpv-nvidia.conf else
-    ./dotfiles/shared/mpv/mpv-cpu.conf;
+mpv_config_path = if variables.configure_with_nvidia then
+    ../../dotfiles/shared/mpv/mpv-nvidia.conf else
+    ../../dotfiles/shared/mpv/mpv-cpu.conf;
 
 in
 {
@@ -24,12 +24,12 @@ in
 
   imports = [
     #shared base functionality
-    ./dotfiles/shared/neovim-nvf/nvf-base.nix
-    ./dotfiles/shared/git.nix
-    ./dotfiles/shared/shell/bash.nix
-    ./dotfiles/shared/shell/starship.nix
-    ./dotfiles/shared/modify-desktop-entries.nix
-    ./dotfiles/shared/firefox-bookmarks.nix
+    ../../dotfiles/shared/neovim-nvf/nvf-base.nix
+    ../../dotfiles/shared/git.nix
+    ../../dotfiles/shared/shell/bash.nix
+    ../../dotfiles/shared/shell/starship.nix
+    ../../dotfiles/shared/modify-desktop-entries.nix
+    ../../dotfiles/shared/firefox-bookmarks.nix
 
     #rice specific modules
     (dotfile_path "fonts.nix")
@@ -43,8 +43,8 @@ in
 
     #shared #shared base functionality
     ".config/mpv/mpv.conf".source = mpv_config_path;
-    ".config/yazi/yazi.toml".source = ./dotfiles/shared/yazi/yazi.toml;
-    ".config/yazi/keymap.toml".source = ./dotfiles/shared/yazi/yazi-keymap.toml;
+    ".config/yazi/yazi.toml".source = ../../dotfiles/shared/yazi/yazi.toml;
+    ".config/yazi/keymap.toml".source = ../../dotfiles/shared/yazi/yazi-keymap.toml;
 
     #rice specific dotfiles
     ".config/kitty/kitty.conf".source = (dotfile_path "kitty.conf");
