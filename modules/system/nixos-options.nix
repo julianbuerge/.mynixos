@@ -55,9 +55,6 @@ in {
     enable = true;
   };
 
-  environment.variables = {
-    EDITOR="nvim";
-  };
 
   documentation.doc.enable = false;
 

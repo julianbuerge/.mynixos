@@ -1,5 +1,7 @@
-{ config, pkgs, ... }:
-
+{ config, pkgs, variables, ... }:
+let
+    inherit (variables) hostname username;
+in
 {
 	programs.hyprland = {
 		enable = true;
@@ -21,4 +23,11 @@
                 mpvpaper
 		dunst
 	];
+
+        environment.sessionVariables = {
+            #this will be used in each rices hyprland.conf
+            #to import the monitor configuration file for the right host
+            #(rices are user specific, but the monitors are host specific)
+            HYPRLAND_MONITORS_CONFIG_DIR = "/home/${username}/.mynixos/home/dotfiles/shared/hyprland/hosts/${hostname}/";
+        };
 }

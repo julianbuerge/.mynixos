@@ -71,7 +71,7 @@ and afterwards you can apply the home configuration with
 ```
 home-manager switch --flake ./home#exampleusername
 ```
-Reboot for all the changes to apply. Start Hyprland simply by doing `hyprland`. Perhaps the resolution will be off, that is because Hyprland needs to be told which monitor to use (there is multi monitor support, but at the moment I don't know how it works). To see what options are available, open a terminal with Super Enter, and do
+Reboot for all the changes to apply. Start Hyprland simply by doing `hyprland`. Perhaps the resolution will be off, that is because Hyprland needs to be told which monitors to use. To see what options are available, open a terminal with Super Enter, and do
 ```
 hyprctl monitors
 ```
@@ -81,9 +81,8 @@ Monitor DP-2 (ID 0):
 	2560x1440@143.85600 at 0x0
     ...
 ```
-Go to `home/dotfiles/shared/Hyprland/hyprland-monitors.conf` and put the name of your chosen monitor (in my example it is DP-2) into the line
+Go to `home/dotfiles/shared/hyprland/hosts` and make a copy of the directory `template`. Rename it to `hostname`. Enter the new directory, open `hyprland-monitors.conf` and put the name of your chosen monitor (in my example it is DP-2) into it, like so
 ```
-#preliminaries
 monitor=DP-2,preferred,auto,1
 ```
 Logout with Super Esc and start Hyprland anew. Now you should be ready to go! The most important shortcuts are
