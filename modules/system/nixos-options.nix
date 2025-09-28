@@ -2,11 +2,22 @@
 
 let
 
+inherit (variables) hostname realname username use_nvidia;
+
 #define a list with either one item ./nvidia.nix or no item
-nvidia_import = if variables.use_nvidia then
+nvidia_import = if use_nvidia then
     [ ./nvidia.nix ] else [];
 
 in {
+  networking.hostName = hostname;
+
+  users.users.${username} = {
+    isNormalUser = true;
+    description = realname;
+    extraGroups = [ "networkmanager" "wheel" "cdrom" ];
+    packages = with pkgs; [];
+  };
+
   #imports are a list, which is the sum of the written and the nvidia_import list
   imports =
     [ 
