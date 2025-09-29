@@ -55,6 +55,9 @@ in {
     enable = true;
   };
 
+  environment.variables = {
+    EDITOR="nvim"; #will get installed as nvf through home-manager
+  };
 
   documentation.doc.enable = false;
 
