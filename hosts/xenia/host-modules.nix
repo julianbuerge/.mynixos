@@ -12,6 +12,7 @@
     #if you are on nixos, this configures the system
     ../../modules/system/nixos-options.nix
     ../../modules/system/android-usb.nix
+    ../../modules/system/printing.nix
 
     #import the coding environments of choice
     ../../modules/coding/base-backends.nix

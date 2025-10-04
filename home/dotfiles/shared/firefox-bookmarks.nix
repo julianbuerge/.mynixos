@@ -19,6 +19,7 @@
 				    { name = "Search NixOS Packages"; url = "https://search.nixos.org/packages?channel=unstable&"; keyword = "nixsp";}
 				    { name = "Search NixOS Options"; url = "https://search.nixos.org/options?channel=unstable&"; keyword = "nixso";}
 				    { name = "My Nixos"; url = "https://mynixos.com"; keyword = "nixm"; }
+                                    { name ="CUPS Printing Service"; url = "http://localhost:631/"; keyword = "printer"; }
 				    { name = "Arch Wiki"; url = "https://wiki.archlinux.org/title/Main_page"; }
 				    { name = "Hyprland Wiki"; url = "https://wiki.hypr.land/"; }
 				    { name = "Software alternatives"; url = "https://alternativeto.net"; }
