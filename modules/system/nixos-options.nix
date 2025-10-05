@@ -14,7 +14,7 @@ in {
   users.users.${username} = {
     isNormalUser = true;
     description = realname;
-    extraGroups = [ "networkmanager" "wheel" "cdrom" ];
+    extraGroups = [ "networkmanager" "wheel" "cdrom" "input" ];
     packages = with pkgs; [];
   };
 

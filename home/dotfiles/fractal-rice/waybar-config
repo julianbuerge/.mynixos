@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio"],
+    "modules-right": ["keyboard-state", "pulseaudio"],
     
     "clock": {
     	"format": "{:%d ∧ %H:%M }"
@@ -29,6 +29,11 @@
         "persistent-workspaces": {
 		"*": [1,2,3,4,5]
 	}
+    },
+   
+    #does not show anything, throws warning: Can't create libevdev device: EINVAL Invalid argument
+    "keyboard-state": {
+        "format": "{name}",
     },
 
     "pulseaudio": {

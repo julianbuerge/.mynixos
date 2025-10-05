@@ -15,6 +15,7 @@
 	matrix = "cmatrix -B -C magenta -u 3";
         rmHomeTrash = "rm -rf ~/.local/share/Trash/files/*; rm -rf ~/.local/share/Trash/files/.*; rm -rf ~/.local/share/Trash/info/*; rm -rf ~/.local/share/Trash/info/.*";
         rmDataTrash = "rm -r ~/Data/.Trash-1000/files/*; rm -rf ~/Data/.Trash-1000/files/.*; rm -r ~/Data/.Trash-1000/info/*; rm -rf ~/Data/.Trash-1000/info/.*";
+        mynix = "cd ~/.mynixos/";
     };
   };
 }

@@ -2,7 +2,7 @@
 show=drun
 location=center
 width=700
-lines=8
+lines=9
 columns=2
 dynamic_lines=false
 
