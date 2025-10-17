@@ -73,8 +73,6 @@
 			    {
 				name = "Entertainment";
 				bookmarks = [
-				    { name = "Youtube"; url = "https://www.youtube.com/"; keyword = "yt";}
-				    { name = "Youtube Music"; url = "https://music.youtube.com/"; keyword = "ytm"; }
                                     { name = "CeDe"; url = "https://www.cede.ch/de/"; keyword = "cede"; }
 				    { name = "Maps"; url = "https://vemaps.com/"; }
 				    { name = "Star Wars Galaxy Map"; url = "http://www.swgalaxymap.com/"; }
