@@ -73,9 +73,9 @@
 			    {
 				name = "Entertainment";
 				bookmarks = [
-				    { name = "Youtube"; url = "https://www.youtube.com/"; keyword = "yt";}
-				    { name = "Youtube Music"; url = "https://music.youtube.com/"; keyword = "ytm"; }
                                     { name = "CeDe"; url = "https://www.cede.ch/de/"; keyword = "cede"; }
+                                    { name = "Müller Spring"; url = "https://cd.mueller-spring.ch"; }
+                                    { name = "Presto Music"; url = "https://www.prestomusic.com"; }
 				    { name = "Maps"; url = "https://vemaps.com/"; }
 				    { name = "Star Wars Galaxy Map"; url = "http://www.swgalaxymap.com/"; }
 				    { name = "Souls Lore Shop"; url = "https://www.tuneandfairweather.com/"; }

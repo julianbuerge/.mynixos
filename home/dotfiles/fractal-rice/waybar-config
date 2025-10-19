@@ -31,11 +31,6 @@
 	}
     },
    
-    #does not show anything, throws warning: Can't create libevdev device: EINVAL Invalid argument
-    "keyboard-state": {
-        "format": "{name}",
-    },
-
     "pulseaudio": {
         "format": "𝑢ₜₜ = 𝑐²𝛻²𝑢,  𝐴 = {volume}",
         "format-muted": "𝑢 ≡ 0",
