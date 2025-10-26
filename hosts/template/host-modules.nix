@@ -2,40 +2,42 @@
   config,
   pkgs,
   ...
-}: {
+}: let
+  modulepath = modulename: ../../modules/${modulename};
+in {
   imports = [
     #hardware
     ./hardware-configuration.nix
     ./filesystems.nix
 
     #operating system
-    ../../modules/system/nixos-options.nix
-    ../../modules/system/android-usb.nix
-    ../../modules/system/bluetooth.nix
-    ../../modules/system/printing.nix
+    (modulepath "system/nixos-options.nix")
+    (modulepath "system/android-usb.nix")
+    (modulepath "system/bluetooth.nix")
+    (modulepath "system/printing.nix")
 
     #coding
-    ../../modules/coding/lua.nix
-    ../../modules/coding/latex.nix
-    ../../modules/coding/julia.nix
+    (modulepath "coding/lua.nix")
+    (modulepath "coding/latex.nix")
+    (modulepath "coding/julia.nix")
 
     #terminal with command packages
-    ../../modules/terminals/kitty.nix
+    (modulepath "terminal/kitty.nix")
 
     #graphical environment
-    ../../modules/environments/hyprland.nix
+    (modulepath "environments/hyprland.nix")
 
     #basic gui apps
-    ../../modules/applications/yazi.nix #file manager
-    ../../modules/applications/zathura.nix #pdf viewer
-    ../../modules/applications/mpv.nix #audio, video and image player
+    (modulepath "applications/yazi.nix") #file manager
+    (modulepath "applications/zathura.nix") #pdf viewer
+    (modulepath "applications/mpv.nix") #media player
 
     #password manager
-    ../../modules/applications/gnome-secrets.nix
+    (modulepath "applications/gnome-secrets.nix")
 
     #onlineness
-    ../../modules/applications/firefox.nix #browser
-    ../../modules/applications/thunderbird.nix #email client
+    (modulepath "applications/firefox.nix") #browser
+    (modulepath "applications/thunderbird.nix") #email client
 
     ./additional-options.nix
     ./additional-packages.nix

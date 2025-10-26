@@ -3,7 +3,9 @@
   pkgs,
   variables,
   ...
-}: {
+}: let
+  modulepath = modulename: ../../modules/${modulename};
+in {
   home.username = variables.username;
   home.homeDirectory = "/home/${variables.username}";
 
@@ -13,10 +15,10 @@
 
   imports = [
     #coding
-    ../../modules/git.nix
+    (modulepath "git.nix")
 
     #terminal
-    ../../modules/kitty.nix
+    (modulepath "kitty.nix")
     ../../modules/neovim-nvf.nix
     ../../modules/starship.nix
     ../../modules/bash.nix
@@ -25,7 +27,7 @@
     ../../modules/hyprland.nix
     ../../modules/gtk.nix
     ../../modules/wofi.nix
-    ../../modules/waybar.nix
+    (modulepath "waybar.nix")
     ../../modules/modify-desktop-entries.nix
     ../../modules/fonts.nix
 
