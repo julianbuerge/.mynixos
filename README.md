@@ -6,7 +6,9 @@ This is my personal NixOS setup as a Nix project which by its fully declarative 
 </p>
 
 ## Overview
-The systems aims to be minimal and elegant. To this end many things (such as connecting to wifi and changing audio devices is done in terminal). Find an easy explanation of how to in the [wiki](https://github.com/julianbuerge/.mynixos/wiki).
+The systems aims to be minimal and elegant. To this end many things (such as connecting to wifi and changing audio devices) is done in terminal. Find an easy explanation of how to in the [wiki](https://github.com/julianbuerge/.mynixos/wiki).
+
+The system is made for easy deployment for different hosts/users. To this end it is completely modular. Below is the default setup.
 
 Base environment:
  * [Hyprland](https://github.com/hyprwm/Hyprland) (highly customizable dynamic tiling window manager with GPU rendering with the latest wayland features) 
@@ -28,6 +30,7 @@ Basic apps:
 
 Onlineness:
  * [Gnome-secrets](https://gitlab.gnome.org/World/secrets) (Gnome's GTK password manager using the KeePass v.4 format)
+ * [KeePassXC]() (https://keepassxc.org/) (no-nonsense, ad-free, tracker-free, and cloud-free, free and open source password manager written in C++)
  * [Thunderbird](https://www.thunderbird.net/en-US/) (privacy focused open source email client from Mozilla)
  * [Firefox](https://github.com/mozilla-firefox/firefox) (Mozilla's web browser)
 
@@ -42,7 +45,7 @@ Just for fun (These are installed as additional packages for some hosts):
 ## Usage
 
 ### Setup
-Assuming you are on a computer with NixOS and with git installed, clone this repository to `$HOME/.mynixos`. Navigate into it. You will need to adapt the system and the home configuration to use your computer as a new host with your user as new user. 
+Assuming you are on a computer with NixOS and with git installed, clone this repository to `$HOME/.mynixos`. Navigate into it. You will need to adapt the system and the home configuration to use your computer as a new host with your user as a new user. 
 
 First on a system level. Copy the directory `hosts/template` to `hosts/examplehostname` where `examplehostname` is the name you want your machine to have. You will need edit one of the files and add a new one. Optionally you can edit several more files:
  1. Copy `/etc/nixos/hardware-configuration.nix` into the directory. This is the hardware configuration that NixOS automatically created during install and is unique to your machine. 
@@ -50,9 +53,9 @@ First on a system level. Copy the directory `hosts/template` to `hosts/exampleho
  3. OPTIONALLY edit `filesystems.nix` by uncommenting the code and specifying what additional drives should get mounted automatically at startup.
  4. OPTIONALLY add something to `additional-configuration.nix` (none by default).
  5. OPTIONALLY add packages to `additional-packages.nix` (none by default).
- 6. OPTIONALLY modify the imports in `host-modules.nix` (the setup is very modular, here is where you choose what modules will be installed. By default you can leave it as is).
+ 6. OPTIONALLY modify the imports in `host-modules.nix` (the setup is completely modular, here is where you choose what modules will be installed. By default you can leave it as is).
 
-With the new host ready you need to tell the system flake `flake.nix` about it. In `flake.nix` add a new line to `nixosConfiguration`:
+With the new host ready you need to tell the system flake `flake.nix` about it. In `flake.nix` add the new host to `nixosConfiguration` like this :
 ```
 examplehostname = setup_host_with_hostname {
         inherit nixpkgs;
@@ -62,11 +65,16 @@ examplehostname = setup_host_with_hostname {
 
 The process for adding a new user home configuration is analogous. Copy the directory `home/users/template` to `home/users/exampleusername` where `exampleusername` is the name of the user. You will need edit one of the files.
  1. Edit `user-variables.nix` by setting all the variables.
- 2. OPTIONALLY edit `home.nix` to fit your preferences.
+ 2. OPTIONALLY modify the imports in `home.nix` (the setup is completely modular, here is where you decide what dotfile modules to use. By default you can leave it as is).
 
 With the new user ready you need to tell the home flake `home/flake.nix` about it. In `home/flake.nix` add a new line to `homeConfigurations`:
 ```
-exampleusername = setup "exampleusername";
+exampleusername = setup_user_with_username {
+        inherit pkgs;
+        inherit home-manager;
+        inherit nvf;
+        username = "exampleusername";
+      };
 ```
 After having completed these steps stash all the changes with `git add *`. Now you are ready to rebuild the system. Do
 ```
@@ -108,7 +116,7 @@ Since NixOS stores all previous builds one may want to clean up older versions f
 ```
 nh clean all --keep N
 ```
-This will delete all previous versions except the N most recent.
+This will delete all previous versions (when doing rebuild switch the next time) except the N most recent.
 
 ## Rices
 

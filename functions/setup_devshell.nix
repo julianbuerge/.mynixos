@@ -2,6 +2,6 @@
   pkgs,
   shellname,
 }: let
-  shellpath = ./shell-${shellname}.nix;
+  shellpath = ../devshells/shell-${shellname}.nix;
 in
   import shellpath {inherit pkgs;}

@@ -17,9 +17,9 @@
       config.allowUnfree = true;
     };
 
-    setup_host_with_hostname = import ./setup_host_with_hostname.nix;
+    setup_host_with_hostname = import ./functions/setup_host_with_hostname.nix;
 
-    setup_devShell = import ./devshells/setup_devshell.nix;
+    setup_devShell = import ./functions/setup_devshell.nix;
   in {
     nixosConfigurations = {
       xenia = setup_host_with_hostname {

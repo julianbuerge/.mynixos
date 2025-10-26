@@ -19,7 +19,7 @@
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
 
-    setup_user_with_username = import ./setup_user_with_username.nix;
+    setup_user_with_username = import ./functions/setup_user_with_username.nix;
   in {
     homeConfigurations = {
       julian = setup_user_with_username {
