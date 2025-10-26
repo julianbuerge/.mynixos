@@ -10,31 +10,30 @@
     nvf.url = "github:NotAShelf/nvf";
   };
 
-  outputs =
-    { nixpkgs, home-manager, nvf, ... }:
-    let
-        system = "x86_64-linux";
-        pkgs = nixpkgs.legacyPackages.${system};
-    
-        setup = username :  let 
-                                variables = import ./users/${username}/user-variables.nix;
-                            in 
-                                home-manager.lib.homeManagerConfiguration {
-                                    inherit pkgs;
+  outputs = {
+    nixpkgs,
+    home-manager,
+    nvf,
+    ...
+  }: let
+    system = "x86_64-linux";
+    pkgs = nixpkgs.legacyPackages.${system};
 
-                                    modules = [
-                                        nvf.homeManagerModules.default
-                                        ./users/${username}/home.nix
-                                    ];
-
-                                    #these will get passed to home.nix
-                                    extraSpecialArgs = { inherit variables; };
-        };
-    in
-    {
-        homeConfigurations = {
-            julian = setup "julian";
-            dominik = setup "dominik";
-        };
+    setup_user_with_username = import ./setup_user_with_username.nix;
+  in {
+    homeConfigurations = {
+      julian = setup_user_with_username {
+        inherit pkgs;
+        inherit home-manager;
+        inherit nvf;
+        username = "julian";
+      };
+      dominik = setup_user_with_username {
+        inherit pkgs;
+        inherit home-manager;
+        inherit nvf;
+        username = "dominik";
+      };
     };
+  };
 }

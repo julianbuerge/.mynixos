@@ -6,6 +6,8 @@ This is my personal NixOS setup as a Nix project which by its fully declarative 
 </p>
 
 ## Overview
+The systems aims to be minimal and elegant. To this end many things (such as connecting to wifi and changing audio devices is done in terminal). Find an easy explanation of how to in the [wiki](https://github.com/julianbuerge/.mynixos/wiki).
+
 Base environment:
  * [Hyprland](https://github.com/hyprwm/Hyprland) (highly customizable dynamic tiling window manager with GPU rendering with the latest wayland features) 
  * [Waybar](https://github.com/Alexays/Waybar) (status bar for wayland)
