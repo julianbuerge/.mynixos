@@ -1,51 +1,43 @@
-#OPTIONALLY change the imports
-{ config, pkgs, ... }:
-
 {
-
-
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
-    #hardware specific modules
+    #hardware
     ./hardware-configuration.nix
     ./filesystems.nix
 
-
-    #if you are on nixos, this configures the system
+    #operating system
     ../../modules/system/nixos-options.nix
     ../../modules/system/android-usb.nix
     ../../modules/system/bluetooth.nix
     ../../modules/system/printing.nix
 
-    #import the coding environments of choice
-    ../../modules/coding/base-backends.nix
+    #coding
+    ../../modules/coding/lua.nix
+    ../../modules/coding/latex.nix
+    ../../modules/coding/julia.nix
 
-
-
-    #import the terminal of choice, automatically comes with packages for commands
+    #terminal with command packages
     ../../modules/terminals/kitty.nix
 
-    #import the graphical environment of choice
+    #graphical environment
     ../../modules/environments/hyprland.nix
 
-
-
-    #import basic gui apps of choice
+    #basic gui apps
     ../../modules/applications/yazi.nix #file manager
     ../../modules/applications/zathura.nix #pdf viewer
     ../../modules/applications/mpv.nix #audio, video and image player
 
-    #import the password manager gui app of choice
+    #password manager
     ../../modules/applications/gnome-secrets.nix
 
-    #import onlineness gui apps of choice
+    #onlineness
     ../../modules/applications/firefox.nix #browser
     ../../modules/applications/thunderbird.nix #email client
-    
 
-
-    #additional things
     ./additional-options.nix
     ./additional-packages.nix
   ];
-
 }

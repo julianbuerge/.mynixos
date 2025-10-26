@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   programs.thunderbird = {
     enable = true;
 
@@ -13,10 +15,10 @@
 
       # You can install extensions declaratively here if you want:
       ExtensionSettings = {
-         "DuctTape-Dark@addons.thunderbird.net" = {
-           installation_mode = "force_installed";
-           install_url = "https://addons.thunderbird.net/thunderbird/downloads/latest/dark-black-theme/addon-988343-latest.xpi?src=dp-btn-primary";
-         };
+        "DuctTape-Dark@addons.thunderbird.net" = {
+          installation_mode = "force_installed";
+          install_url = "https://addons.thunderbird.net/thunderbird/downloads/latest/dark-black-theme/addon-988343-latest.xpi?src=dp-btn-primary";
+        };
       };
     };
 
@@ -52,4 +54,3 @@
     preferencesStatus = "user"; # or "default" / "user"
   };
 }
-

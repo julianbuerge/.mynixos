@@ -1,7 +1,9 @@
 #COMPLETELY OPTIONAL
-{ config, pkgs, ... }:
-
+{
+  config,
+  pkgs,
+  ...
+}:
 #find possible options at search.nixos.org/options
 {
-
 }

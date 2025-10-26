@@ -4,6 +4,8 @@
   ...
 }: {
   environment.systemPackages = with pkgs; [
-    keepassxc
+    texliveFull
+    lua
+    julia
   ];
 }

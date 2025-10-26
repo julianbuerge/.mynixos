@@ -77,6 +77,7 @@ in
         #language support: warnings, errors, autocompletion
         lsp = {
           enable = true;
+          formatOnSave = true;
         };
 
         #autocompletion with lsp
@@ -103,7 +104,7 @@ in
         #for the desired languages
         languages =
           (builtins.listToAttrs [
-            (enalangnoform "nix")
+            (enalangform "nix")
             (enalangnoform "bash")
             (enalang "clang")
             (enalang "julia")

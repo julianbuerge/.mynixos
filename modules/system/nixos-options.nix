@@ -1,28 +1,37 @@
-{ config, pkgs, variables, ... }:
+{
+  config,
+  pkgs,
+  variables,
+  ...
+}: let
+  inherit (variables) hostname realname username use_nvidia;
 
-let
-
-inherit (variables) hostname realname username use_nvidia;
-
-#define a list with either one item ./nvidia.nix or no item
-nvidia_import = if use_nvidia then
-    [ ./nvidia.nix ] else [];
-
+  #define a list with either one item ./nvidia.nix or no item
+  nvidia_import =
+    if use_nvidia
+    then [./nvidia.nix]
+    else [];
 in {
   networking.hostName = hostname;
 
   users.users.${username} = {
     isNormalUser = true;
     description = realname;
-    extraGroups = [ "networkmanager" "wheel" "cdrom" "input" ];
+    extraGroups = ["networkmanager" "wheel" "cdrom" "input"];
     packages = with pkgs; [];
   };
 
   #imports are a list, which is the sum of the written and the nvidia_import list
   imports =
-    [ 
+    [
       ./fonts.nix
-    ] ++ nvidia_import;
+    ]
+    ++ nvidia_import;
+
+  environment.systemPackages = with pkgs; [
+    nh #nix helper utility, e.g. for garbage collection
+    home-manager #declarative dot file management
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -30,7 +39,7 @@ in {
   networking.firewall.enable = true;
   networking.networkmanager.enable = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   time.timeZone = "Europe/Zurich";
 
@@ -46,9 +55,9 @@ in {
   nixpkgs.config.allowUnfree = true;
 
   services.pipewire = {
-	enable = true;
-	alsa.enable = true;
-	pulse.enable = true;
+    enable = true;
+    alsa.enable = true;
+    pulse.enable = true;
   };
 
   services.openssh = {
@@ -56,11 +65,10 @@ in {
   };
 
   environment.variables = {
-    EDITOR="nvim"; #will get installed as nvf through home-manager
+    EDITOR = "nvim"; #will get installed as nvf through home-manager
   };
 
   documentation.doc.enable = false;
 
   system.stateVersion = "25.05";
-
 }

@@ -4,6 +4,6 @@
   ...
 }: {
   environment.systemPackages = with pkgs; [
-    keepassxc
+    julia
   ];
 }

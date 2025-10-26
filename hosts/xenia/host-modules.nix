@@ -1,13 +1,12 @@
-{ config, pkgs, variables, ... }:
-
 {
-
-
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     #hardware specific modules
     ./hardware-configuration.nix
     ./filesystems.nix
-
 
     #if you are on nixos, this configures the system
     ../../modules/system/nixos-options.nix
@@ -15,17 +14,15 @@
     ../../modules/system/printing.nix
 
     #import the coding environments of choice
-    ../../modules/coding/base-backends.nix
-
-
+    ../../modules/coding/latex.nix
+    ../../modules/coding/lua.nix
+    ../../modules/coding/julia.nix
 
     #import the terminal of choice, automatically comes with packages for commands
     ../../modules/terminals/kitty.nix
 
     #import the graphical environment of choice
     ../../modules/environments/hyprland.nix
-
-
 
     #import basic gui apps of choice
     ../../modules/applications/yazi.nix #file manager
@@ -38,12 +35,9 @@
     #import onlineness gui apps of choice
     ../../modules/applications/firefox.nix #browser
     ../../modules/applications/thunderbird.nix #email client
-    
-
 
     #additional things
     ./additional-options.nix
     ./additional-packages.nix
   ];
-
 }

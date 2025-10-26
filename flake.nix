@@ -1,47 +1,55 @@
 {
-  description = "BaseFlake";
+  description = "My NixOS system";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
   };
 
-  outputs = { self, nixpkgs, ... }:
+  outputs = {
+    self,
+    nixpkgs,
+    ...
+  }: let
+    system = "x86_64-linux";
 
-        let
-        system = "x86_64-linux"; #could this become part of host-variables.nix?
-        pkgs = import nixpkgs {
-                                inherit system;
-                                config.allowUnfree = true;
-                              };
+    pkgs = import nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
+    };
 
-        #define a function that takes the hostname and sets up all the modules 
-	setup = hostname : let 
-                              variables = import ./hosts/${hostname}/host-variables.nix;
-                           in 
-                           nixpkgs.lib.nixosSystem {
-		                modules = [
-		                    ./hosts/${hostname}/host-modules.nix
-		                ];
+    setup_host_with_hostname = import ./setup_host_with_hostname.nix;
 
-                                                      #this get passed to the modules above
-                           specialArgs = { inherit variables; };
-	};
+    setup_devShell = import ./devshells/setup_devshell.nix;
+  in {
+    nixosConfigurations = {
+      xenia = setup_host_with_hostname {
+        inherit nixpkgs;
+        hostname = "xenia";
+      };
+      panther = setup_host_with_hostname {
+        inherit nixpkgs;
+        hostname = "panther";
+      };
+    };
 
-        in {
-
-            #call the function for each available host
-            nixosConfigurations = {
-                xenia = setup "xenia";
-                panther = setup "panther";
-            };
-
-            #import all the devShells. Shells get built the first time they are entered
-            #whereby a host chooses which shells they want to use
-            devShells.${system} = {
-                sciml = import ./devshells/sciml-shell.nix { inherit pkgs; };
-                scimlcuda = import ./devshells/scimlcuda-shell.nix { inherit pkgs; };
-                numba = import ./devshells/numba-shell.nix { inherit pkgs; };
-                spacemonkeys = import ./devshells/spacemonkeys-shell.nix { inherit pkgs; };
-           }; 
-        };
+    #devShells get built on first entry => implicit choice per host
+    devShells.${system} = {
+      sciml = setup_devShell {
+        inherit pkgs;
+        shellname = "sciml";
+      };
+      scimlcuda = setup_devShell {
+        inherit pkgs;
+        shellname = "sciml";
+      };
+      numba = setup_devShell {
+        inherit pkgs;
+        shellname = "numba";
+      };
+      spacemonkeys = setup_devShell {
+        inherit pkgs;
+        shellname = "spacemonkeys";
+      };
+    };
+  };
 }

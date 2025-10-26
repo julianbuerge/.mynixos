@@ -52,7 +52,10 @@ First on a system level. Copy the directory `hosts/template` to `hosts/exampleho
 
 With the new host ready you need to tell the system flake `flake.nix` about it. In `flake.nix` add a new line to `nixosConfiguration`:
 ```
-examplehostname = setup "examplehostname";
+examplehostname = setup_host_with_hostname {
+        inherit nixpkgs;
+        hostname = "examplehostname";
+      };
 ```
 
 The process for adding a new user home configuration is analogous. Copy the directory `home/users/template` to `home/users/exampleusername` where `exampleusername` is the name of the user. You will need edit one of the files.
