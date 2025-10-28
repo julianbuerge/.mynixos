@@ -6,8 +6,6 @@ This is my personal NixOS setup as a Nix project which by its fully declarative 
 </p>
 
 ## Overview
-The systems aims to be minimal and elegant. To this end many things (such as connecting to wifi and changing audio devices) is done in terminal. Find an easy explanation of how to in the [wiki](https://github.com/julianbuerge/.mynixos/wiki).
-
 The system is made for easy deployment for different hosts/users. To this end it is completely modular. Below is the default setup.
 
 Base environment:
@@ -43,15 +41,21 @@ Just for fun (These are installed as additional packages for some hosts):
  * [Steam](https://store.steampowered.com) (gaming platform)
 
 ## Usage
+The systems aims to be minimal and elegant. To this end many things (such as connecting to wifi and changing audio devices) is done in terminal. Find an easy explanation of how to in the [wiki](https://github.com/julianbuerge/.mynixos/wiki).
+
 
 ### Setup
 Assuming you are on a computer with NixOS and with git installed, clone this repository to `$HOME/.mynixos`. Navigate into it. You will need to adapt the system and the home configuration to use your computer as a new host with your user as a new user. 
 
+Before we begin two comments:
+ * I use the Swiss keyboardlayout. If you want another one, go edit it in `modules/system/nixos-options.nix` and also in `home/dotfiles/shared/hyprland/keyboard-inputs.conf`. In the future this will be handled more conveniently with a variable.
+ * I am not sure about UEFI/BIOS bootmodes. I just know that the config works on all my machines. I plan to find out and make an appropriate variable soon. 
+ 
 First on a system level. Copy the directory `hosts/template` to `hosts/examplehostname` where `examplehostname` is the name you want your machine to have. You will need edit one of the files and add a new one. Optionally you can edit several more files:
  1. Copy `/etc/nixos/hardware-configuration.nix` into the directory. This is the hardware configuration that NixOS automatically created during install and is unique to your machine. 
  2. Edit `host-variables.nix` by setting all the variables (hostname, username, use_nvidia, ...).
  3. OPTIONALLY edit `filesystems.nix` by uncommenting the code and specifying what additional drives should get mounted automatically at startup.
- 4. OPTIONALLY add something to `additional-configuration.nix` (none by default).
+ 4. OPTIONALLY add something to `additional-options.nix` (none by default).
  5. OPTIONALLY add packages to `additional-packages.nix` (none by default).
  6. OPTIONALLY modify the imports in `host-modules.nix` (the setup is completely modular, here is where you choose what modules will be installed. By default you can leave it as is).
 

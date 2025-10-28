@@ -34,6 +34,7 @@ in {
 
     #password manager
     (modulepath "applications/gnome-secrets.nix")
+    (modulepath "applications/keepassxc.nix")
 
     #onlineness
     (modulepath "applications/firefox.nix") #browser
