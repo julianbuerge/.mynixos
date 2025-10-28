@@ -22,7 +22,7 @@ in {
     (modulepath "coding/julia.nix")
 
     #terminal with command packages
-    (modulepath "terminal/kitty.nix")
+    (modulepath "terminals/kitty.nix")
 
     #graphical environment
     (modulepath "environments/hyprland.nix")

@@ -1,10 +1,8 @@
 {
+  hostname = "panther";
 
-hostname = "panther";
+  realname = "Dominik";
+  username = "dominik";
 
-realname = "Dominik";
-username = "dominik";
-
-use_nvidia = true;
-
+  use_nvidia = true;
 }
