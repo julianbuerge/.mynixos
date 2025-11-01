@@ -2,41 +2,44 @@
   config,
   pkgs,
   ...
-}: {
+}: let
+  modulepath = modulename: ../../modules/${modulename};
+in {
   imports = [
-    #hardware specific modules
+    #hardware
     ./hardware-configuration.nix
     ./filesystems.nix
 
-    #if you are on nixos, this configures the system
-    ../../modules/system/nixos-options.nix
-    ../../modules/system/android-usb.nix
-    ../../modules/system/printing.nix
+    #operating system
+    (modulepath "system/nixos-options.nix")
+    (modulepath "system/android-usb.nix")
+    (modulepath "system/bluetooth.nix")
+    (modulepath "system/printing.nix")
 
-    #import the coding environments of choice
-    ../../modules/coding/latex.nix
-    ../../modules/coding/lua.nix
-    ../../modules/coding/julia.nix
+    #coding
+    (modulepath "coding/direnv.nix")
+    (modulepath "coding/lua.nix")
+    (modulepath "coding/latex.nix")
+    (modulepath "coding/julia.nix")
 
-    #import the terminal of choice, automatically comes with packages for commands
-    ../../modules/terminals/kitty.nix
+    #terminal with command packages
+    (modulepath "terminals/kitty.nix")
 
-    #import the graphical environment of choice
-    ../../modules/environments/hyprland.nix
+    #graphical environment
+    (modulepath "environments/hyprland.nix")
 
-    #import basic gui apps of choice
-    ../../modules/applications/yazi.nix #file manager
-    ../../modules/applications/zathura.nix #pdf viewer
-    ../../modules/applications/mpv.nix #audio, video and image player
+    #basic gui apps
+    (modulepath "applications/yazi.nix") #file manager
+    (modulepath "applications/zathura.nix") #pdf viewer
+    (modulepath "applications/mpv.nix") #media player
 
-    #import the password manager gui app of choice
-    ../../modules/applications/gnome-secrets.nix
+    #password manager
+    (modulepath "applications/gnome-secrets.nix")
 
-    #import onlineness gui apps of choice
-    ../../modules/applications/firefox.nix #browser
-    ../../modules/applications/thunderbird.nix #email client
+    #onlineness
+    (modulepath "applications/firefox.nix") #browser
+    (modulepath "applications/thunderbird.nix") #email client
 
-    #additional things
     ./additional-options.nix
     ./additional-packages.nix
   ];
