@@ -40,7 +40,7 @@
       };
       scimlcuda = setup_devShell {
         inherit pkgs;
-        shellname = "sciml";
+        shellname = "scimlcuda";
       };
       numba = setup_devShell {
         inherit pkgs;
