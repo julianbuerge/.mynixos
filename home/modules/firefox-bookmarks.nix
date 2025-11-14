@@ -193,7 +193,7 @@
                 ];
               }
               {
-                name = "Meteo";
+                name = "Meteo & Maps";
                 bookmarks = [
                   {
                     name = "Temperature";
@@ -206,6 +206,10 @@
                   {
                     name = "Forecast";
                     url = "https://www.meteoswiss.admin.ch/";
+                  }
+                  {
+                    name = "Swiss map";
+                    url = "https://map.geo.admin.ch";
                   }
                 ];
               }

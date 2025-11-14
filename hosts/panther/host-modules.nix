@@ -12,6 +12,7 @@ in {
 
     #operating system
     (modulepath "system/nixos-options.nix")
+    (modulepath "system/brightness.nix")
     (modulepath "system/android-usb.nix")
     (modulepath "system/bluetooth.nix")
     (modulepath "system/printing.nix")
