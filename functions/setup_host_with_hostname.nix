@@ -1,4 +1,5 @@
 {
+  inputs,
   nixpkgs,
   hostname,
 }: let
@@ -9,5 +10,8 @@ in
       ../hosts/${hostname}/host-modules.nix
     ];
 
-    specialArgs = {inherit variables;}; #this get passed to the modules above
+    specialArgs = {
+      inherit variables;
+      inherit inputs;
+    }; #this get passed to the modules above
   }

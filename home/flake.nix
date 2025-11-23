@@ -34,6 +34,12 @@
         inherit nvf;
         username = "dominik";
       };
+      jamina = setup_user_with_username {
+        inherit pkgs;
+        inherit home-manager;
+        inherit nvf;
+        username = "jamina";
+      };
     };
   };
 }

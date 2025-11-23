@@ -3,9 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
-  outputs = {
+  outputs = inputs @ {
     self,
     nixpkgs,
     ...
@@ -23,12 +24,19 @@
   in {
     nixosConfigurations = {
       xenia = setup_host_with_hostname {
+        inherit inputs;
         inherit nixpkgs;
         hostname = "xenia";
       };
       panther = setup_host_with_hostname {
+        inherit inputs;
         inherit nixpkgs;
         hostname = "panther";
+      };
+      soup = setup_host_with_hostname {
+        inherit inputs;
+        inherit nixpkgs;
+        hostname = "soup";
       };
     };
 
