@@ -7,6 +7,7 @@
   environment.systemPackages = with pkgs; [
     steam
     audacity
+    ffmpeg
     cava
   ];
 }
