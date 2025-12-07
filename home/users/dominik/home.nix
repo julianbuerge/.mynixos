@@ -19,21 +19,21 @@ in {
 
     #terminal
     (modulepath "kitty.nix")
-    ../../modules/neovim-nvf.nix
-    ../../modules/starship.nix
-    ../../modules/bash.nix
+    (modulepath "neovim-nvf.nix")
+    (modulepath "starship.nix")
+    (modulepath "bash.nix")
 
     #graphical environment
-    ../../modules/hyprland.nix
-    ../../modules/gtk.nix
-    ../../modules/wofi.nix
+    (modulepath "hyprland.nix")
+    (modulepath "gtk.nix")
+    (modulepath "wofi.nix")
     (modulepath "waybar.nix")
-    ../../modules/modify-desktop-entries.nix
-    ../../modules/fonts.nix
+    (modulepath "modify-desktop-entries.nix")
+    (modulepath "fonts.nix")
 
     #applications
-    ../../modules/yazi.nix
-    ../../modules/firefox-bookmarks.nix
-    ../../modules/mpv.nix
+    (modulepath "yazi.nix")
+    (modulepath "firefox-bookmarks.nix")
+    (modulepath "mpv.nix")
   ];
 }
