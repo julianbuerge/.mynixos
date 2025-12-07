@@ -29,9 +29,19 @@ in {
     ++ nvidia_import;
 
   environment.systemPackages = with pkgs; [
-    nh #nix helper utility, e.g. for garbage collection
     home-manager #declarative dot file management
   ];
+
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 7d";
+  };
+
+  nix.optimise = {
+    automatic = true;
+    dates = ["weekly"];
+  };
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
