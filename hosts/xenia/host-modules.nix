@@ -19,9 +19,7 @@ in {
 
     #coding
     (modulepath "coding/direnv.nix")
-    (modulepath "coding/lua.nix")
     (modulepath "coding/latex.nix")
-    (modulepath "coding/julia.nix")
 
     #terminal with command packages
     (modulepath "terminals/kitty.nix")
