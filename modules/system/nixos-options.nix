@@ -17,8 +17,13 @@ in {
   users.users.${username} = {
     isNormalUser = true;
     description = realname;
-    extraGroups = ["networkmanager" "wheel" "cdrom" "input"];
+    extraGroups = ["networkmanager" "wheel" "cdrom" "input" "media"];
     packages = with pkgs; [];
+  };
+
+  #meant to be the ownership for media drives
+  users.groups.media = {
+    gid = 4000;
   };
 
   #imports are a list, which is the sum of the written and the nvidia_import list
