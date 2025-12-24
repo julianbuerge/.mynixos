@@ -18,50 +18,7 @@
     },
     "root": {
       "inputs": {
-        "nixpkgs": "nixpkgs",
-        "zarumet": "zarumet"
-      }
-    },
-    "rust-overlay": {
-      "inputs": {
-        "nixpkgs": [
-          "zarumet",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1765334520,
-        "narHash": "sha256-jTof2+ir9UPmv4lWksYO6WbaXCC0nsDExrB9KZj7Dz4=",
-        "owner": "oxalica",
-        "repo": "rust-overlay",
-        "rev": "db61f666aea93b28f644861fbddd37f235cc5983",
-        "type": "github"
-      },
-      "original": {
-        "owner": "oxalica",
-        "repo": "rust-overlay",
-        "type": "github"
-      }
-    },
-    "zarumet": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "rust-overlay": "rust-overlay"
-      },
-      "locked": {
-        "lastModified": 1766536184,
-        "narHash": "sha256-j2QYRoN6rCApukbckwP2DD0OpeCcF2EpuYni2jKdXr0=",
-        "owner": "Immelancholy",
-        "repo": "zarumet",
-        "rev": "8175b5f9bfade3443edbc1a5cc8be90c7dab0641",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Immelancholy",
-        "repo": "zarumet",
-        "type": "github"
+        "nixpkgs": "nixpkgs"
       }
     }
   },
