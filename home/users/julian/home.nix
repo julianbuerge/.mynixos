@@ -12,6 +12,9 @@
   home.stateVersion = "25.05";
 
   imports = [
+    #services
+    ../../modules/mpd.nix
+
     #coding
     ../../modules/git.nix
 
@@ -33,5 +36,6 @@
     ../../modules/yazi.nix
     ../../modules/firefox-bookmarks.nix
     ../../modules/mpv.nix
+    ../../modules/zarumet.nix
   ];
 }

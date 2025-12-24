@@ -2,6 +2,7 @@
   pkgs,
   home-manager,
   nvf,
+  zarumet,
   username,
 }: let
   variables = import ../users/${username}/user-variables.nix;
@@ -11,6 +12,7 @@ in
 
     modules = [
       nvf.homeManagerModules.default
+      zarumet.homeModules.default
       ../users/${username}/home.nix
     ];
 

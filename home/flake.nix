@@ -7,13 +7,21 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nvf.url = "github:NotAShelf/nvf";
+    nvf = {
+      url = "github:NotAShelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    zarumet = {
+      url = "github:Immelancholy/zarumet";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     nixpkgs,
     home-manager,
     nvf,
+    zarumet,
     ...
   }: let
     system = "x86_64-linux";
@@ -26,12 +34,14 @@
         inherit pkgs;
         inherit home-manager;
         inherit nvf;
+        inherit zarumet;
         username = "julian";
       };
       dominik = setup_user_with_username {
         inherit pkgs;
         inherit home-manager;
         inherit nvf;
+        inherit zarumet;
         username = "dominik";
       };
     };
