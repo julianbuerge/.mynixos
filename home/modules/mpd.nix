@@ -18,6 +18,11 @@
         name "Pipewire out"
       }
       auto_update "yes"
+      auto_update_depth "4"
+      follow_outside_symlinks "yes"
+      follow_inside_symlinks "yes"
+
+      restore_paused "yes"
     '';
   };
 }
