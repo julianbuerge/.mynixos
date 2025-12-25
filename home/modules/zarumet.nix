@@ -1,14 +1,9 @@
-{
-  programs.zarumet = {
-    enable = true;
+{variables, ...}: let
+  rice_dotfile_path = import ../functions/rice_dotfile_path.nix {inherit variables;};
+in {
+  programs.zarumet.enable = true;
 
-    settings = {
-      mpd = {
-        address = "localhost:6600";
-      };
-      pipewire = {
-        bit_perfect_enabled = true;
-      };
-    };
+  home.file = {
+    ".config/zarumet/config.toml".source = rice_dotfile_path "zarumet.toml";
   };
 }

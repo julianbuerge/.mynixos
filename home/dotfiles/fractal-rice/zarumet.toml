@@ -1,0 +1,32 @@
+[mpd]
+address = "localhost:6600"
+
+[colors]
+border = "#111111"
+song_title = "#aa77ff"
+album = "#aa77ff"
+artist = "#aa77ff"
+border_title = "#ccaacc"
+progress_filled = "#ee44aa"
+progress_empty = "#1b1d0e"
+paused = "#aa77ff"
+playing = "#aa77ff"
+stopped = "#aa77ff"
+time_separator = "#aa77ff"
+time_duration = "#aa77ff"
+time_elapsed = "#aa77ff"
+queue_selected_highlight = "#ee44aa"
+queue_selected_text = "#1b1d0e"
+queue_album = "#aa77ff"
+queue_song_title = "#ee44aa"
+queue_artist = "#aa77ff"
+queue_position = "#aa77ff"
+queue_duration = "#aa77ff"
+top_accent = "#ee44aa"
+volume = "#aa77ff"
+volume_empty = "#1b1d0e"
+mode = "#ccaacc"
+track_duration = "#aa77ff"
+
+[pipewire]
+bit_perfect_enabled = true

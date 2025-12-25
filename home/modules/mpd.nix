@@ -23,6 +23,8 @@
       follow_inside_symlinks "yes"
 
       restore_paused "yes"
+
+      metadata_to_use "artist,albumartist,album,title,track,name,genre,date,composer,performer,disc"
     '';
   };
 }
