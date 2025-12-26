@@ -37,5 +37,6 @@
     ../../modules/firefox-bookmarks.nix
     ../../modules/mpv.nix
     ../../modules/zarumet.nix
+    ../../modules/zathura.nix
   ];
 }
