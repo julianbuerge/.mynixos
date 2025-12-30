@@ -19,9 +19,9 @@ in {
     options = ["nofail" "noatime" "defaults"];
   };
   #mount my backup & games drive
-  #fileSystems."/home/${username}/GamesAndBackups" = {
-  # device = "/dev/disk/by-uuid/a05c41da-9ff8-45c1-91d4-a251ef0653d0";
-  # fsType = "ext4";
-  # options = ["nofail" "defaults"];
-  #};
+  fileSystems."/home/${username}/Backups" = {
+    device = "/dev/disk/by-uuid/a05c41da-9ff8-45c1-91d4-a251ef0653d0";
+    fsType = "ext4";
+    options = ["nofail" "defaults"];
+  };
 }
