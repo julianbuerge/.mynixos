@@ -25,6 +25,7 @@ Basic apps:
  * [Yazi](https://github.com/sxyazi/yazi) (blazingly fast terminal file manager)
  * [zathura](https://github.com/pwmt/zathura) (functional document viewer with an extremely minimal design) 
  * [mpv](https://github.com/mpv-player/mpv) (free terminal media player)
+ * [Zarumet](https://github.com/Immelancholy/Zarumet) (terminal client for mpd written in Rust, similar feel to yazi)
 
 Onlineness:
  * [Gnome-secrets](https://gitlab.gnome.org/World/secrets) (Gnome's GTK password manager using the KeePass v.4 format)
@@ -32,12 +33,10 @@ Onlineness:
  * [Thunderbird](https://www.thunderbird.net/en-US/) (privacy focused open source email client from Mozilla)
  * [Firefox](https://github.com/mozilla-firefox/firefox) (Mozilla's web browser)
 
-Editors (These are installed as additional packages for some hosts):
+Additional:
  * [Audacity](https://github.com/audacity/audacity) (easy-to-use, multi-track audio editor)
  * [GIMP](https://www.gimp.org/) (cross-platform image editor)
 
-Just for fun (These are installed as additional packages for some hosts):
- * [Hypnotix](https://github.com/linuxmint/hypnotix) (IPTV streaming application with support for live TV, movies and series)
  * [Steam](https://store.steampowered.com) (gaming platform)
 
 ## Usage

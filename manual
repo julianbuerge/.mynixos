@@ -1,19 +1,13 @@
 ### Non-declarative things (I have not found the correct nix option for these yet) ###
 
-In Gnome-secrets you may have to manually change the sorting behavior and time to automatic lock.
-In KeepassXC you have to manually select the theme
+In Gnome-secrets you may have to change the sorting behavior and time to automatic lock.
 
-In Gimp you have to manually go to Edit -> Preferences -> Interface -> Theme
-and select the system theme (which was set declaratively, so it's available and correct) instead of the default
+In KeepassXC you have to select the theme.
 
-In Audacity you have to manually go to Edit -> Preferences -> Interface -> Theme
-and select dark (the system theme affects some parts, but not all)
+In Gimp you have to go to Edit -> Preferences -> Interface -> Theme and select the system theme (which was set declaratively, so it's available and correct) instead of the default.
 
+In Audacity you have to go to Edit -> Preferences -> Interface -> Theme and select dark (the system theme affects some parts, but not all).
 
-In Firefox the default zoom level needs to be set manually.
-Unwanted search suggestions (history, shortcuts, ...) need to be deactivated under Settings->Search->Address Bar.
+In Firefox the default zoom level needs to be set manually. Unwanted search suggestions (history, shortcuts, ...) need to be deactivated under Settings->Search->Address Bar.
 
-In Thunderbird I need to adjust the Layout to Wide and the view to table view.
-
-
-Everything within Steam is handled manually
+In Thunderbird adjust the Layout to wide and the view to table view.
