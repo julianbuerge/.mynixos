@@ -13,7 +13,7 @@
       rmHomeTrash = "rm -rf ~/.local/share/Trash/files/*; rm -rf ~/.local/share/Trash/info/*";
       rmDataTrash = "rm -rf ~/Data/.Trash-1000/files/.*; rm -rf ~/Data/.Trash-1000/info/.*";
       rmMediaTrash = "rm -rf ~/MediaLibrary/.Trash-1000/files/.*; rm -rf ~/MediaLibrary/.Trash-1000/info/.*";
-      rmBackupTrash = "rm -rf ~/Backups/.Trash-1000/files/.*; rm -rf ~/Backups/.Trash-1000/info/.*";
+      rmBackupsTrash = "rm -rf ~/Backups/.Trash-1000/files/.*; rm -rf ~/Backups/.Trash-1000/info/.*";
       mynix = "cd ~/.mynixos/";
     };
   };
