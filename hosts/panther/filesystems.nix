@@ -18,4 +18,10 @@ in {
     fsType = "ext4";
     options = ["nofail" "noatime" "defaults"];
   };
+  #mount my backup HDD
+  fileSystems."/home/${username}/Backups" = {
+    device = "/dev/disk/by-uuid/44bba7f1-bfc5-431a-8114-d8d143814f08";
+    fsType = "ext4";
+    options = ["nofail" "defaults"];
+  };
 }
