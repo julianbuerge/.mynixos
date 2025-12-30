@@ -72,11 +72,11 @@
                       {
                         name = "Public AI";
                         url = "https://chat.publicai.co/";
-                        keyword = "llm";
                       }
                       {
                         name = "ChatGPT";
                         url = "https://chatgpt.com";
+                        keyword = "chat";
                       }
                       {
                         name = "Fonts";
@@ -231,7 +231,7 @@
                   {
                     name = "Proton Email";
                     url = "https://mail.proton.me";
-                    keyword = "proton";
+                    keyword = "pr";
                   }
                   {
                     name = "Google Email";
