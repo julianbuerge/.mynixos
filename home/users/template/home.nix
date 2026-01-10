@@ -14,6 +14,9 @@ in {
   home.stateVersion = "25.05";
 
   imports = [
+    #services
+    (modulepath "mpd.nix")
+
     #coding
     (modulepath "git.nix")
 
@@ -33,7 +36,9 @@ in {
 
     #applications
     (modulepath "yazi.nix")
+    (modulepath "zathura.nix")
     (modulepath "firefox-bookmarks.nix")
     (modulepath "mpv.nix")
+    (modulepath "zarumet.nix")
   ];
 }

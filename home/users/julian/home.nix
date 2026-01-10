@@ -3,7 +3,9 @@
   pkgs,
   variables,
   ...
-}: {
+}: let
+  modulepath = modulename: ../../modules/${modulename};
+in {
   home.username = variables.username;
   home.homeDirectory = "/home/${variables.username}";
 
@@ -13,30 +15,30 @@
 
   imports = [
     #services
-    ../../modules/mpd.nix
+    (modulepath "mpd.nix")
 
     #coding
-    ../../modules/git.nix
+    (modulepath "git.nix")
 
     #terminal
-    ../../modules/kitty.nix
-    ../../modules/neovim-nvf.nix
-    ../../modules/starship.nix
-    ../../modules/bash.nix
+    (modulepath "kitty.nix")
+    (modulepath "neovim-nvf.nix")
+    (modulepath "starship.nix")
+    (modulepath "bash.nix")
 
     #graphical environment
-    ../../modules/hyprland.nix
-    ../../modules/gtk.nix
-    ../../modules/wofi.nix
-    ../../modules/waybar.nix
-    ../../modules/modify-desktop-entries.nix
-    ../../modules/fonts.nix
+    (modulepath "hyprland.nix")
+    (modulepath "gtk.nix")
+    (modulepath "wofi.nix")
+    (modulepath "waybar.nix")
+    (modulepath "modify-desktop-entries.nix")
+    (modulepath "fonts.nix")
 
     #applications
-    ../../modules/yazi.nix
-    ../../modules/firefox-bookmarks.nix
-    ../../modules/mpv.nix
-    ../../modules/zarumet.nix
-    ../../modules/zathura.nix
+    (modulepath "yazi.nix")
+    (modulepath "firefox-bookmarks.nix")
+    (modulepath "mpv.nix")
+    (modulepath "zathura.nix")
+    (modulepath "zarumet.nix")
   ];
 }
