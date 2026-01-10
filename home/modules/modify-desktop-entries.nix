@@ -4,6 +4,17 @@
   ...
 }: {
   home.file = {
+    ".local/share/applications/zarumet.desktop".text = ''
+      [Desktop Entry]
+      Name=Zarumet
+      Comment=Client for mpd
+      Exec=kitty zarumet
+      Icon=music
+      Terminal=false
+      Type=Application
+      Categories=Music;Media;Mpd;
+    '';
+
     #hide or modify desktop entries that we don't want to launch graphically
     #by adding a user .desktop entry with NoDisplay=true.
     #user entries take precedence over the system wide ones.
