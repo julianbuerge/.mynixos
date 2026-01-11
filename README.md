@@ -8,7 +8,7 @@ This is my personal NixOS setup as a Nix project which by its fully declarative 
 ## Overview
 The system is made for easy deployment for different hosts/users. To this end it is completely modular. Below is the default setup.
 
-Base environment:
+Environment:
  * [Hyprland](https://github.com/hyprwm/Hyprland) (highly customizable dynamic tiling window manager with GPU rendering with the latest wayland features) 
  * [Waybar](https://github.com/Alexays/Waybar) (status bar for wayland)
  * [wofi](https://github.com/SimplyCEO/wofi) (app launcher for wayland).
@@ -22,14 +22,11 @@ The heart piece of my workflow for programming and creating documents with LaTeX
  * [neovim](https://github.com/neovim/neovim) (terminal based highly configurable text editor)
 
 Basic apps:
+ * [KeePassXC](https://keepassxc.org/) (no-nonsense, ad-free, tracker-free, and cloud-free, free and open source password manager written in C++)
  * [Yazi](https://github.com/sxyazi/yazi) (blazingly fast terminal file manager)
- * [zathura](https://github.com/pwmt/zathura) (functional document viewer with an extremely minimal design) 
  * [mpv](https://github.com/mpv-player/mpv) (free terminal media player)
  * [Zarumet](https://github.com/Immelancholy/Zarumet) (terminal client for mpd written in Rust, similar feel to yazi)
-
-Onlineness:
- * [Gnome-secrets](https://gitlab.gnome.org/World/secrets) (Gnome's GTK password manager using the KeePass v.4 format)
- * [KeePassXC]() (https://keepassxc.org/) (no-nonsense, ad-free, tracker-free, and cloud-free, free and open source password manager written in C++)
+ * [zathura](https://github.com/pwmt/zathura) (functional document viewer with an extremely minimal design) 
  * [Thunderbird](https://www.thunderbird.net/en-US/) (privacy focused open source email client from Mozilla)
  * [Firefox](https://github.com/mozilla-firefox/firefox) (Mozilla's web browser)
 
