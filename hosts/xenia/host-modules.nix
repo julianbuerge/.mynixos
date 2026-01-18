@@ -26,6 +26,7 @@ in {
 
     #graphical environment
     (modulepath "environments/hyprland.nix")
+    (modulepath "environments/niri.nix")
 
     #basic gui apps
     (modulepath "applications/yazi.nix") #file manager

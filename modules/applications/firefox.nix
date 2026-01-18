@@ -115,15 +115,21 @@ in {
             installation_mode = "force_installed";
             private_browsing = true;
           };
+          # KeePassXC Browser:
+          "keepassxc-browser@keepassxc.org" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/keepassxc-browser/latest.xpi";
+            installation_mode = "force_installed";
+            private_browsing = true;
+          };
           #Vim motions
           "tridactyl.vim@cmcaine.co.uk" = {
-            install_url = "https://addons.mozilla.org/firefox/downloads/file/4549492/tridactyl_vim-1.24.4.xpi";
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/tridactyl_vim/latest.xpi";
             installation_mode = "force_installed";
             private_browsing = true;
           };
           #Theme
           "YetAnotherAMOLEDTheme@neopolitan.uk" = {
-            install_url = "https://addons.mozilla.org/firefox/downloads/file/4013174/yet_another_amoled_theme-1.0.xpi";
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/yet_another_amoled_theme/latest.xpi";
             installation_mode = "force_installed";
             private_browsing = true;
           };
