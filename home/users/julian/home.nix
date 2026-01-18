@@ -28,6 +28,7 @@ in {
 
     #graphical environment
     (modulepath "hyprland.nix")
+    (modulepath "niri.nix")
     (modulepath "gtk.nix")
     (modulepath "wofi.nix")
     (modulepath "waybar.nix")
