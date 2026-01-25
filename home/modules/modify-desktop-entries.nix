@@ -10,6 +10,7 @@
       Comment=Client for mpd
       Exec=kitty zarumet
       Icon=music
+      NoDisplay=true
       Terminal=false
       Type=Application
       Categories=Music;Media;Mpd;
