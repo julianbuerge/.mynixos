@@ -30,6 +30,10 @@
         inherit nixpkgs;
         hostname = "panther";
       };
+      linuxbook = setup_host_with_hostname {
+        inherit nixpkgs;
+        hostname = "linuxbook";
+      };
     };
 
     #devShells get built on first entry => implicit choice per host

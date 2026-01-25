@@ -44,6 +44,13 @@
         inherit zarumet;
         username = "dominik";
       };
+      booky = setup_user_with_username {
+        inherit pkgs;
+        inherit home-manager;
+        inherit nvf;
+        inherit zarumet;
+        username = "booky";
+      };
     };
   };
 }
