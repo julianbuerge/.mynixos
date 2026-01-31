@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   #configure the gtk appearance in the nix language
   gtk = {
     enable = true;

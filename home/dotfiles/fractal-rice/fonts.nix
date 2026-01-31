@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   home.packages = with pkgs; [
     stix-two
     nerd-fonts.jetbrains-mono
@@ -11,9 +9,7 @@
 
   #list available families with fc-list : family | sort -u
   fonts.fontconfig.defaultFonts = {
-    serif = [ "STIX Two Math" ];
-    monospace = [ "JetBrainsMono Nerd Font" ];
+    serif = ["STIX Two Math"];
+    monospace = ["JetBrainsMono Nerd Font"];
   };
-
 }
-

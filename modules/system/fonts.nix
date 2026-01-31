@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   #installation of system fonts
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono

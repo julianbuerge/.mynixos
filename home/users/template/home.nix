@@ -1,9 +1,4 @@
-{
-  config,
-  pkgs,
-  variables,
-  ...
-}: let
+{variables, ...}: let
   modulepath = modulename: ../../modules/${modulename};
 in {
   home.username = variables.username;

@@ -1,9 +1,5 @@
 #these options will modify fstab.
-{
-  config,
-  variables,
-  ...
-}: let
+{variables, ...}: let
   inherit (variables) username;
 in {
   /*

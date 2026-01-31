@@ -1,4 +1,4 @@
-{variables, ...}: let
+{...}: let
   shared_dotfile_path = import ../functions/shared_dotfile_path.nix;
 in {
   home.file = {

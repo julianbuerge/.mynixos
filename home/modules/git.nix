@@ -1,9 +1,4 @@
-{
-  config,
-  pkgs,
-  variables,
-  ...
-}: {
+{variables, ...}: {
   #configure git in the nix language
   programs.git = {
     enable = true;

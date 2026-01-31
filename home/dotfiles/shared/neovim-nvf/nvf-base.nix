@@ -1,7 +1,4 @@
-{ config, pkgs, ... }:
-
-let
-
+{pkgs, ...}: let
   #enable the language lang (string) with lsp support (nothing about formatting because some languages do not even have that option)
   enalang = lang: {
     name = lang;
@@ -35,7 +32,7 @@ let
     src = pkgs.fetchFromGitHub {
       owner = "brenoprata10";
       repo = "nvim-highlight-colors";
-      rev = "e0c4a58"; 
+      rev = "e0c4a58";
       sha256 = "sha256-BIcOU2Gie90wujQFZ+aD3wYTRegSKw4CBxC95DRwo9I=";
     };
     doCheck = false;
@@ -47,24 +44,20 @@ let
     src = pkgs.fetchFromGitHub {
       owner = "nvim-telescope";
       repo = "telescope-symbols.nvim";
-      rev = "a6d0127"; 
+      rev = "a6d0127";
       sha256 = "sha256-zYON9z3ELwjfqZ11LD6E7M+bymuBHxrSjYXhsCPEwR8=";
     };
   };
-
-
-in
-{
+in {
   programs.nvf = {
     enable = true;
 
     settings = {
       vim = {
-
         #options and keybindings written in normal lua
         luaConfigRC = {
-            options = (builtins.readFile ./options.lua);
-            keybinds = (builtins.readFile ./keybinds.lua);
+          options = builtins.readFile ./options.lua;
+          keybinds = builtins.readFile ./keybinds.lua;
         };
 
         #Plugins
@@ -119,22 +112,22 @@ in
 
         #turn of treesitter indentation (we have autoindentation, combined they are messy)
         treesitter = {
-            indent.enable = false;
-            grammars = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
-                latex
-            ];        
+          indent.enable = false;
+          grammars = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+            latex
+          ];
         };
 
         extraPlugins = {
-            #colors colors in their color
-            csscolors = {
-                package = csscolors;
-                setup = "require('nvim-highlight-colors').setup({})";
-            };
-            #allows for seeing all available symbols with :Telescope symbols
-            symbols = {
-                package = symbols;
-            };
+          #colors colors in their color
+          csscolors = {
+            package = csscolors;
+            setup = "require('nvim-highlight-colors').setup({})";
+          };
+          #allows for seeing all available symbols with :Telescope symbols
+          symbols = {
+            package = symbols;
+          };
         };
       };
     };

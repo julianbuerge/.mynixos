@@ -1,8 +1,4 @@
-{
-  config,
-  variables,
-  ...
-}: {
+{variables, ...}: {
   services.mpd = {
     enable = true;
 

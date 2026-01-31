@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{...}: {
   home.file = {
     ".local/share/applications/zarumet.desktop".text = ''
       [Desktop Entry]

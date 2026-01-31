@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: let
+{...}: let
   modulepath = modulename: ../../modules/${modulename};
 in {
   imports = [

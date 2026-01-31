@@ -1,11 +1,7 @@
 /*
 copied from https://discourse.nixos.org/t/declare-firefox-extensions-and-settings/36265
 */
-{
-  config,
-  pkgs,
-  ...
-}: let
+{...}: let
   lock-false = {
     Value = false;
     Status = "locked";

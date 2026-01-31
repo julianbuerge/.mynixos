@@ -1,12 +1,10 @@
 {
+  username = "dominik";
 
-username = "dominik";
+  gitusername = "julianbuerge";
+  gitemail = "julian.buerge@alumni.ethz.ch";
 
-gitusername = "julianbuerge";
-gitemail = "julian.buerge@alumni.ethz.ch";   
+  rice = "city-rice";
 
-rice = "city-rice";
-
-configure_with_nvidia = true;
-
+  configure_with_nvidia = true;
 }
