@@ -25,6 +25,8 @@ in {
     swww
     mpvpaper
     dunst
+    grim #wayland screenshots
+    slurp #wayland screenshots
   ];
 
   environment.sessionVariables = {

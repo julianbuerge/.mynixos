@@ -1,9 +1,5 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    kitty
+    btop #task manager
   ];
 }

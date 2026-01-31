@@ -33,10 +33,6 @@ in {
     ]
     ++ nvidia_import;
 
-  environment.systemPackages = with pkgs; [
-    home-manager #declarative dot file management
-  ];
-
   nix.gc = {
     automatic = true;
     dates = "weekly";

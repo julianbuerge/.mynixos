@@ -17,27 +17,33 @@ in {
     (modulepath "system/bluetooth.nix")
     (modulepath "system/printing.nix")
 
+    #home
+    (modulepath "home/home-manager.nix")
+
+    #tui apps
+    (modulepath "applications-tui/basic-terminal-commands.nix")
+    (modulepath "applications-tui/btop.nix") #resource manager
+    (modulepath "applications-tui/git.nix") #version control system
+    (modulepath "applications-tui/playerctl.nix") #media player controls
+    (modulepath "applications-tui/libnotify.nix") #notification cli utility
+    (modulepath "applications-tui/yazi.nix") #file manager
+    (modulepath "applications-tui/mpv.nix") #media player
+
     #coding
     (modulepath "coding/direnv.nix")
     (modulepath "coding/latex.nix")
 
-    #terminal with command packages
+    #terminal
     (modulepath "terminals/kitty.nix")
 
     #graphical environment
     (modulepath "environments/hyprland.nix")
 
-    #basic gui apps
-    (modulepath "applications/yazi.nix") #file manager
-    (modulepath "applications/zathura.nix") #pdf viewer
-    (modulepath "applications/mpv.nix") #media player
-
-    #password manager
-    (modulepath "applications/keepassxc.nix")
-
-    #onlineness
-    (modulepath "applications/firefox.nix") #browser
-    (modulepath "applications/thunderbird.nix") #email client
+    #gui apps
+    (modulepath "applications-gui/zathura.nix") #pdf viewer
+    (modulepath "applications-gui/keepassxc.nix") #password manager
+    (modulepath "applications-gui/firefox.nix") #browser
+    (modulepath "applications-gui/thunderbird.nix") #email client
 
     ./additional-options.nix
     ./additional-packages.nix
