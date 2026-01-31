@@ -45,7 +45,6 @@ in {
     (modulepath "applications-gui/firefox.nix") #browser
     (modulepath "applications-gui/thunderbird.nix") #email client
 
-    ./additional-options.nix
     ./additional-packages.nix
   ];
 }

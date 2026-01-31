@@ -41,8 +41,5 @@ in {
     #onlineness
     (modulepath "applications/firefox.nix") #browser
     (modulepath "applications/thunderbird.nix") #email client
-
-    ./additional-options.nix
-    ./additional-packages.nix
   ];
 }

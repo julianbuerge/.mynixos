@@ -61,9 +61,11 @@ in {
     variant = "de_nodeadkeys";
   };
 
-  console.keyMap = "sg";
-
+  #allows detecting optical drives
+  boot.kernelModules = ["sg"];
   nixpkgs.config.allowUnfree = true;
+
+  console.keyMap = "sg";
 
   services.pipewire = {
     enable = true;
