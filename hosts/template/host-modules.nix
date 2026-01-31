@@ -24,6 +24,7 @@ in {
     (modulepath "applications-tui/basic-terminal-commands.nix")
     (modulepath "applications-tui/btop.nix") #resource manager
     (modulepath "applications-tui/git.nix")
+    (modulepath "applications-tui/dysk.nix")
     (modulepath "applications-tui/playerctl.nix") #media player controls
     (modulepath "applications-tui/libnotify.nix") #notification cli utility
     (modulepath "applications-tui/ffmpeg.nix")
