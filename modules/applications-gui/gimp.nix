@@ -1,5 +1,5 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    gnome-secrets
+    gimp3 #image editor
   ];
 }

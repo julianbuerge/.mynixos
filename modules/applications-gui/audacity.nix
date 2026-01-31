@@ -1,5 +1,5 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    gnome-secrets
+    audacity #audio editor
   ];
 }

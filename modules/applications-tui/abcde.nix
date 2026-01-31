@@ -1,5 +1,5 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    gnome-secrets
+    abcde #cd reading program
   ];
 }
