@@ -23,6 +23,7 @@ in {
 
     #graphical environment
     (modulepath "hyprland.nix")
+    (modulepath "mango.nix")
     (modulepath "gtk.nix")
     (modulepath "wofi.nix")
     (modulepath "waybar.nix")
