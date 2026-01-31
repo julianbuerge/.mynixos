@@ -10,6 +10,10 @@ in {
     ./hardware-configuration.nix
     ./filesystems.nix
 
+    #IMPORTANT
+    #This contains every available module.
+    #Delete the ones you don't want.
+
     #operating system
     (modulepath "system/nixos-options.nix")
     (modulepath "system/brightness.nix")
@@ -17,29 +21,41 @@ in {
     (modulepath "system/bluetooth.nix")
     (modulepath "system/printing.nix")
 
+    #home
+    (modulepath "home/home-manager.nix")
+
+    #tui apps
+    (modulepath "applications-tui/basic-terminal-commands.nix")
+    (modulepath "applications-tui/btop.nix") #resource manager
+    (modulepath "applications-tui/git.nix")
+    (modulepath "applications-tui/playerctl.nix") #media player controls
+    (modulepath "applications-tui/libnotify.nix") #notification cli utility
+    (modulepath "applications-tui/ffmpeg.nix")
+    (modulepath "applications-tui/yazi.nix") #file manager
+    (modulepath "applications-tui/mpv.nix") #media player
+    (modulepath "applications-tui/abcde.nix")
+
     #coding
     (modulepath "coding/direnv.nix")
-    (modulepath "coding/lua.nix")
     (modulepath "coding/latex.nix")
     (modulepath "coding/julia.nix")
+    (modulepath "coding/lua.nix")
 
-    #terminal with command packages
+    #terminals
     (modulepath "terminals/kitty.nix")
 
     #graphical environment
     (modulepath "environments/hyprland.nix")
 
-    #basic gui apps
-    (modulepath "applications/yazi.nix") #file manager
-    (modulepath "applications/zathura.nix") #pdf viewer
-    (modulepath "applications/mpv.nix") #media player
-
-    #password manager
-    (modulepath "applications/gnome-secrets.nix")
-    (modulepath "applications/keepassxc.nix")
-
-    #onlineness
-    (modulepath "applications/firefox.nix") #browser
-    (modulepath "applications/thunderbird.nix") #email client
+    #gui apps
+    (modulepath "applications-gui/keepassxc.nix") #password manager
+    (modulepath "applications-gui/gnome-secrets.nix") #password manager
+    (modulepath "applications-gui/zathura.nix") #pdf viewer
+    (modulepath "applications-gui/firefox.nix") #browser
+    (modulepath "applications-gui/thunderbird.nix") #email client
+    (modulepath "applications-gui/audacity.nix") #audio editor
+    (modulepath "applications-gui/gimp.nix") #image editor
+    (modulepath "applications-gui/makemkv.nix")
+    (modulepath "applications-gui/steam.nix") #gaming client
   ];
 }

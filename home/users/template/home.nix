@@ -14,6 +14,10 @@ in {
   home.stateVersion = "25.05";
 
   imports = [
+    #IMPORTANT
+    #This contains every available module.
+    #Delete the ones you don't want.
+
     #services
     (modulepath "mpd.nix")
 
