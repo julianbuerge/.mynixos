@@ -3,11 +3,15 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    mango = {
+      url = "github:DreamMaoMao/mango";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
-    self,
     nixpkgs,
+    mango,
     ...
   }: let
     system = "x86_64-linux";
@@ -25,14 +29,16 @@
       xenia = setup_host_with_hostname {
         inherit nixpkgs;
         hostname = "xenia";
+        inherit mango;
       };
       panther = setup_host_with_hostname {
         inherit nixpkgs;
         hostname = "panther";
+        inherit mango;
       };
     };
 
-    #devShells get built on first entry => implicit choice per host
+    #devShells get built on first entry => implicit choice which ones get installed
     devShells.${system} = {
       sciml = setup_devShell {
         inherit pkgs;

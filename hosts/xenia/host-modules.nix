@@ -36,6 +36,7 @@ in {
 
     #graphical environment
     (modulepath "environments/hyprland.nix")
+    (modulepath "environments/mango.nix")
 
     #gui apps
     (modulepath "applications-gui/keepassxc.nix") #password manager
