@@ -103,7 +103,7 @@ in {
         */
         # Valid strings for installation_mode are "allowed", "blocked", "force_installed" and "normal_installed".
         ExtensionSettings = {
-          "*".installation_mode = "blocked"; # blocks all addons except the ones specified below
+          "*".installation_mode = "allowed"; # blocks all addons except the ones specified below
           "*".allowed_type = ["extension" "theme" "dictonary" "locale"];
           # uBlock Origin:
           "uBlock0@raymondhill.net" = {
