@@ -9,9 +9,6 @@ in {
   home.stateVersion = "25.05";
 
   imports = [
-    #services
-    (modulepath "mpd.nix")
-
     #coding
     (modulepath "git.nix")
 
@@ -22,19 +19,15 @@ in {
     (modulepath "bash.nix")
 
     #graphical environment
-    (modulepath "hyprland.nix")
     (modulepath "mango.nix")
     (modulepath "gtk.nix")
     (modulepath "wofi.nix")
-    (modulepath "waybar.nix")
     (modulepath "modify-desktop-entries.nix")
     (modulepath "fonts.nix")
 
     #applications
-    (modulepath "yazi.nix")
     (modulepath "firefox-bookmarks.nix")
     (modulepath "mpv.nix")
     (modulepath "zathura.nix")
-    (modulepath "zarumet.nix")
   ];
 }
