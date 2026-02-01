@@ -4,7 +4,7 @@
   gitusername = "julianbuerge";
   gitemail = "julian.buerge@alumni.ethz.ch";
 
-  rice = "epic-rice";
+  rice = "space-rice";
 
   configure_with_nvidia = true;
 }
