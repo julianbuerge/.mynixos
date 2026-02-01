@@ -14,7 +14,7 @@
     wofi
     swww
     mpvpaper
-    mako
+    dunst
     grim #wayland screenshots
     slurp #wayland screenshots
     wl-clipboard
