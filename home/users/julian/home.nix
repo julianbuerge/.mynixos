@@ -21,8 +21,6 @@ in {
     #graphical environment
     (modulepath "mango.nix")
     (modulepath "gtk.nix")
-    (modulepath "wofi.nix")
-    (modulepath "modify-desktop-entries.nix")
     (modulepath "fonts.nix")
 
     #applications

@@ -10,9 +10,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    waybar
-    wofi
-    swww
     mpvpaper
     dunst
     grim #wayland screenshots

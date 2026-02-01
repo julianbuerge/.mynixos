@@ -22,9 +22,8 @@ in {
     (modulepath "applications-tui/git.nix") #version control system
     (modulepath "applications-tui/dysk.nix")
     (modulepath "applications-tui/playerctl.nix") #media player controls
-    (modulepath "applications-tui/libnotify.nix") #notification cli utility
+    (modulepath "applications-tui/libnotify.nix") #media player controls
     (modulepath "applications-tui/ffmpeg.nix") #image and video handler
-    (modulepath "applications-tui/yazi.nix") #file manager
     (modulepath "applications-tui/mpv.nix") #media player
     (modulepath "applications-tui/abcde.nix") #cd reader
 
@@ -36,7 +35,6 @@ in {
     (modulepath "terminals/kitty.nix")
 
     #graphical environment
-    (modulepath "environments/hyprland.nix")
     (modulepath "environments/mango.nix")
 
     #gui apps
