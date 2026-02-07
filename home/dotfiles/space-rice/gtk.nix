@@ -11,10 +11,8 @@
     };
 
     iconTheme = {
-      name = "Reversal-black-dark";
-      package = pkgs.reversal-icon-theme.override {
-        colorVariants = ["-black"];
-      };
+      name = "Tela-dark";
+      package = pkgs.tela-icon-theme;
     };
 
     #Don't forget to edit the relevant environment variables in hypr.config as well
