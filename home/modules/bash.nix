@@ -17,6 +17,8 @@
       rmMediaTrash = "rm -rf ~/MediaLibrary/.Trash-1000/files/*; rm -rf ~/MediaLibrary/.Trash-1000/info/*; rm -rf ~/MediaLibrary/.Trash-1000/files/.*; rm -rf ~/MediaLibrary/.Trash-1000/info/.*";
       rmBackupsTrash = "rm -rf ~/Backups/.Trash-1000/files/*; rm -rf ~/Backups/.Trash-1000/info/*; rm -rf ~/Backups/.Trash-1000/files/.*; rm -rf ~/Backups/.Trash-1000/info/.*";
       mynix = "cd ~/.mynixos/";
+      gitlog = "git log --oneline --all --graph --decorate";
+      gitlog10 = "git log -n 10 --oneline --all --graph --decorate";
     };
   };
 }
