@@ -12,6 +12,7 @@ in {
     (modulepath "system/android-usb.nix")
     (modulepath "system/bluetooth.nix")
     (modulepath "system/printing.nix")
+    (modulepath "system/appimage.nix")
 
     #home
     (modulepath "home/home-manager.nix")

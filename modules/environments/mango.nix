@@ -11,7 +11,7 @@
 
   environment.systemPackages = with pkgs; [
     mpvpaper
-    dunst
+    mako
     grim #wayland screenshots
     slurp #wayland screenshots
     wl-clipboard
