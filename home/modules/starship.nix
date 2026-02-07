@@ -1,11 +1,10 @@
 {variables, ...}: let
   rice_dotfile_path = import ../functions/rice_dotfile_path.nix {inherit variables;};
+  shared_dotfile_path = import ../functions/shared_dotfile_path.nix;
 in {
-  programs.starship = {
-    enable = true;
-    enableBashIntegration = true;
-  };
-
+  imports = [
+    (shared_dotfile_path "starship/starship.nix")
+  ];
   home.file = {
     ".config/starship.toml".source = rice_dotfile_path "starship.toml";
   };
