@@ -11,7 +11,7 @@
     };
 
     iconTheme = {
-      name = "Tela-dark";
+      name = "Tela-black";
       package = pkgs.tela-icon-theme;
     };
 
