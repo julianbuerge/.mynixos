@@ -1,0 +1,3 @@
+{...}: {
+  programs.zarumet.enable = true;
+}
