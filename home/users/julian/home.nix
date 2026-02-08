@@ -17,6 +17,7 @@ in {
     (modulepath "neovim-nvf.nix")
     (modulepath "starship.nix")
     (modulepath "bash.nix")
+    (modulepath "fastfetch.nix")
 
     #graphical environment
     (modulepath "mango.nix")

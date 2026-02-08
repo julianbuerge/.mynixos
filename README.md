@@ -134,3 +134,5 @@ Transparent style with soft blue ui and a animated city background. Since the ba
     <img src="images/city-rice.png" alt="Screenshot" width=90%>
 </p>
 
+### Space rice
+Work in progress. The nixos logo used in fastfetch is from [the official artwork repository](https://github.com/NixOS/nixos-artwork), is licensed under [CC By 4.0](https://creativecommons.org/licenses/by/4.0/), and was adapted in color.
