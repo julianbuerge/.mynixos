@@ -8,24 +8,24 @@ require("coal").setup({
 		dark_charcoal = "#303030", -- this changes the inactive line numbers, active line background
 		gray = "#A5A5A5", --'#7E7E7E', active line number, operators, delimiters, comments
 		quick_silver = "#A5A5A5", --this seems to be key words
-		chinese_silver = "#CCCCCC", -- this seems to be basic text
-		anti_flash_white = "#F2F2F2", -- this changes the statusbar as well as some text
+		chinese_silver = "#EEE0D0", -- this seems to be basic text
+		anti_flash_white = "#EED0C0", -- this changes the statusbar as well as some text
 		white = "#47FF81", --'#FFFFFF', this changes the find results in telescope
 	},
 })
 
 -- -----------------------------------------------------------------------------
 -- Spell checking
-vim.api.nvim_set_hl(0, "SpellBad", { undercurl = true, sp = "#FF99FF" })
-vim.api.nvim_set_hl(0, "SpellCap", { undercurl = true, sp = "#FF99FF" })
-vim.api.nvim_set_hl(0, "SpellRare", { undercurl = true, sp = "#FFFFE0" })
-vim.api.nvim_set_hl(0, "SpellLocal", { undercurl = true, sp = "#FFFFE0" })
+vim.api.nvim_set_hl(0, "SpellBad", { undercurl = true, sp = "#AAAAEE" })
+vim.api.nvim_set_hl(0, "SpellCap", { undercurl = true, sp = "#AAAAEE" })
+vim.api.nvim_set_hl(0, "SpellRare", { undercurl = true, sp = "#FFD0C0" })
+vim.api.nvim_set_hl(0, "SpellLocal", { undercurl = true, sp = "#FFD0C0" })
 
 -- -----------------------------------------------------------------------------
 -- Code highlighting customizations
 local black = "#000000"
-local strong1 = "#EEEEEE"
-local weak1 = "#DDDDDD"
+local strong1 = "#CCCCEE"
+local weak1 = "#EEE0D0"
 
 -- keywords
 vim.api.nvim_set_hl(0, "@keyword", { fg = black, bg = weak1, bold = true, italic = true })
@@ -58,4 +58,4 @@ vim.api.nvim_set_hl(0, "@punctuation.delimiter.latex", { bg = strong1, fg = blac
 vim.api.nvim_set_hl(0, "@function.latex", { bg = weak1, fg = black, bold = true })
 vim.api.nvim_set_hl(0, "@operator.latex", { fg = strong1, bold = false })
 
-vim.api.nvim_set_hl(0, "@string.latex", { fg = "#FFFFFF" })
+vim.api.nvim_set_hl(0, "@string.latex", { fg = "#EEEEEE" })
