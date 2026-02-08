@@ -1,6 +1,9 @@
 {pkgs, ...}: {
   programs.mango.enable = true;
 
+  #RealtimeKit system service, which hands out realtime scheduling priority to user processes on demand, which pipewire uses to acquire realtime priority.
+  security.rtkit.enable = true;
+
   xdg.portal = {
     enable = true;
     extraPortals = [
