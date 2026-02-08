@@ -21,7 +21,6 @@ in {
     (modulepath "applications-tui/basic-terminal-commands.nix")
     (modulepath "applications-tui/btop.nix") #resource manager
     (modulepath "applications-tui/git.nix") #version control system
-    (modulepath "applications-tui/dysk.nix")
     (modulepath "applications-tui/playerctl.nix") #media player controls
     (modulepath "applications-tui/libnotify.nix") #media player controls
     (modulepath "applications-tui/ffmpeg.nix") #image and video handler
