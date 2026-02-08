@@ -13,6 +13,9 @@
 in {
   networking.hostName = hostname;
 
+  #the keyboard layout in the TTY, sg = swiss german.
+  console.keyMap = "sg";
+
   users.users.${username} = {
     isNormalUser = true;
     description = realname;
@@ -55,16 +58,10 @@ in {
 
   i18n.defaultLocale = "en_US.UTF-8";
 
-  services.xserver.xkb = {
-    layout = "ch";
-    variant = "de_nodeadkeys";
-  };
-
-  #allows detecting optical drives
+  #allows detecting optical drives, sg = SCSI Generic
   boot.kernelModules = ["sg"];
-  nixpkgs.config.allowUnfree = true;
 
-  console.keyMap = "sg";
+  nixpkgs.config.allowUnfree = true;
 
   services.pipewire = {
     enable = true;

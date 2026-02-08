@@ -45,7 +45,7 @@ Assuming you are on a computer with NixOS and with git installed, clone this rep
 
 Before we begin two comments:
  * I use the Swiss keyboardlayout. If you want another one, go edit it in `modules/system/nixos-options.nix` and also in `home/dotfiles/shared/hyprland/keyboard-inputs.conf`. In the future this will be handled more conveniently with a variable.
- * I am not sure about UEFI/BIOS bootmodes. I just know that the config works on all my machines. I plan to find out and make an appropriate variable soon. 
+ * I am not sure about UEFI/BIOS bootmodes. I just know that the config works on all my machines. I plan to find out and make an appropriate variable. 
  
 First on a system level. Copy the directory `hosts/template` to `hosts/examplehostname` where `examplehostname` is the name you want your machine to have. You will need edit one of the files and add a new one. Optionally you can edit several more files:
  1. Copy `/etc/nixos/hardware-configuration.nix` into the directory. This is the hardware configuration that NixOS automatically created during install and is unique to your machine. 
