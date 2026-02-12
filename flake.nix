@@ -48,6 +48,11 @@
         inherit pkgs;
         shellname = "scimlcuda";
       };
+      bioprocess-experiment = setup_devShell {
+        inherit pkgs;
+        shellname = "bioprocess-experiment";
+      };
+
       numba = setup_devShell {
         inherit pkgs;
         shellname = "numba";
