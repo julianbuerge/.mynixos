@@ -10,6 +10,7 @@ pkgs.mkShell {
         matplotlib
         jupyterlab
         pandas
+        torch
       ]))
   ];
 }
