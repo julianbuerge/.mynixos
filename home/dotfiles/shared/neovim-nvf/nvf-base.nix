@@ -16,6 +16,17 @@
       format.enable = true;
     };
   };
+  #enable the language lang (string) with lsp and formatting support
+  enable_python = lang: {
+    name = lang;
+    value = {
+      enable = true;
+      lsp.enable = true;
+      lsp.servers = ["pyright"];
+      format.enable = true;
+    };
+  };
+
   #enable the language lang (string) with lsp and explicitly no formatting support
   enalangnoform = lang: {
     name = lang;
@@ -103,7 +114,7 @@ in {
             (enalang "julia")
             (enalangnoform "markdown")
             (enalangform "lua")
-            (enalangform "python")
+            (enable_python "python")
             (enalangform "rust")
           ])
           // {
