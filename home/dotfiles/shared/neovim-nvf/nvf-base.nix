@@ -23,7 +23,7 @@
       enable = true;
       lsp.enable = true;
       lsp.servers = ["pyright"];
-      format.enable = true;
+      format.enable = false;
     };
   };
 
