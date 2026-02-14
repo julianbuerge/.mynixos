@@ -1,15 +1,15 @@
 add_newline = true
 
 format = """\
-[](fg:#EEE0D0 bg:#000000)\
-[ ](fg:#000000 bg:#EEE0D0)\
+[](fg:#AAAAEE bg:#000000)\
+[ ](fg:#000000 bg:#AAAAEE)\
 $username\
 $directory\
-[](fg:#EEE0D0 bg:#000000)\
+[](fg:#AAAAEE bg:#000000)\
 $git_branch\
-[](fg:#000000 bg:#EEE0D0)\
+[](fg:#000000 bg:#AAAAEE)\
 $nix_shell\
-[](fg:#EEE0D0 bg:#000000)\
+[](fg:#AAAAEE bg:#000000)\
 $character\
 """
 
@@ -21,7 +21,7 @@ style_user = "bold fg:#EEE0D0 bg:#000000"
 
 [directory]
 format = "[ $path ]($style)"
-style = "bold fg:#000000 bg:#EEE0D0"
+style = "bold fg:#000000 bg:#AAAAEE"
 truncation_length = 10
 read_only = " "
 
@@ -36,7 +36,7 @@ symbol = " "
 
 [nix_shell]
 format = "[  $state nix-$name ]($style)"
-style = "bold fg:#000000 bg:#EEE0D0"
+style = "bold fg:#000000 bg:#AAEEAA"
 
 [cmd_duration]
 format = "[  $duration ]($style)"
