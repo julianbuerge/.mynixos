@@ -35,8 +35,8 @@ format = "[ $symbol$branch ]($style)"
 symbol = " "
 
 [nix_shell]
-format = "[  $state nix-$name ]($style)"
-style = "bold fg:#000000 bg:#AAEEAA"
+format = "[  $state $name ]($style)"
+style = "bold fg:#000000 bg:#FF0059"
 
 [cmd_duration]
 format = "[  $duration ]($style)"
