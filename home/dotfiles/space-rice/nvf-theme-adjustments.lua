@@ -16,10 +16,10 @@ require("coal").setup({
 
 -- -----------------------------------------------------------------------------
 -- Spell checking
-vim.api.nvim_set_hl(0, "SpellBad", { undercurl = true, sp = blue })
-vim.api.nvim_set_hl(0, "SpellCap", { undercurl = true, sp = blue })
-vim.api.nvim_set_hl(0, "SpellRare", { undercurl = true, sp = red })
-vim.api.nvim_set_hl(0, "SpellLocal", { undercurl = true, sp = red })
+vim.api.nvim_set_hl(0, "SpellBad", { undercurl = true, sp = "#FF0059" })
+vim.api.nvim_set_hl(0, "SpellCap", { undercurl = true, sp = "#FF0059" })
+vim.api.nvim_set_hl(0, "SpellRare", { undercurl = true, sp = "#E2D0E2" })
+vim.api.nvim_set_hl(0, "SpellLocal", { undercurl = true, sp = "#E2D0E2" })
 
 -- -----------------------------------------------------------------------------
 -- Code highlighting customizations

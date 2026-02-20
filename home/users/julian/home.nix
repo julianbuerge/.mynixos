@@ -21,6 +21,7 @@ in {
 
     #graphical environment
     (modulepath "mango.nix")
+    (modulepath "hyprland.nix")
     (modulepath "gtk.nix")
     (modulepath "fonts.nix")
 
