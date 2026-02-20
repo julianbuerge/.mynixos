@@ -23,7 +23,7 @@ in {
     wofi
     swww
     mpvpaper
-    dunst
+    mako
     grim #wayland screenshots
     slurp #wayland screenshots
   ];
