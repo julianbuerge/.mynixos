@@ -16,16 +16,6 @@
       format.enable = true;
     };
   };
-  #enable the language lang (string) with lsp and formatting support
-  enable_python = lang: {
-    name = lang;
-    value = {
-      enable = true;
-      lsp.enable = true;
-      lsp.servers = ["pyright"];
-      format.enable = false;
-    };
-  };
 
   #enable the language lang (string) with lsp and explicitly no formatting support
   enalangnoform = lang: {
@@ -114,8 +104,8 @@ in {
             (enalang "julia")
             (enalangnoform "markdown")
             (enalangform "lua")
-            (enable_python "python")
-            (enalangform "rust")
+            (enalangnoform "python")
+            (enalang "haskell")
           ])
           // {
             enableTreesitter = true;

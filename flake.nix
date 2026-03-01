@@ -64,6 +64,10 @@
         inherit pkgs;
         shellname = "spacemonkeys";
       };
+      haskell = setup_devShell {
+        inherit pkgs;
+        shellname = "haskell";
+      };
     };
   };
 }
