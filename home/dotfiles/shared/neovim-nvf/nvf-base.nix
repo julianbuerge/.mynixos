@@ -101,7 +101,6 @@ in {
             (enalangform "nix")
             (enalangnoform "bash")
             (enalang "clang")
-            (enalang "julia")
             (enalangnoform "markdown")
             (enalangform "lua")
             (enalangnoform "python")
