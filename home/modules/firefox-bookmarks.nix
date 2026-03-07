@@ -141,6 +141,10 @@
                     url = "https://www.cellobello.org/latin-american-cello-works/";
                   }
                   {
+                    name = "Cello Expressions - Free sheet music";
+                    url = "https://celloexpressions.com";
+                  }
+                  {
                     name = "8notes";
                     url = "https://www.8notes.com/Default.asp";
                   }
