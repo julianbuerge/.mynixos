@@ -214,6 +214,16 @@
                 ];
               }
               {
+                name = "Food";
+                bookmarks = [
+                  {
+                    name = "Hestan culinary";
+                    url = "https://hestanculinary.co/";
+                    keyword = "hestan";
+                  }
+                ];
+              }
+              {
                 name = "Admin";
                 bookmarks = [
                   {
