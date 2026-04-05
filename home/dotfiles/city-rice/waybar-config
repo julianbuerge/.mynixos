@@ -2,32 +2,8 @@
     "layer": "top",
     "position" : "bottom",
     "modules-left": [""],
-    "modules-center": ["hyprland/workspaces"],
+    "modules-center": [""],
     "modules-right": ["battery","network","pulseaudio", "clock"],
-    
-    "hyprland/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "warp-on-scroll": false,
-        "format": "{icon}",
-        "format-icons": {
-	    "1" : "𝟏",
-	    "2" : "𝟐",
-	    "3" : "𝟑",
-	    "4" : "𝟒",
-	    "5" : "𝟓",
-	    "6" : "𝟔",
-	    "7" : "𝟕",
-	    "8" : "𝟖",
-	    "9" : "𝟗",
-	    "10" : "𝟏𝟎",
-            "default": "●"
-        },
-        "persistent-workspaces": {
-		"*": [1,2,3,4,5,6]
-	}
-    },
-
     "battery": {
         "states": {
             "warning": 30,
@@ -49,10 +25,7 @@
         "on-click": "$HOME/.mynixos/home/dotfiles/shared/scripts/audio-ctrl.sh",
     	"on-click-right": "$HOME/.mynixos/home/dotfiles/shared/scripts/audio-ctrl.sh",
     },
-
     "clock": {
     	"format": " {:%d  󰥔  %H:%M}"
     }
-
 }
-
