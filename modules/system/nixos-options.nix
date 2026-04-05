@@ -54,7 +54,7 @@ in {
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  time.timeZone = "Europe/Zurich";
+  time.timeZone = "America/Mazatlan";
 
   i18n.defaultLocale = "en_US.UTF-8";
 
