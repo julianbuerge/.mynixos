@@ -17,18 +17,18 @@ in {
     (modulepath "neovim-nvf.nix")
     (modulepath "starship.nix")
     (modulepath "bash.nix")
+    (modulepath "fastfetch.nix")
 
     #graphical environment
+    (modulepath "mango.nix")
+    (modulepath "mako.nix")
     (modulepath "hyprland.nix")
     (modulepath "gtk.nix")
-    (modulepath "wofi.nix")
-    (modulepath "waybar.nix")
-    (modulepath "modify-desktop-entries.nix")
     (modulepath "fonts.nix")
 
     #applications
-    (modulepath "yazi.nix")
     (modulepath "firefox-bookmarks.nix")
     (modulepath "mpv.nix")
+    (modulepath "zathura.nix")
   ];
 }
