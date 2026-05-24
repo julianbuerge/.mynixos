@@ -19,6 +19,11 @@
       mynix = "cd ~/.mynixos/";
       gitlog = "git log --oneline --all --graph --decorate";
       gitlog10 = "git log -n 10 --oneline --all --graph --decorate";
+      music = "cd ~/MediaLibrary/Music/";
+      classical = "cd ~/MediaLibrary/Music/Classical/";
+      worship = "cd ~/MediaLibrary/Music/Worship/";
+      movies = "cd ~/MediaLibrary/Movies/";
+      shows = "cd ~/MediaLibrary/Shows/";
     };
   };
 }
