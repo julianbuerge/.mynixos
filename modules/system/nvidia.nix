@@ -12,7 +12,7 @@
 
   hardware.nvidia = {
     modesetting.enable = true;
-    open = true;
+    open = false;
     nvidiaSettings = true;
     package =
       (pkgs_nvidia.linuxPackagesFor config.boot.kernelPackages.kernel)
