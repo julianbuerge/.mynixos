@@ -3,6 +3,9 @@
   gtk = {
     enable = true;
 
+    #a warning during rebuilding said to add this, but what sense does it make?
+    gtk4.theme = null;
+
     theme = {
       name = "Orchis-Yellow-Dark";
       package = pkgs.orchis-theme.override {
