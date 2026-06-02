@@ -21,7 +21,7 @@ in {
   environment.systemPackages = with pkgs; [
     waybar
     wofi
-    swww
+    awww
     mpvpaper
     mako
     grim #wayland screenshots
