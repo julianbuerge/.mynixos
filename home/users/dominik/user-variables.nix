@@ -6,5 +6,5 @@
 
   rice = "space-rice";
 
-  configure_with_nvidia = true;
+  configure_with_nvidia = false;
 }

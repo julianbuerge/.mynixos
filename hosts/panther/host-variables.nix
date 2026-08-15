@@ -4,5 +4,5 @@
   realname = "Dominik";
   username = "dominik";
 
-  use_nvidia = true;
+  use_nvidia = false;
 }

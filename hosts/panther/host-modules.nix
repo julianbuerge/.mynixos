@@ -49,7 +49,6 @@ in {
     (modulepath "applications-gui/thunderbird.nix") #email client
     (modulepath "applications-gui/audacity.nix") #audio editor
     (modulepath "applications-gui/gimp.nix") #image editor
-    (modulepath "applications-gui/makemkv.nix")
     (modulepath "applications-gui/thunar.nix")
     (modulepath "applications-gui/steam.nix")
   ];
