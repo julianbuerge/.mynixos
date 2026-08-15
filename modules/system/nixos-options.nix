@@ -3,13 +3,7 @@
   variables,
   ...
 }: let
-  inherit (variables) hostname realname username use_nvidia;
-
-  #define a list with either one item ./nvidia.nix or no item
-  nvidia_import =
-    if use_nvidia
-    then [./nvidia.nix]
-    else [];
+  inherit (variables) hostname realname username;
 in {
   networking.hostName = hostname;
 
@@ -28,12 +22,9 @@ in {
     gid = 4000;
   };
 
-  #imports are a list, which is the sum of the written and the nvidia_import list
-  imports =
-    [
-      ./fonts.nix
-    ]
-    ++ nvidia_import;
+  imports = [
+    ./fonts.nix
+  ];
 
   nix.gc = {
     automatic = true;

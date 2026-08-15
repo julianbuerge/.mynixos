@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgs_nvidia.url = "github:nixos/nixpkgs?ref=aca4d95fce4914b3892661bcb80b8087293536c6";
     mango = {
       url = "github:DreamMaoMao/mango";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -11,12 +12,17 @@
 
   outputs = {
     nixpkgs,
+    nixpkgs_nvidia,
     mango,
     ...
   }: let
     system = "x86_64-linux";
 
     pkgs = import nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
+    };
+    pkgs_nvidia = import nixpkgs_nvidia {
       inherit system;
       config.allowUnfree = true;
     };
@@ -28,11 +34,13 @@
     nixosConfigurations = {
       xenia = setup_host_with_hostname {
         inherit nixpkgs;
+        inherit pkgs_nvidia;
         hostname = "xenia";
         inherit mango;
       };
       panther = setup_host_with_hostname {
         inherit nixpkgs;
+        inherit pkgs_nvidia;
         hostname = "panther";
         inherit mango;
       };

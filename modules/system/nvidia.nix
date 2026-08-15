@@ -1,4 +1,8 @@
-{config, ...}: {
+{
+  config,
+  pkgs_nvidia,
+  ...
+}: {
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
@@ -8,8 +12,10 @@
 
   hardware.nvidia = {
     modesetting.enable = true;
-    open = false;
+    open = true;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    package =
+      (pkgs_nvidia.linuxPackagesFor config.boot.kernelPackages.kernel)
+      .nvidiaPackages.stable;
   };
 }
