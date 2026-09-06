@@ -19,7 +19,7 @@ in {
   users.users.${username} = {
     isNormalUser = true;
     description = realname;
-    extraGroups = ["networkmanager" "wheel" "cdrom" "input" "media"];
+    extraGroups = ["networkmanager" "wheel" "cdrom" "input" "media" "adbusers"];
     packages = with pkgs; [];
   };
 
