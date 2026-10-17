@@ -30,58 +30,56 @@ in {
         };
       };
 
-      statusline.lualine = {
-        enable = true;
+        statusline.lualine = {
+  enable = true;
 
-        setupOpts.sections.a = [
-          ''
-            {
-            "mode",
-            icons_enabled = true,
-            separator = {
-            left = ' ',
-            right = ''
-            },
-            }
-          ''
-          ''
-            {
-            "",
-            draw_empty = true,
-            separator = { left = '', right = '' }
-            }
-          ''
-        ];
-        setupOpts.sections.z = [
-          ''
-            {
-            "",
-            draw_empty = true,
-            separator = { left = '', right = '' }
-            }
-          ''
-          ''
-            {
-            "progress",
-            separator = {left = ''}
-            }
-          ''
-          ''
-            {"location"}
-          ''
-          ''
-            {
-            "fileformat",
-            color = {fg='black'},
-            symbols = {
-            unix = '', -- e712
-            dos = '',  -- e70f
-            mac = '',  -- e711
-            }
-            }
-          ''
-        ];
-      };
+  setupOpts.sections = {
+    lualine_a = [
+      {
+        __unkeyed-1 = "mode";
+        icons_enabled = true;
+        separator = {
+          left = " ";
+          right = "";
+        };
+      }
+      {
+        __unkeyed-1 = "";
+        draw_empty = true;
+        separator = {
+          left = "";
+          right = "";
+        };
+      }
+    ];
+
+    lualine_z = [
+      {
+        __unkeyed-1 = "";
+        draw_empty = true;
+        separator = {
+          left = "";
+          right = "";
+        };
+      }
+      {
+        __unkeyed-1 = "progress";
+        separator.left = "";
+      }
+      "location"
+      {
+        __unkeyed-1 = "fileformat";
+        color.fg = "black";
+        symbols = {
+          unix = ""; # e712
+          dos = "";  # e70f
+          mac = "";  # e711
+        };
+      }
+    ];
+  };
+};
+
 
       visuals.nvim-web-devicons.enable = true;
     };
