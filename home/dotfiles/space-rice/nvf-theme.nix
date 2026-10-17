@@ -33,7 +33,7 @@ in {
       statusline.lualine = {
         enable = true;
 
-        activeSection.a = [
+        setupOpts.sections.a = [
           ''
             {
             "mode",
@@ -52,7 +52,7 @@ in {
             }
           ''
         ];
-        activeSection.z = [
+        setupOpts.sections.z = [
           ''
             {
             "",
